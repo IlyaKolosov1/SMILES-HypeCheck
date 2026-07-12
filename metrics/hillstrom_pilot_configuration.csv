@@ -1,0 +1,2 @@
+Dataset,Treatment,Control,Outcome,Pilot sample size,Evaluation,Random seed,CausalPFN context size,CausalPFN query size,CausalPFN neighbours,Bootstrap iterations
+Hillstrom,Womens E-Mail,No E-Mail,visit,12000,2-fold honest splitting,42,512,256,128,1000

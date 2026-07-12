@@ -1,0 +1,4 @@
+Comparison,Metric,Difference,95% CI low,95% CI high,Interpretation
+S-Learner minus CausalPFN,Qini AUC,0.02543503675623345,0.001096531475113711,0.05144502550813725,First model is better in this paired bootstrap
+S-Learner minus CausalPFN,AUUC,0.011727835769486014,0.0005245642019627633,0.023788692431453606,First model is better in this paired bootstrap
+CausalPFN minus S-Learner,"Uplift@20, pp",0.23347091674804688,-2.249740046262741,2.733227682113647,No statistically clear difference
