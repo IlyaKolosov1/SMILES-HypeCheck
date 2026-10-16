@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS01",
+  "experiment": "E01",
+  "experiment_version": "v004",
+  "run_id": "20261016T220852_305611Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Q-hat reanalysis of five v003 outer folds on four datasets with random_query context seed 42.",
+  "original_local_path": "qhat_reanalysis_results/20261016T220852_305611Z",
+  "source_result": "projects/context_selection/hypotheses/CS01/results/E01/v003/20261013T202852_574199Z/manifest.json",
+  "source_manifest_sha256": "225ec5c08a4e4c752131ea10869ed5a4c19c838f611a5fe6c3d3d24f22a37d77",
+  "source_script_sha256": "1c3fa229d73a650b6ce39e169ecf5cdd7dd968364f49af3f45eef318a15122f0",
+  "code_git_commit": "89bccca1e9f3f5cf8915934d42f444dff25ff6d4",
+  "code_sha256": "4347bdf2052da49e8b9f96732419b26e186da66f20c03d8b32d21aeaa926f9a9",
+  "code_snapshot": null,
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 3326,
+      "sha256": "2512879f4da72caeb7e1c1bfe7bb02625ef06aa81aaf91ed1b74614a85f243ce"
+    },
+    {
+      "path": "all_paired_deltas.csv",
+      "size": 4868,
+      "sha256": "bee0c48390391dafbf3a0389b41bad91b4afbd8fc50103625470d99bd0df08c6"
+    },
+    {
+      "path": "selector_effects_summary.csv",
+      "size": 952,
+      "sha256": "641952d727e46420e41e16d5d7a151ab26ed3f550a858d80bbe9ede6962a9846"
+    },
+    {
+      "path": "source_files.csv",
+      "size": 10457,
+      "sha256": "a8687fcbda079f50ba68a97a33c569f27c8e0ca343026c667b40693e01d55cfa"
+    },
+    {
+      "path": "protocol.json",
+      "size": 1544,
+      "sha256": "df85da75de858214a17b22dbb98cca30b3756008d3af309132d9912b7ff127b3"
+    }
+  ],
+  "limitation": "Reanalysis of saved predictions, not an independent model run; overlapping train banks and one context seed. Bootstrap intervals are conditional; no overall significance claim."
+}

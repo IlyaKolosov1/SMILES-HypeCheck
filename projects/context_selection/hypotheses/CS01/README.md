@@ -1,6 +1,6 @@
 # CS01 — выбор контекста против random
 
-**Вопрос:** при фиксированном `K` улучшает ли feature/effect selector ранжирование uplift по сравнению с query-dependent random context? **Primary контраст:** разность normalized Qini AUC внутри датасета и outer split относительно среднего трёх `random_query` seeds. Вторичные метрики: uplift@10%, AUUC, время. Weak learner показывается отдельно, поскольку его scores помогают `effect_knn`.
+**Вопрос:** при фиксированном `K` улучшает ли feature/effect selector ранжирование uplift по сравнению с query-dependent random context? **Primary контраст v001–v003:** разность normalized Qini AUC внутри датасета и outer split относительно среднего трёх `random_query` seeds. В v004 тот же коэффициент Qini обозначен Q̂, а baseline использует один context seed `42`. Вторичные метрики старых запусков: uplift@10%, AUUC, время. Weak learner показывается отдельно, поскольку его scores помогают `effect_knn`.
 
 Статус: **разведочные результаты, статистическая значимость общего улучшения не установлена**. Orange остаётся sensitivity dataset до проверки смысла treatment/outcome. Criteo в этих запусках — один 100k source sample, outcome `visit`.
 
@@ -9,6 +9,7 @@
 | [v001 legacy](experiments/E01/v001.md) | In-sample effect score, один split, пять датасетов | [20261013T165932_748546Z](results/E01/v001/20261013T165932_748546Z/README.md) |
 | [v002 cross-fit pilot](experiments/E01/v002.md) | OOF effect score, один split, четыре датасета | [20261013T190149_158894Z](results/E01/v002/20261013T190149_158894Z/README.md) |
 | [v003 cross-fit folds](experiments/E01/v003.md) | Пять outer folds, четыре датасета | [20261013T202852_574199Z](results/E01/v003/20261013T202852_574199Z/README.md) |
+| [v004 Q̂, seed 42](experiments/E01/v004.md) | Повторный анализ предсказаний v003; пять folds, один context seed | [20261016T220852_305611Z](results/E01/v004/20261016T220852_305611Z/README.md) |
 
 [Руководство runner](experiment-guide.md) и [аудит legacy-пилота](legacy-audit.md) сохраняют детали и границы выводов. Точный исходный скрипт v002/v003 есть в `source_snapshots/` проекта; исходный SHA v001 там отсутствует, поэтому его нельзя объявлять полностью воспроизводимым по этому checkout. Режим `--effect-score-mode legacy` в новом коде — совместимая абляция, не побайтовая копия прежнего скрипта.
 
@@ -22,3 +23,5 @@
 | Criteo-ITE-v2.1 | +0.0972 (3/5) | +0.0215 (2/5) |
 
 Источник: [агрегированные контрасты v003](results/E01/v003/20261013T202852_574199Z/selector_effects_summary.csv). Train banks пересекаются, а Criteo source sample один; до claim нужны новые независимые проверки и выбор primary сравнения.
+
+[Срез v004](results/E01/v004/20261016T220852_305611Z/README.md) показывает, как меняются разности при baseline `random_query_s42`. Он не является новым запуском модели или независимой проверкой v003.

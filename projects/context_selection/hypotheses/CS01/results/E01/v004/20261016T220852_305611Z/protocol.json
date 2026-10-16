@@ -1,0 +1,36 @@
+{
+  "project": "context_selection",
+  "hypothesis": "CS01",
+  "experiment": "E01",
+  "experiment_version": "v004",
+  "run_id": "20261016T220852_305611Z",
+  "analysis_type": "reanalysis_of_saved_predictions_no_model_inference",
+  "source_run": "artifacts/local/multi_dataset_context_results/20261013T202852_574199Z",
+  "source_run_id": "20261013T202852_574199Z",
+  "source_manifest": "projects/context_selection/hypotheses/CS01/results/E01/v003/20261013T202852_574199Z/manifest.json",
+  "source_manifest_sha256": "225ec5c08a4e4c752131ea10869ed5a4c19c838f611a5fe6c3d3d24f22a37d77",
+  "source_script_sha256": "1c3fa229d73a650b6ce39e169ecf5cdd7dd968364f49af3f45eef318a15122f0",
+  "analysis_script": "projects/context_selection/src/reanalyse_qini_single_seed.py",
+  "analysis_script_sha256": "4347bdf2052da49e8b9f96732419b26e186da66f20c03d8b32d21aeaa926f9a9",
+  "analysis_git_commit": "89bccca1e9f3f5cf8915934d42f444dff25ff6d4",
+  "datasets": [
+    "Hillstrom",
+    "Retailhero-uplift",
+    "LZD",
+    "Criteo-ITE-v2.1"
+  ],
+  "folds": 5,
+  "context_size": 512,
+  "context_seed": 42,
+  "baseline": "random_query_s42",
+  "metric": "q_hat = (AUQC_model - AUQC_random) / (AUQC_max - AUQC_random)",
+  "metric_implementation": "sklift.metrics.qini_auc_score(negative_effect=True)",
+  "bootstrap": {
+    "draws": 500,
+    "stratified_by_treatment": true,
+    "seed_by_fold": "42 + fold + 999",
+    "interval": "percentile_95",
+    "minimum_valid_draws": 400
+  },
+  "interpretation": "Exploratory; conditional on saved predictions and overlapping folds"
+}
