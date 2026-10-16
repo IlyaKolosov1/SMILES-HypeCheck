@@ -11,7 +11,7 @@
   "original_local_path": "metrics/",
   "code_git_commit": null,
   "code_sha256": "773ddae540240e4e3908a83d54c092d6f79fcbd5512518a885d574bd9921183a",
-  "code_snapshot": "projects/model_comparison/source_snapshots/773ddae540240e4e3908a83d54c092d6f79fcbd5512518a885d574bd9921183a_SMILES_HypeCheck.ipynb",
+  "code_snapshot": "projects/model_comparison/source_snapshots/legacy/SMILES_HypeCheck.ipynb",
   "files": [
     {
       "path": "hillstrom_pilot_comparisons.csv",

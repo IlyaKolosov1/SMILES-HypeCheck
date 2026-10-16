@@ -11,7 +11,7 @@
   "original_local_path": "synthetic_retrieval_pilot/20261007T062843_026698Z",
   "code_git_commit": null,
   "code_sha256": "0ddf06683f3a908319366e25049081e048e18070c82f70e073cfda1ba8163753",
-  "code_snapshot": "projects/context_selection/source_snapshots/0ddf06683f3a908319366e25049081e048e18070c82f70e073cfda1ba8163753_synthetic_pilot.py",
+  "code_snapshot": "projects/context_selection/source_snapshots/legacy/synthetic_pilot.py",
   "files": [
     {
       "path": "all_metrics.csv",

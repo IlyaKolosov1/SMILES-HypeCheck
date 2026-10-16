@@ -11,7 +11,7 @@
   "original_local_path": "selector_abc_results/20261007T103928_992700Z",
   "code_git_commit": null,
   "code_sha256": "2d0972ac07767638cb2938058606cf3a76c5bc984b2e7dfc1d24f8f3edf2a14e",
-  "code_snapshot": "projects/context_selection/source_snapshots/2d0972ac07767638cb2938058606cf3a76c5bc984b2e7dfc1d24f8f3edf2a14e_selector_abc_pilot.py",
+  "code_snapshot": "projects/context_selection/source_snapshots/legacy/selector_abc_pilot.py",
   "files": [
     {
       "path": "all_metrics.csv",

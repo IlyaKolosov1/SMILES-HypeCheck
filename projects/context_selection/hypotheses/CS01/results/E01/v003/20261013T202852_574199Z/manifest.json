@@ -11,7 +11,7 @@
   "original_local_path": "multi_dataset_context_results/20261013T202852_574199Z",
   "code_git_commit": null,
   "code_sha256": "1c3fa229d73a650b6ce39e169ecf5cdd7dd968364f49af3f45eef318a15122f0",
-  "code_snapshot": "projects/context_selection/source_snapshots/1c3fa229d73a650b6ce39e169ecf5cdd7dd968364f49af3f45eef318a15122f0_multi_dataset_context.py",
+  "code_snapshot": "projects/context_selection/source_snapshots/legacy/multi_dataset_context.py",
   "files": [
     {
       "path": "all_metrics.csv",
