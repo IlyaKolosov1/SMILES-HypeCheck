@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS01",
+  "experiment": "E01",
+  "experiment_version": "v001",
+  "run_id": "20261013T165932_748546Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Исторический one-split пилот с in-sample effect scores; пять датасетов, K=512.",
+  "original_local_path": "multi_dataset_context_results/20261013T165932_748546Z",
+  "code_git_commit": null,
+  "code_sha256": "12e846e822fdfec320581ea85d42a2c2b45c576882101b201e6b0caf96cff548",
+  "code_snapshot": null,
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 6916,
+      "sha256": "e1b50180de6c13efe442628fdda46c21c27b5b801774478d91a8365b270c695f"
+    },
+    {
+      "path": "all_paired_deltas.csv",
+      "size": 27541,
+      "sha256": "7b46bb4d9e267a7b2ea019bf2e7068fd490a2cddeb20508a37861c9f5c1f665f"
+    },
+    {
+      "path": "failures.json",
+      "size": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "model.json",
+      "size": 216,
+      "sha256": "74dc1ccbd09a3691b23273ee001f45cd44ded0599e7766bedbe49916acb83d7c"
+    },
+    {
+      "path": "protocol.json",
+      "size": 981,
+      "sha256": "29dc8926412ebebd2ebbeed7f7098dee7b755877d5c95cd9e9764143fd3ed1dc"
+    },
+    {
+      "path": "selector_effects.csv",
+      "size": 2531,
+      "sha256": "de13556bf3486fa34cc4203de40bc96cbcedb05fff5c5ab22f7acba0d2491174"
+    },
+    {
+      "path": "selector_effects_summary.csv",
+      "size": 3905,
+      "sha256": "0af8b0e4ed896a289f40faff8d0ff35ef9a199de4a5acb3ab5def66bc02587fb"
+    },
+    {
+      "path": "summary.csv",
+      "size": 5268,
+      "sha256": "3926f0a2acb6c96ff4c660fb936007b0cd1d1a351fe6504fa6dc879b2dc11847"
+    }
+  ],
+  "limitation": "Historical exploratory run; Git commit at execution was not recorded. Full predictions remain local."
+}

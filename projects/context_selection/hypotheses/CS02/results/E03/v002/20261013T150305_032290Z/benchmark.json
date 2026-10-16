@@ -1,0 +1,20 @@
+{
+  "device": "cpu",
+  "batch": 2,
+  "seconds_per_batch": [
+    0.0654465839616023,
+    0.06557024997891858,
+    0.06542645901208743
+  ],
+  "context_sizes": [
+    512,
+    1024,
+    2048
+  ],
+  "methods": [
+    "random_query",
+    "feature_knn",
+    "effect_knn"
+  ],
+  "estimated_inference_minutes": 20.105190593004227
+}

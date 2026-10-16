@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E01",
+  "experiment_version": "v001",
+  "run_id": "notebook-hillstrom-pilot",
+  "result_revision": 1,
+  "status": "historical_pilot",
+  "summary": "Hillstrom model comparison: CausalPFN, S-Learner, T-Learner; conditional bootstrap CSVs.",
+  "original_local_path": "metrics/",
+  "code_git_commit": null,
+  "code_sha256": "773ddae540240e4e3908a83d54c092d6f79fcbd5512518a885d574bd9921183a",
+  "code_snapshot": "projects/model_comparison/source_snapshots/773ddae540240e4e3908a83d54c092d6f79fcbd5512518a885d574bd9921183a_SMILES_HypeCheck.ipynb",
+  "files": [
+    {
+      "path": "hillstrom_pilot_comparisons.csv",
+      "size": 485,
+      "sha256": "b02b1746fe3b30bc67329f75ac1ad0eab662fcd9952fe59da7cc827f78192948"
+    },
+    {
+      "path": "hillstrom_pilot_configuration.csv",
+      "size": 251,
+      "sha256": "5ef22bec6fe87ace3f59fbd17b88ed06c3cc71bed798ab8417bec71071798e58"
+    },
+    {
+      "path": "hillstrom_pilot_metrics_ci.csv",
+      "size": 705,
+      "sha256": "ce4e44f607c1dc503c42a01b4d9a0ce689d38b7f3eaeb4d1f41f6dd6c5c3d26d"
+    }
+  ],
+  "limitation": "Historical notebook pilot; notebook is tracked, but the Git commit used for the run was not recorded. Full predictions were not committed."
+}

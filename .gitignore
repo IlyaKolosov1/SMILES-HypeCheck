@@ -1,1 +1,20 @@
 .venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+
+# Dataset copies and full run artifacts. Commit compact reviewed snapshots
+# inside the relevant hypothesis instead.
+/artifacts/local/
+# Old default paths, kept as a safeguard when running a historical command.
+/data_A_cleaned/
+/hillstrom_pilot_local/
+/hillstrom_multiseed_*/
+/hillstrom_context_sweep/
+/hillstrom_context_sweep_3sizes/
+/synthetic_retrieval_pilot/
+/selector_abc_results/
+/multi_dataset_context_results/

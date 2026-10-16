@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M04",
+  "experiment": "E01",
+  "experiment_version": "v001",
+  "run_id": "notebook-synthetic-pilot",
+  "result_revision": 1,
+  "status": "historical_report_only",
+  "summary": "Synthetic values documented in historical notebook report; no separate results CSV was committed.",
+  "original_local_path": "README.md synthetic table and SMILES_HypeCheck.ipynb",
+  "code_git_commit": null,
+  "code_sha256": "773ddae540240e4e3908a83d54c092d6f79fcbd5512518a885d574bd9921183a",
+  "code_snapshot": "projects/model_comparison/source_snapshots/773ddae540240e4e3908a83d54c092d6f79fcbd5512518a885d574bd9921183a_SMILES_HypeCheck.ipynb",
+  "files": [],
+  "limitation": "Historical report only; neither raw predictions nor a separate results CSV is available."
+}

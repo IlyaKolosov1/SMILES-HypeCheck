@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS02",
+  "experiment": "E03",
+  "experiment_version": "v001",
+  "run_id": "20261013T145604_165459Z",
+  "result_revision": 1,
+  "status": "incomplete",
+  "summary": "Hillstrom sweep размера контекста; частичный запуск не трактуется как результат.",
+  "original_local_path": "hillstrom_context_sweep/20261013T145604_165459Z",
+  "code_git_commit": null,
+  "code_sha256": null,
+  "code_snapshot": null,
+  "files": [
+    {
+      "path": "benchmark.json",
+      "size": 330,
+      "sha256": "1369f194772e1c56343ef0cf04469a4245ee49a5aa568018d21917aea676ee01"
+    },
+    {
+      "path": "config.json",
+      "size": 2266,
+      "sha256": "74ee805fb8c9e4076b5c7ad4e19aedbcaa1c7cf44c0d363b65d22cd7281c9166"
+    },
+    {
+      "path": "environment.txt",
+      "size": 676,
+      "sha256": "ad145b6aa58664722530bf588ac7c0b2e934bdb8e6e8d044db51072b08da1243"
+    },
+    {
+      "path": "timings.csv",
+      "size": 190,
+      "sha256": "183f316d41662d5d1d5ef9466f40d012a025994dbd2cb905fba15ec8eb0e0715"
+    }
+  ],
+  "limitation": "Historical exploratory run; Git commit at execution was not recorded. Full predictions remain local."
+}

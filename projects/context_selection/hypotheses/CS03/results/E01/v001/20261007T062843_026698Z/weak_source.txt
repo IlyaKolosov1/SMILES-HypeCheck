@@ -1,0 +1,27 @@
+    def _train_weak_learner(self, X: np.ndarray, t: np.ndarray, y: np.ndarray) -> GradientBoostingRegressor:
+        self.t_transformer = OneHotEncoder(sparse_output=False, categories="auto", drop="first")
+        T = self.t_transformer.fit_transform(t.reshape(-1, 1))
+        self._d_t = (T.shape[1],)
+        feat_arr = np.concatenate((X, 1 - np.sum(T, axis=1).reshape(-1, 1), T), axis=1)
+        self.stratifier = GradientBoostingRegressor(
+            n_estimators=100,
+            max_depth=6,
+            min_samples_leaf=max(2, int(X.shape[0] / 100)),
+            random_state=111,
+        )
+        self.stratifier.fit(feat_arr, y)
+
+    def _estimate_cate_weak_learner(self, X_test: np.ndarray) -> np.ndarray:
+        if self.stratifier is None or self.t_transformer is None:
+            raise ValueError("Weak learner must be trained before estimating CATE.")
+
+        t0 = np.zeros(X_test.shape[0], dtype=X_test.dtype)
+        t1 = np.ones(X_test.shape[0], dtype=X_test.dtype)
+        T0 = self.t_transformer.transform(t0.reshape(-1, 1))
+        T1 = self.t_transformer.transform(t1.reshape(-1, 1))
+        X_T0 = np.concatenate((X_test, 1 - np.sum(T0, axis=1).reshape(-1, 1), T0), axis=1)
+        X_T1 = np.concatenate((X_test, 1 - np.sum(T1, axis=1).reshape(-1, 1), T1), axis=1)
+        Y0 = self.stratifier.predict(X_T0)
+        Y1 = self.stratifier.predict(X_T1)
+
+        return Y1 - Y0

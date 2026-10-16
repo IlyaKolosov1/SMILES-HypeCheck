@@ -1,0 +1,18 @@
+def generate(n, rng):
+    """Предлагаемый DGP v1, НЕ генератор из статьи и не подгонка к Hillstrom.
+
+    X ~ Uniform[-1,1]^8; T ~ Bernoulli(0.5), независимо от X.
+    p0 in [0.15, 0.41], tau in [-0.09, 0.14]; p1 = p0 + tau.
+    Три группы воздействия + плавное изменение внутри каждой группы.
+    Y ~ Bernoulli(pT). CATE = p1-p0, а не индивидуальный бинарный Y1-Y0.
+    Никакой clipping вероятностей: иначе он изменил бы истинный эффект.
+    """
+    x = rng.uniform(-1, 1, size=(n, 8)).astype(np.float32)
+    p0 = 0.28 + 0.06 * np.sin(np.pi * x[:, 2]) + 0.04 * x[:, 3] + 0.03 * x[:, 4] * x[:, 5]
+    tau = np.where(x[:, 0] > 0.35, 0.12, np.where(x[:, 0] < -0.35, -0.07, 0.015))
+    tau = tau + 0.02 * x[:, 1]
+    p1 = p0 + tau
+    assert np.all((p0 > 0) & (p0 < 1) & (p1 > 0) & (p1 < 1))
+    t = rng.binomial(1, 0.5, n).astype(np.int64)
+    y = rng.binomial(1, np.where(t == 1, p1, p0)).astype(np.int64)
+    return x, t, y, tau.astype(np.float64)

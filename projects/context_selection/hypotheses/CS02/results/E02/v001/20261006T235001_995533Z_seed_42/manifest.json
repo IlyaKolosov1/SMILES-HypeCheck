@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS02",
+  "experiment": "E02",
+  "experiment_version": "v001",
+  "run_id": "20261006T235001_995533Z_seed_42",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Hillstrom повторение с seed_42; общий протокол E02/v001.",
+  "original_local_path": "hillstrom_multiseed_20261007_024959/seed_42/20261006T235001_995533Z",
+  "code_git_commit": null,
+  "code_sha256": null,
+  "code_snapshot": null,
+  "files": [
+    {
+      "path": "benchmark.json",
+      "size": 192,
+      "sha256": "4191658676f0264c03f737c466a9608a783e349aa640115f55c8ca41cf8bce67"
+    },
+    {
+      "path": "config.json",
+      "size": 2249,
+      "sha256": "8e1eca693709c51bbf2176363507a382e6357320ad6f27416dc1edff395b18e3"
+    },
+    {
+      "path": "environment.txt",
+      "size": 676,
+      "sha256": "ad145b6aa58664722530bf588ac7c0b2e934bdb8e6e8d044db51072b08da1243"
+    },
+    {
+      "path": "metrics.csv",
+      "size": 368,
+      "sha256": "f992e7bcb7a0454e8e7b892e1b81cd9b50efd01f88048ddf54340a30caa79031"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 754,
+      "sha256": "ee838c1050ae5485a2da51fe582b97508745bd8fde77c16dc86ff209f7464b4d"
+    },
+    {
+      "path": "timings.csv",
+      "size": 466,
+      "sha256": "4f08772b48f277cf3f5c56154e02d45f451e43b6a737c71ba8501ac74906d7c2"
+    },
+    {
+      "path": "verdict.txt",
+      "size": 194,
+      "sha256": "749b4bf31344e03d5fd230f18a66a2c5213c397017bc17327a4bbdb9d1c8f85c"
+    }
+  ],
+  "limitation": "Historical exploratory run; Git commit at execution was not recorded. Full predictions remain local."
+}

@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS03",
+  "experiment": "E02",
+  "experiment_version": "v001",
+  "run_id": "20261007T103928_992700Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Синтетическая ABC диагностика selector quality, пять seeds.",
+  "original_local_path": "selector_abc_results/20261007T103928_992700Z",
+  "code_git_commit": null,
+  "code_sha256": "2d0972ac07767638cb2938058606cf3a76c5bc984b2e7dfc1d24f8f3edf2a14e",
+  "code_snapshot": "projects/context_selection/source_snapshots/2d0972ac07767638cb2938058606cf3a76c5bc984b2e7dfc1d24f8f3edf2a14e_selector_abc_pilot.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 5335,
+      "sha256": "a8fc627ad89464e648b83aa801a0a214ef6fbc007c42d31c07bd3093a6c40cda"
+    },
+    {
+      "path": "all_neighbor_quality.csv",
+      "size": 1900,
+      "sha256": "30128f00715c75d27e9bab6ba02a91e581aede858e3b6e83c9cc89664562391d"
+    },
+    {
+      "path": "all_paired_deltas.csv",
+      "size": 20259,
+      "sha256": "c254135d57b1dc451ec8c9870fab9b2487b1ae822e81c1cc0703e755c1f3487f"
+    },
+    {
+      "path": "all_score_quality.csv",
+      "size": 4817,
+      "sha256": "d69de52b6ce4feed384aeda9be453f5f3827cee0269267526038cfec6c6669b8"
+    },
+    {
+      "path": "config.json",
+      "size": 1548,
+      "sha256": "8e8152b234bc2c0d9944750045ffba1764c56627cdf169eee3a1e1041c39e91c"
+    },
+    {
+      "path": "environment.txt",
+      "size": 676,
+      "sha256": "ad145b6aa58664722530bf588ac7c0b2e934bdb8e6e8d044db51072b08da1243"
+    },
+    {
+      "path": "previous_neighbor_quality.csv",
+      "size": 879,
+      "sha256": "696c6ce83bb40aa20194ef174a3a08446fecd6ecfc5a31219da3122137a949a4"
+    },
+    {
+      "path": "previous_score_quality.csv",
+      "size": 1679,
+      "sha256": "6541ce4b09d435208607a5918014dd67c725c7810cf70da1c96a78fd7463e2bc"
+    },
+    {
+      "path": "seed_42/benchmark.json",
+      "size": 93,
+      "sha256": "3cff5c11aa231930dd427d81becd126a9d9ed605bdab389ece9d2dc9f8237669"
+    },
+    {
+      "path": "seed_42/metrics.csv",
+      "size": 1118,
+      "sha256": "52a7fec7db3b87359b4d3fe602f4e57cafcee9029045621aa5d09051ae88810d"
+    },
+    {
+      "path": "seed_42/neighbor_quality.csv",
+      "size": 425,
+      "sha256": "10fb036606d3eea50e62326858ce83587a08cc94493870435c68b9833a5d1fae"
+    },
+    {
+      "path": "seed_42/paired_deltas.csv",
+      "size": 4124,
+      "sha256": "40e43f184e3cae2978d1ad1d6827aa0cfa75da6576307993b74f3aac18bdbabe"
+    },
+    {
+      "path": "seed_42/score_quality.csv",
+      "size": 1027,
+      "sha256": "cc1b8ad1f9c2700b566b28d4686439de27c2dd08a15209aaa214781b751fbcb3"
+    },
+    {
+      "path": "seed_42/status.json",
+      "size": 63,
+      "sha256": "c0f40712bd0952ee146a744f0e8953527c9f57515fd9a921b53c8786218b81a9"
+    },
+    {
+      "path": "seed_42/timings.csv",
+      "size": 309,
+      "sha256": "ed1934f847bae1f810059f6ea043dbc7c484ae1c7a23f03d9e933e7337dc6c24"
+    },
+    {
+      "path": "seed_43/benchmark.json",
+      "size": 93,
+      "sha256": "70b33cef4552380b11dee541c4a9a2846cb055ab2b90c8d736b2ac85ee9ba760"
+    },
+    {
+      "path": "seed_43/metrics.csv",
+      "size": 1122,
+      "sha256": "09c6741f0bec2f97bd9338c4f0225e8774dbda451b9c5306d851f772dcbf4f81"
+    },
+    {
+      "path": "seed_43/neighbor_quality.csv",
+      "size": 426,
+      "sha256": "8f27ad17f73bf0248da3ea93968e8d26ab98921c0aa2e130c48db08ae0e8311a"
+    },
+    {
+      "path": "seed_43/paired_deltas.csv",
+      "size": 4104,
+      "sha256": "2899ab9722e2463fd9b347a8cc85a2287d50632f1f170fd0a81424f531fb4cf3"
+    },
+    {
+      "path": "seed_43/score_quality.csv",
+      "size": 1032,
+      "sha256": "4d67ae9f9311b532eafc1d186f9ff88e04d1d059551bb3f273c297a1fa75e622"
+    },
+    {
+      "path": "seed_43/status.json",
+      "size": 63,
+      "sha256": "0f119c88666cdf374795ab4e278c762ad9cb669e6e8dd056928bf3afd6095a99"
+    },
+    {
+      "path": "seed_43/timings.csv",
+      "size": 308,
+      "sha256": "de0e836139213651c408180a211738be8ca60429ce7398b198fa1a3f3c9e1917"
+    },
+    {
+      "path": "seed_44/benchmark.json",
+      "size": 93,
+      "sha256": "5663f36d3cd5856736f1d1cb059d8cc9e6dd2081dec1d9c02c36c1196b1520c9"
+    },
+    {
+      "path": "seed_44/metrics.csv",
+      "size": 1123,
+      "sha256": "8fc97032169c36fb913e02532071b2f1739c31dc950e061e41c955f80c8aa1eb"
+    },
+    {
+      "path": "seed_44/neighbor_quality.csv",
+      "size": 426,
+      "sha256": "a879f8d249ace27ff092eeadcebf3f58b997ed4498a060400f16417b16046cc3"
+    },
+    {
+      "path": "seed_44/paired_deltas.csv",
+      "size": 4111,
+      "sha256": "02e4a5da974ac83263af8504647f5a097876017dfecae3b55e71a6fb0d10f3aa"
+    },
+    {
+      "path": "seed_44/score_quality.csv",
+      "size": 1027,
+      "sha256": "44da1e6404d1071bf101b3fe8d175246972bd3b13bdffb509471be5b2f2a2baa"
+    },
+    {
+      "path": "seed_44/status.json",
+      "size": 63,
+      "sha256": "ddb3b427887aa4095a669cb90cfc9dd6077f01c12f9959a0efa8370d1a1330a1"
+    },
+    {
+      "path": "seed_44/timings.csv",
+      "size": 306,
+      "sha256": "977d78c049eab70b361e78eeb90f05ebe49552c97cacd02bfaad8522c2d79c34"
+    },
+    {
+      "path": "seed_45/benchmark.json",
+      "size": 93,
+      "sha256": "959c02284fd48d633246d7e8cc03df15a7ed9baef28cbcd9402c3dee7e36a077"
+    },
+    {
+      "path": "seed_45/metrics.csv",
+      "size": 1117,
+      "sha256": "6d5a7d9ce0e6f7917f7b75b496d46969fa09811b40894cfcf2160c92f93de5d9"
+    },
+    {
+      "path": "seed_45/neighbor_quality.csv",
+      "size": 423,
+      "sha256": "9fc9cca28f48dc6dfcb48301f15abbbf6f781c075d4aa6e21c9a44e25668a275"
+    },
+    {
+      "path": "seed_45/paired_deltas.csv",
+      "size": 4103,
+      "sha256": "384be6fe9abd025c3a56a0017791b57e7e7428804f9ab877b7b7c47aaece4dbc"
+    },
+    {
+      "path": "seed_45/score_quality.csv",
+      "size": 1022,
+      "sha256": "78b16c7069b76146371c341e5b2b2a682e8830d8dd14044a5b2173bd350eb200"
+    },
+    {
+      "path": "seed_45/status.json",
+      "size": 63,
+      "sha256": "42fbb55e7ca9092c406a0e08670912f2ee52d9920b672b16c6f9fc008bff1724"
+    },
+    {
+      "path": "seed_45/timings.csv",
+      "size": 308,
+      "sha256": "2457a5cd19ef616f7badf0338cb700c3dd4c63fc14c5d6f6668f655112a36a8e"
+    },
+    {
+      "path": "seed_46/benchmark.json",
+      "size": 93,
+      "sha256": "c1fa6e10a6a355bab482a18cff35cc95c6c40be4658c84f7e38ec31e94cca369"
+    },
+    {
+      "path": "seed_46/metrics.csv",
+      "size": 1115,
+      "sha256": "29711ffa0a3cd2cda9fed0202f848b49610b3b49bbda4d48ee7a39ffe7892fbc"
+    },
+    {
+      "path": "seed_46/neighbor_quality.csv",
+      "size": 424,
+      "sha256": "04923dce945c425168dba615ce9bc9c5f39a9feaec29df50712ea8a452120b81"
+    },
+    {
+      "path": "seed_46/paired_deltas.csv",
+      "size": 4097,
+      "sha256": "1c591bf39c5109edc885482de640fc427f90e27b3863bfcb1772fadcd11820d9"
+    },
+    {
+      "path": "seed_46/score_quality.csv",
+      "size": 1021,
+      "sha256": "6f371282604a071f0a6dbd5f5a566cb75c78eb41bad33589f7da1935efe67360"
+    },
+    {
+      "path": "seed_46/status.json",
+      "size": 63,
+      "sha256": "dc972f25dd88b4571fb030ff670a91721487339772816bda728d4b23edcbf214"
+    },
+    {
+      "path": "seed_46/timings.csv",
+      "size": 312,
+      "sha256": "d9ffaaf3dfd786dc6e41d093fe2170344eb53083a76ae70d09f3a74da70d7ce8"
+    },
+    {
+      "path": "summary_deltas.csv",
+      "size": 2899,
+      "sha256": "e41b1a3dda6cf3c2a94dbdc503c982fe381cfd06ab7b2fe4523d9bcdbbd41758"
+    },
+    {
+      "path": "summary_metrics.csv",
+      "size": 2327,
+      "sha256": "12bface59ca1df7031b5e31691acbba0799ac68729325541484ef39e23169c6f"
+    }
+  ],
+  "limitation": "Historical exploratory run; Git commit at execution was not recorded. Full predictions remain local."
+}

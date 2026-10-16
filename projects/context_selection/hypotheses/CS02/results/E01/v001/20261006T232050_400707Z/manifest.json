@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS02",
+  "experiment": "E01",
+  "experiment_version": "v001",
+  "run_id": "20261006T232050_400707Z",
+  "result_revision": 1,
+  "status": "incomplete",
+  "summary": "Hillstrom run stopped before benchmark and metrics; only config/environment are snapshotted.",
+  "original_local_path": "hillstrom_pilot_local/20261006T232050_400707Z",
+  "code_git_commit": null,
+  "code_sha256": null,
+  "code_snapshot": null,
+  "files": [
+    {
+      "path": "config.json",
+      "size": 2249,
+      "sha256": "9c8f21c0bd4eabd3a2767a9fc9b512cd49cbe49a6182c930a97655adcca0798a"
+    },
+    {
+      "path": "environment.txt",
+      "size": 676,
+      "sha256": "ad145b6aa58664722530bf588ac7c0b2e934bdb8e6e8d044db51072b08da1243"
+    }
+  ],
+  "limitation": "Historical exploratory run; Git commit at execution was not recorded. Full predictions remain local."
+}

@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS03",
+  "experiment": "E01",
+  "experiment_version": "v001",
+  "run_id": "20261007T062843_026698Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Синтетический noisy-effect retrieval, пять независимых generated seeds.",
+  "original_local_path": "synthetic_retrieval_pilot/20261007T062843_026698Z",
+  "code_git_commit": null,
+  "code_sha256": "0ddf06683f3a908319366e25049081e048e18070c82f70e073cfda1ba8163753",
+  "code_snapshot": "projects/context_selection/source_snapshots/0ddf06683f3a908319366e25049081e048e18070c82f70e073cfda1ba8163753_synthetic_pilot.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 7698,
+      "sha256": "1978b153d429d5d8ccce7a0cb75aee59f5772178d7837778bbe35bfef1cd0213"
+    },
+    {
+      "path": "all_paired_deltas.csv",
+      "size": 55944,
+      "sha256": "80921a029fcbb8f5fdb72d145068418ed0eeae105353cde3295e042a74ab08c8"
+    },
+    {
+      "path": "config.json",
+      "size": 1509,
+      "sha256": "5dc986b7031bd62572d96a9d215fdcb2707293ff1cf4ce8e34889e4b223ac427"
+    },
+    {
+      "path": "dgp_source.txt",
+      "size": 1130,
+      "sha256": "e6bc3c0940014e0e4addd456f48b2e51737c1459708e9555650853c9e9268a08"
+    },
+    {
+      "path": "environment.txt",
+      "size": 676,
+      "sha256": "ad145b6aa58664722530bf588ac7c0b2e934bdb8e6e8d044db51072b08da1243"
+    },
+    {
+      "path": "seed_42/benchmark.json",
+      "size": 155,
+      "sha256": "d4c988d1d251224b189321a478f374098f1d32bc7728259b6773910dd6aafd6c"
+    },
+    {
+      "path": "seed_42/metrics.csv",
+      "size": 1591,
+      "sha256": "2e420155eb7835f1a22dbcbb3714e0e15e7d507c59fe9c63d76045f0262838de"
+    },
+    {
+      "path": "seed_42/paired_deltas.csv",
+      "size": 11284,
+      "sha256": "b8c4e74cc3dc1d9934bb85eea85dc91a0972a404938cbd6d820d2a4778abe454"
+    },
+    {
+      "path": "seed_42/score_quality.csv",
+      "size": 232,
+      "sha256": "018ce35ef9c3a3798a6ebf787828abd8f8ff9e7dee2995b10718d22e16357c4c"
+    },
+    {
+      "path": "seed_42/status.json",
+      "size": 174,
+      "sha256": "b4696acf3d48e9c5c7123b445c9efb1cdb53bdb9e4ebdf0595d83d6535db8f76"
+    },
+    {
+      "path": "seed_42/timings.csv",
+      "size": 845,
+      "sha256": "381141601223e2b998e5181d540ec731885e84ee2ddecb82650f490f0e45d5cb"
+    },
+    {
+      "path": "seed_43/benchmark.json",
+      "size": 154,
+      "sha256": "47b09d0910fe8bbbcb126fd9378dc45a3befca593abcc99d5b45568d556a37e8"
+    },
+    {
+      "path": "seed_43/metrics.csv",
+      "size": 1597,
+      "sha256": "7aea6ce1c291ec986a02af14c9a79d63f991897bffdf250859b95a0e0fd4ac26"
+    },
+    {
+      "path": "seed_43/paired_deltas.csv",
+      "size": 11250,
+      "sha256": "c27572af277003f2e830f1a5e4e67588698797aeb613dab5ade7933497549053"
+    },
+    {
+      "path": "seed_43/score_quality.csv",
+      "size": 232,
+      "sha256": "061fa3463f88ed6008e707c538ebc130e8000c6c54853a7ffc1bf154a07e694b"
+    },
+    {
+      "path": "seed_43/status.json",
+      "size": 174,
+      "sha256": "fd87b5d445a05a1509a9b66a36000762441ffa6145124389784a287c7549a1d7"
+    },
+    {
+      "path": "seed_43/timings.csv",
+      "size": 843,
+      "sha256": "8e8036b4a52abe36738dc8327eac8a6abbf3eb19c5c7b2e58af46bbaa6b11c3d"
+    },
+    {
+      "path": "seed_44/benchmark.json",
+      "size": 153,
+      "sha256": "29f3f5e58115aa82c262c3e029ab2b3c0999d6d3a54ce0f7ea18e89a3f5be8b4"
+    },
+    {
+      "path": "seed_44/metrics.csv",
+      "size": 1599,
+      "sha256": "cf7b1656090e7872bc2282bb32106989f430630de054637c76a9236c4600eee4"
+    },
+    {
+      "path": "seed_44/paired_deltas.csv",
+      "size": 11254,
+      "sha256": "e94efbf44fca2e8833655c9169989f9488d74d978a13c10461b5293055a68b35"
+    },
+    {
+      "path": "seed_44/score_quality.csv",
+      "size": 231,
+      "sha256": "06ea998a4531e22b722f08edafb1f95de1e2b817fba00e1dab54e2255d2ae745"
+    },
+    {
+      "path": "seed_44/status.json",
+      "size": 174,
+      "sha256": "058ef3b92b4f163d75b1eb2ef3d2bc227449a1ef4eeecac1a48bc1fd4d43c611"
+    },
+    {
+      "path": "seed_44/timings.csv",
+      "size": 836,
+      "sha256": "6e374daa9a240c20e8bd5e5c33524a22e8f325a32ee941d158b8a2414da836b8"
+    },
+    {
+      "path": "seed_45/benchmark.json",
+      "size": 154,
+      "sha256": "df3391af3e86ab3d8374bfa4e8cac730ef019018517a2220a34c7d3ca5729ea2"
+    },
+    {
+      "path": "seed_45/metrics.csv",
+      "size": 1576,
+      "sha256": "cf3744563cf08ecf0af3353963f1950f61235ce4ce5adb04a38ded9668ec4540"
+    },
+    {
+      "path": "seed_45/paired_deltas.csv",
+      "size": 11248,
+      "sha256": "1d3d330d20a884b5c7cca05d30a1cd977cac797188c5f44c029d5cd90f9b814c"
+    },
+    {
+      "path": "seed_45/score_quality.csv",
+      "size": 229,
+      "sha256": "cd4ae014b85b73fff457ad4650f283375b4c5993cceb8aa00a57acbee676e54e"
+    },
+    {
+      "path": "seed_45/status.json",
+      "size": 174,
+      "sha256": "ec0a965997465e507168785c8018f3766d1ecc1ad75ee8e9bad6f2d232650e51"
+    },
+    {
+      "path": "seed_45/timings.csv",
+      "size": 850,
+      "sha256": "6e38e12812a4262c7caa3fc7271c59232090c391e8793d255282e8ec37dcdbe5"
+    },
+    {
+      "path": "seed_46/benchmark.json",
+      "size": 155,
+      "sha256": "7967469b5a929eb63dd9a38bad95dc8a5293ba0c59e6ee320d72727e423afcb2"
+    },
+    {
+      "path": "seed_46/metrics.csv",
+      "size": 1595,
+      "sha256": "bc38a2789e6bd925e83273febd1189ba50b4b9b1abc3514cfa229e96775d8d29"
+    },
+    {
+      "path": "seed_46/paired_deltas.csv",
+      "size": 11256,
+      "sha256": "66e10cfe951835e744caa5006fcc7e22e94388b749ac654d844a840de6ec2f3b"
+    },
+    {
+      "path": "seed_46/score_quality.csv",
+      "size": 230,
+      "sha256": "182b5fba8317c5cc4574e830fd30623c93f6c2c1063d5f1eceb3f6b3d463e196"
+    },
+    {
+      "path": "seed_46/status.json",
+      "size": 173,
+      "sha256": "877c442a84bc66dca96bb9be6ce35f5f7ff794fd33039c498af038ced3b6a624"
+    },
+    {
+      "path": "seed_46/timings.csv",
+      "size": 845,
+      "sha256": "b7f45e9003c78650b87af92912be28744f42fc0c9e29804640bdf34928cc38f4"
+    },
+    {
+      "path": "summary_deltas.csv",
+      "size": 7555,
+      "sha256": "8f819cd27a0da68b47eb37eec44d14128d3348f5d5812227ca7603c162f71356"
+    },
+    {
+      "path": "summary_metrics.csv",
+      "size": 3220,
+      "sha256": "0a903fc998e60ad01dc31312a61f76f815cc3ad360405844ff7731bf32a5279c"
+    },
+    {
+      "path": "weak_source.txt",
+      "size": 1401,
+      "sha256": "6c3cfb0a6d4bec7bb562e4b33cb550a829ef462f009ae6f5ce0e9f1b4de25394"
+    }
+  ],
+  "limitation": "Historical exploratory run; Git commit at execution was not recorded. Full predictions remain local."
+}

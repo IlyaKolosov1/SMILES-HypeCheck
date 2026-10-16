@@ -1,0 +1,47 @@
+{
+  "run": true,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_train": 8192,
+  "n_eval": 4096,
+  "context": 512,
+  "batch": 2,
+  "threads": 4,
+  "bootstrap": 500,
+  "offline": true,
+  "revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "previous": "synthetic_retrieval_pilot/20261007T062843_026698Z",
+  "out_dir": "selector_abc_results",
+  "device": "cpu",
+  "dgp": "three_groups_v1",
+  "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+  "script_sha256": "2d0972ac07767638cb2938058606cf3a76c5bc984b2e7dfc1d24f8f3edf2a14e",
+  "helper_sha256": "0ddf06683f3a908319366e25049081e048e18070c82f70e073cfda1ba8163753",
+  "primary_contrasts": [
+    "pfn_out - pfn_in",
+    "PFN_added_error_out_minus_in"
+  ],
+  "primary_metrics": [
+    "cate_rmse",
+    "regret10_pp"
+  ],
+  "versions": {
+    "torch": "2.3.1",
+    "causalpfn": "0.1.5",
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scikit-learn": "1.5.2"
+  },
+  "caveats": [
+    "A and B are independent equal-size samples. C is never used to train or tune.",
+    "Out pipeline accesses labels A+B, in pipeline labels B: this is a diagnostic, NOT an equal-total-data deployment benchmark.",
+    "Different selector fits can differ in quality. Difference-in-differences describes added error, not a complete causal decomposition.",
+    "One DGP and one random context seed per replication; bootstrap intervals conditional, exploratory and unadjusted.",
+    "Timing excludes shared model load, preprocessing and diagnostic computations."
+  ]
+}

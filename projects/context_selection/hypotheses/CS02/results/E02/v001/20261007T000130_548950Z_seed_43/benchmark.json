@@ -1,0 +1,10 @@
+{
+  "device": "cpu",
+  "batch": 2,
+  "seconds_per_batch": [
+    0.0673191669920925,
+    0.06616324999777135,
+    0.0659056669974234
+  ],
+  "estimated_inference_minutes": 11.291861332952976
+}
