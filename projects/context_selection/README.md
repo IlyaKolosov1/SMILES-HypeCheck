@@ -4,7 +4,7 @@
 
 | Гипотеза | Эксперименты и статус |
 | --- | --- |
-| [CS01: selector против random](hypotheses/CS01/README.md) | Cross-dataset E01: legacy, cross-fit один split, cross-fit пять folds; разведочные результаты |
+| [CS01: selector против random](hypotheses/CS01/README.md) | Cross-dataset E01: legacy и cross-fit пилоты; E02: завершённая разведочная проверка на новых seeds |
 | [CS02: устойчивость на Hillstrom](hypotheses/CS02/README.md) | Локальный пилот, пять seeds и sweep размера контекста; есть неполные запуски |
 | [CS03: качество effect-score selector](hypotheses/CS03/README.md) | Две синтетические серии с известным CATE; разведочные результаты |
 

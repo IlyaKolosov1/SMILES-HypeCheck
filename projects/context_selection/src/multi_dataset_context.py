@@ -604,7 +604,9 @@ def main():
             torch_version=torch.__version__))
 
     all_metrics, all_contrasts, failures = [], [], []
-    for name in args.datasets:
+    for dataset_number, name in enumerate(tqdm(args.datasets, desc="Datasets",
+                                                unit="dataset"), start=1):
+        print(f"Dataset {dataset_number}/{len(args.datasets)}: {name}", flush=True)
         try:
             x, t, y, ids, groups, info = load_dataset(name, args)
             dataset_dir = output / name

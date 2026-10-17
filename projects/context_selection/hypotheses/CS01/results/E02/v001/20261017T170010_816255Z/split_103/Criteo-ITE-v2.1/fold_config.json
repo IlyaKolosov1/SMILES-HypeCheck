@@ -1,0 +1,65 @@
+{
+  "dataset": "Criteo-ITE-v2.1",
+  "source_rows": 13979592,
+  "loaded_rows": 100000,
+  "outcome_source": "visit",
+  "outcome_benefit": "visit",
+  "feature_columns": [
+    "f0",
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f8",
+    "f9",
+    "f11"
+  ],
+  "omitted_columns": [],
+  "treatment_counts": {
+    "0": 14890,
+    "1": 85110
+  },
+  "benefit_counts": {
+    "0": 95335,
+    "1": 4665
+  },
+  "group_safe_split": true,
+  "feature_sha256": "a172c0c811c0f53826c797dc504bd47e7a2c58baa3b4390b6a4dd792d31d9464",
+  "outcome_sha256": "dd864b66d2307132cecce7f5b39e7841ede3377d3313a875c6cffcdfb6abfa61",
+  "fold": 0,
+  "train_rows": 51200,
+  "eval_rows": 4096,
+  "transformed": {
+    "raw_dim": 10,
+    "transformed_dim": 10,
+    "svd_components": null
+  },
+  "train_cells": {
+    "0": {
+      "0": 7353,
+      "1": 41494
+    },
+    "1": {
+      "0": 266,
+      "1": 2087
+    }
+  },
+  "eval_cells": {
+    "0": {
+      "0": 585,
+      "1": 3309
+    },
+    "1": {
+      "0": 27,
+      "1": 175
+    }
+  },
+  "effect_score_mode": "crossfit",
+  "nuisance_folds": 5,
+  "nuisance_seed_effective": 42,
+  "nuisance_seconds": 24.4395236249984,
+  "effect_train_unique": 10814,
+  "effect_eval_unique": 1976
+}

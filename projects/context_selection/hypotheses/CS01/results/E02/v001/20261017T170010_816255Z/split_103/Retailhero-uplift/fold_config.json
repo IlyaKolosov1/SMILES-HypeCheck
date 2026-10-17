@@ -1,0 +1,60 @@
+{
+  "dataset": "Retailhero-uplift",
+  "source_rows": 200039,
+  "loaded_rows": 200039,
+  "outcome_source": "Y",
+  "outcome_benefit": "Y",
+  "feature_columns": [
+    "gender_M",
+    "gender_F",
+    "gender_U",
+    "age",
+    "first_issue_time"
+  ],
+  "omitted_columns": [],
+  "treatment_counts": {
+    "0": 100058,
+    "1": 99981
+  },
+  "benefit_counts": {
+    "0": 76037,
+    "1": 124002
+  },
+  "group_safe_split": false,
+  "feature_sha256": "282afce143e09463ec0f422a43fd9fe9534cd056059b34bd53e494a9f183ef8c",
+  "outcome_sha256": "a2bed96d3738b5904b4f5b974f85d542805c19aed36f4068b8aac5418e21b1e0",
+  "fold": 0,
+  "train_rows": 51200,
+  "eval_rows": 4096,
+  "transformed": {
+    "raw_dim": 5,
+    "transformed_dim": 5,
+    "svd_components": null
+  },
+  "train_cells": {
+    "0": {
+      "0": 10160,
+      "1": 9302
+    },
+    "1": {
+      "0": 15450,
+      "1": 16288
+    }
+  },
+  "eval_cells": {
+    "0": {
+      "0": 813,
+      "1": 744
+    },
+    "1": {
+      "0": 1236,
+      "1": 1303
+    }
+  },
+  "effect_score_mode": "crossfit",
+  "nuisance_folds": 5,
+  "nuisance_seed_effective": 42,
+  "nuisance_seconds": 17.168981749999148,
+  "effect_train_unique": 18098,
+  "effect_eval_unique": 3627
+}

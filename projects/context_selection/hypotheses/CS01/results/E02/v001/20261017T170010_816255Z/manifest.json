@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS01",
+  "experiment": "E02",
+  "experiment_version": "v001",
+  "run_id": "20261017T170010_816255Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Three pre-specified split/context seed checks across four datasets.",
+  "original_local_paths": {
+    "101": "artifacts/local/cs01_e02_results/split_101/20261017T133338_102637Z",
+    "102": "artifacts/local/cs01_e02_results/split_102/20261017T133352_201103Z",
+    "103": "artifacts/local/cs01_e02_results/split_103/20261017T133402_828097Z"
+  },
+  "code_git_commit": "032ae7c691134caf87093dc0cf1fe2cdd4ea1243",
+  "code_sha256": "c91fc1642c60efab60ddc210d500887e83fc47283a01adc96d7b481e74e8defa",
+  "packaging_script_sha256": "e4b11bf72ebbcc6ab10eff1bdc08a080ea27ca7e5fa4a9f41a297b37e3e1f4e0",
+  "code_snapshot": "projects/context_selection/hypotheses/CS01/results/E02/v001/20261017T170010_816255Z/code/multi_dataset_context.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 16786,
+      "sha256": "0629ca4635d8d5504cefee1e255c63bdf4e7385fbbeb55a6e131ee5fc25b270d"
+    },
+    {
+      "path": "all_paired_deltas.csv",
+      "size": 68324,
+      "sha256": "8aa225ef3ae79d8023c7d3417f532793120ab13a7537cb55633218402e505da1"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35449,
+      "sha256": "c91fc1642c60efab60ddc210d500887e83fc47283a01adc96d7b481e74e8defa"
+    },
+    {
+      "path": "code/package_cs01_e02.py",
+      "size": 19347,
+      "sha256": "e4b11bf72ebbcc6ab10eff1bdc08a080ea27ca7e5fa4a9f41a297b37e3e1f4e0"
+    },
+    {
+      "path": "dataset_summary.csv",
+      "size": 1259,
+      "sha256": "c1a03ee8afa1d5fa2bef8eea50152401b1552f56deedf669e6ce0e13c069989b"
+    },
+    {
+      "path": "selector_effects.csv",
+      "size": 6333,
+      "sha256": "6f32dde9648b0b1d3e3b9ec20198cea0d0d9e5a4d3d74ca01cfb1f7cfe1f589d"
+    },
+    {
+      "path": "source_files.csv",
+      "size": 19748,
+      "sha256": "df93a650b7e8423189f89eef43c5a608ac993aac07c3e0655c44a220a0766c49"
+    },
+    {
+      "path": "split_101/Criteo-ITE-v2.1/data_audit.json",
+      "size": 619,
+      "sha256": "ee6fc7ecba078a6bc4d93b24d8836c5f967057059c1ea163bc1b60898bbdb2c5"
+    },
+    {
+      "path": "split_101/Criteo-ITE-v2.1/fold_config.json",
+      "size": 1210,
+      "sha256": "649daa3c0af0db7f45d4ed1821a53f0326defe0ab0c5bc437d0c9e9091275eaa"
+    },
+    {
+      "path": "split_101/Hillstrom/data_audit.json",
+      "size": 633,
+      "sha256": "b4bbff74a621f62eb8c083cc9592fe34ce96e4a497ac621e8031232076ef81be"
+    },
+    {
+      "path": "split_101/Hillstrom/fold_config.json",
+      "size": 1230,
+      "sha256": "fed584e7641cf4d8f1f1ec6e126cca85b53f7cde9834dd650bba5743d8993112"
+    },
+    {
+      "path": "split_101/LZD/data_audit.json",
+      "size": 1191,
+      "sha256": "fbb6c7c1662c07f038b3ec69aa2aa87162c754cd614830dad790174be054a83f"
+    },
+    {
+      "path": "split_101/LZD/fold_config.json",
+      "size": 1785,
+      "sha256": "6093b15bbba2e9822f2c7859b15e528cb8b3974f0139b7364ce2065c2f2bef28"
+    },
+    {
+      "path": "split_101/Retailhero-uplift/data_audit.json",
+      "size": 597,
+      "sha256": "5bfebc45604f3d52c242b072ea07c456934f3f4cda310cec4e6d553ac0eb9a0b"
+    },
+    {
+      "path": "split_101/Retailhero-uplift/fold_config.json",
+      "size": 1194,
+      "sha256": "a65b9308cc25515354cd00d88a3f114e64695031386a98fe657b6ede93ae5dce"
+    },
+    {
+      "path": "split_101/all_metrics.csv",
+      "size": 5543,
+      "sha256": "04c654f0e583ca46fd01a7adaf454be9cf706ca8ea59163b3b64018c12162358"
+    },
+    {
+      "path": "split_101/all_paired_deltas.csv",
+      "size": 21781,
+      "sha256": "517a0fd2eecbff635e4feb513e64131b73e9307970127b45448f7340285a274d"
+    },
+    {
+      "path": "split_101/failures.json",
+      "size": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "split_101/model.json",
+      "size": 216,
+      "sha256": "74dc1ccbd09a3691b23273ee001f45cd44ded0599e7766bedbe49916acb83d7c"
+    },
+    {
+      "path": "split_101/protocol.json",
+      "size": 1151,
+      "sha256": "e0c19bcefac90b3936c2cd75ddc68c73758e7452cb84cf8ded1509ebb1e37a3f"
+    },
+    {
+      "path": "split_101/selector_effects.csv",
+      "size": 2002,
+      "sha256": "c157788a1dac25d621a4925f68a278b47affd0a4881db6f8d0085e02dab781a7"
+    },
+    {
+      "path": "split_101/selector_effects_summary.csv",
+      "size": 3120,
+      "sha256": "1d1c610f19cb38b0ea1f6a64a8c577a796273d3a099123644b1125cb1d8c2eaf"
+    },
+    {
+      "path": "split_101/summary.csv",
+      "size": 4221,
+      "sha256": "c98e705691ef94ea1fe7521c42a7694ec82eba95d4a30b272aead3c1b772ffff"
+    },
+    {
+      "path": "split_102/Criteo-ITE-v2.1/data_audit.json",
+      "size": 619,
+      "sha256": "b8d98c4ba1ab7126bacc982a51500cfe3adf8a40e3d37b15f20257682379f852"
+    },
+    {
+      "path": "split_102/Criteo-ITE-v2.1/fold_config.json",
+      "size": 1212,
+      "sha256": "505434245758150bdca9b59504fac70c311afc5ab1877d622e703fb199f06b80"
+    },
+    {
+      "path": "split_102/Hillstrom/data_audit.json",
+      "size": 633,
+      "sha256": "b4bbff74a621f62eb8c083cc9592fe34ce96e4a497ac621e8031232076ef81be"
+    },
+    {
+      "path": "split_102/Hillstrom/fold_config.json",
+      "size": 1230,
+      "sha256": "fbfad5d1729a099da40ecf390f359d2678b5e8fb857f90bf9c261cc2f1a542dd"
+    },
+    {
+      "path": "split_102/LZD/data_audit.json",
+      "size": 1191,
+      "sha256": "fbb6c7c1662c07f038b3ec69aa2aa87162c754cd614830dad790174be054a83f"
+    },
+    {
+      "path": "split_102/LZD/fold_config.json",
+      "size": 1785,
+      "sha256": "390c045de73079e8579aeb5ac5aea76281b90e84a12b23886db573f26a6e35f5"
+    },
+    {
+      "path": "split_102/Retailhero-uplift/data_audit.json",
+      "size": 597,
+      "sha256": "5bfebc45604f3d52c242b072ea07c456934f3f4cda310cec4e6d553ac0eb9a0b"
+    },
+    {
+      "path": "split_102/Retailhero-uplift/fold_config.json",
+      "size": 1194,
+      "sha256": "abb036affd928133a332e35a71f3fdd518adc104eaa68a0dacddb7dfdf3538db"
+    },
+    {
+      "path": "split_102/all_metrics.csv",
+      "size": 5505,
+      "sha256": "2bd3d0a7e82c5c9a6f7343539f45a20354be9ff1565c65846881a6c245d49cb2"
+    },
+    {
+      "path": "split_102/all_paired_deltas.csv",
+      "size": 21735,
+      "sha256": "850df2dfffa19760c12e2bb6ca3293fa0a468ac39337bf19d6765ad6080a3c99"
+    },
+    {
+      "path": "split_102/failures.json",
+      "size": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "split_102/model.json",
+      "size": 216,
+      "sha256": "74dc1ccbd09a3691b23273ee001f45cd44ded0599e7766bedbe49916acb83d7c"
+    },
+    {
+      "path": "split_102/protocol.json",
+      "size": 1151,
+      "sha256": "a998241f68defca6ac49de17fd086311047bca8009a9d16da91f981a592e7e42"
+    },
+    {
+      "path": "split_102/selector_effects.csv",
+      "size": 1999,
+      "sha256": "dc1eacd32552f09f311670c52718cbdc2a9866a680a65df8b965312cf67acdfb"
+    },
+    {
+      "path": "split_102/selector_effects_summary.csv",
+      "size": 3117,
+      "sha256": "4221da5864ecc94f3d9c565929061cdd9241d98709e0f4f4cae2103b24bbee09"
+    },
+    {
+      "path": "split_102/summary.csv",
+      "size": 4202,
+      "sha256": "9b469be250e7fa6cc08231ad52f079d15ef54f4814e8e9bf5a02679e222386f9"
+    },
+    {
+      "path": "split_103/Criteo-ITE-v2.1/data_audit.json",
+      "size": 619,
+      "sha256": "0cbb14d8006086688ae75217bb6c84a61547af7d465ffbeba7c9c46e869ed57b"
+    },
+    {
+      "path": "split_103/Criteo-ITE-v2.1/fold_config.json",
+      "size": 1211,
+      "sha256": "08a8a53a5174e24b0976a642f92b6e7e58d89b292b792739e6ab21b8c4138f4b"
+    },
+    {
+      "path": "split_103/Hillstrom/data_audit.json",
+      "size": 633,
+      "sha256": "b4bbff74a621f62eb8c083cc9592fe34ce96e4a497ac621e8031232076ef81be"
+    },
+    {
+      "path": "split_103/Hillstrom/fold_config.json",
+      "size": 1230,
+      "sha256": "c9ec5f258b66a8216346a8303bf57d8c0051d915886af140d966a3495a9a36a6"
+    },
+    {
+      "path": "split_103/LZD/data_audit.json",
+      "size": 1191,
+      "sha256": "fbb6c7c1662c07f038b3ec69aa2aa87162c754cd614830dad790174be054a83f"
+    },
+    {
+      "path": "split_103/LZD/fold_config.json",
+      "size": 1785,
+      "sha256": "8b4a60c05f12cf078c13596c39e36503b68c09929e08b712faf87133dc4f24ac"
+    },
+    {
+      "path": "split_103/Retailhero-uplift/data_audit.json",
+      "size": 597,
+      "sha256": "5bfebc45604f3d52c242b072ea07c456934f3f4cda310cec4e6d553ac0eb9a0b"
+    },
+    {
+      "path": "split_103/Retailhero-uplift/fold_config.json",
+      "size": 1194,
+      "sha256": "737ff31bb89fa5f8b822bd86cb0ab7ec66e748e8fc89a0f166cc0fb518ac50d7"
+    },
+    {
+      "path": "split_103/all_metrics.csv",
+      "size": 5573,
+      "sha256": "96efe79a8d07b1b956dd0a9af0b2e7c4a7f96fa7082041b818fe0ba3af1fdc14"
+    },
+    {
+      "path": "split_103/all_paired_deltas.csv",
+      "size": 21738,
+      "sha256": "202a8234242a8c1360a05e6cfe1ed8c7311e88ff08850a92506c2a08ef852db6"
+    },
+    {
+      "path": "split_103/failures.json",
+      "size": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "split_103/model.json",
+      "size": 216,
+      "sha256": "74dc1ccbd09a3691b23273ee001f45cd44ded0599e7766bedbe49916acb83d7c"
+    },
+    {
+      "path": "split_103/protocol.json",
+      "size": 1151,
+      "sha256": "7050e26232f19275b1880ad8e6e177ffa87718a3b23ea1c9a51147c2010710d2"
+    },
+    {
+      "path": "split_103/selector_effects.csv",
+      "size": 1996,
+      "sha256": "da69c25139c6adae6a18b7e991e1c52c4c34d585fc60339b0a8f2635915df978"
+    },
+    {
+      "path": "split_103/selector_effects_summary.csv",
+      "size": 3096,
+      "sha256": "5c18c4b818fa94c1ceb14174165240b1e881c5f25cd39ffc9ad23685d0a463c0"
+    },
+    {
+      "path": "split_103/summary.csv",
+      "size": 4261,
+      "sha256": "8ee3d978aea28be545956b8644cd3a3fdb703b2de449cc1a69886d9c6afca65b"
+    },
+    {
+      "path": "split_contrasts.csv",
+      "size": 4401,
+      "sha256": "4ce3b533cd2387c0f37606b471891f9245ffa4c4e0d02aab56adc6a0cf1fa52d"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 1380,
+      "sha256": "eb93381d32b981c8ef6e0150931ee34c4d52a02928c10817c24b114f50e025de"
+    }
+  ],
+  "limitation": "Shared source datasets, conditional bootstrap; Criteo source sample and split change together. No overall significance claim.",
+  "code_git_commit_role": "base commit at packaging; exact runner in code_snapshot"
+}

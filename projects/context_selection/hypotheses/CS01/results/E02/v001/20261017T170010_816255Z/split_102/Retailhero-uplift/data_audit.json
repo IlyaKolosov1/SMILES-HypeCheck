@@ -1,0 +1,26 @@
+{
+  "dataset": "Retailhero-uplift",
+  "source_rows": 200039,
+  "loaded_rows": 200039,
+  "outcome_source": "Y",
+  "outcome_benefit": "Y",
+  "feature_columns": [
+    "gender_M",
+    "gender_F",
+    "gender_U",
+    "age",
+    "first_issue_time"
+  ],
+  "omitted_columns": [],
+  "treatment_counts": {
+    "0": 100058,
+    "1": 99981
+  },
+  "benefit_counts": {
+    "0": 76037,
+    "1": 124002
+  },
+  "group_safe_split": false,
+  "feature_sha256": "282afce143e09463ec0f422a43fd9fe9534cd056059b34bd53e494a9f183ef8c",
+  "outcome_sha256": "a2bed96d3738b5904b4f5b974f85d542805c19aed36f4068b8aac5418e21b1e0"
+}

@@ -1,0 +1,45 @@
+{
+  "data_root": "/Users/ilya-kolosov/Developer/Projects/SMILE_HypeCheck/artifacts/local/data_A_cleaned",
+  "datasets": [
+    "Hillstrom",
+    "Retailhero-uplift",
+    "LZD",
+    "Criteo-ITE-v2.1"
+  ],
+  "out_dir": "/Users/ilya-kolosov/Developer/Projects/SMILE_HypeCheck/artifacts/local/cs01_e02_results/split_101",
+  "audit": false,
+  "run": true,
+  "device": "cpu",
+  "batch": 2,
+  "threads": 4,
+  "split_seed": 101,
+  "folds": 1,
+  "context_sizes": [
+    512
+  ],
+  "context_seeds": [
+    201,
+    202,
+    203
+  ],
+  "train_max": 51200,
+  "eval_max": 4096,
+  "criteo_sample_max": 100000,
+  "criteo_sample_seed": 301,
+  "bootstrap": 500,
+  "effect_score_mode": "crossfit",
+  "nuisance_folds": 5,
+  "nuisance_seed": 42,
+  "revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "script_sha256": "c91fc1642c60efab60ddc210d500887e83fc47283a01adc96d7b481e74e8defa",
+  "versions": {
+    "causalpfn": "0.1.5",
+    "scikit-uplift": "0.5.1",
+    "scikit-learn": "1.5.2",
+    "torch": "2.3.1",
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "pyarrow": "19.0.1"
+  },
+  "interpretation": "screening; bootstrap conditional on fitted models and contexts"
+}

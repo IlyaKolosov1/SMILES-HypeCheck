@@ -1,0 +1,63 @@
+{
+  "dataset": "Hillstrom",
+  "source_rows": 64000,
+  "loaded_rows": 64000,
+  "outcome_source": "visit",
+  "outcome_benefit": "visit",
+  "feature_columns": [
+    "recency",
+    "history_segment",
+    "history",
+    "mens",
+    "womens",
+    "zip_code",
+    "newbie",
+    "channel"
+  ],
+  "omitted_columns": [],
+  "treatment_counts": {
+    "0": 21306,
+    "1": 42694
+  },
+  "benefit_counts": {
+    "0": 54606,
+    "1": 9394
+  },
+  "group_safe_split": false,
+  "feature_sha256": "d6b4b51b8205a6e407b5d8d3ecb2600fec99567280a7d27aa3f6e1d5053d10c1",
+  "outcome_sha256": "cdeb911fb727d5840d9f54771961a34849062411fed7af839629ce46aa9175e4",
+  "fold": 0,
+  "train_rows": 51200,
+  "eval_rows": 4096,
+  "transformed": {
+    "raw_dim": 8,
+    "transformed_dim": 18,
+    "svd_components": null
+  },
+  "train_cells": {
+    "0": {
+      "0": 15235,
+      "1": 28449
+    },
+    "1": {
+      "0": 1810,
+      "1": 5706
+    }
+  },
+  "eval_cells": {
+    "0": {
+      "0": 1219,
+      "1": 2276
+    },
+    "1": {
+      "0": 145,
+      "1": 456
+    }
+  },
+  "effect_score_mode": "crossfit",
+  "nuisance_folds": 5,
+  "nuisance_seed_effective": 42,
+  "nuisance_seconds": 19.160006333000638,
+  "effect_train_unique": 36850,
+  "effect_eval_unique": 3714
+}

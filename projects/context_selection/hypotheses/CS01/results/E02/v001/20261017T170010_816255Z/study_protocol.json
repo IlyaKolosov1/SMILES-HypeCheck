@@ -1,0 +1,37 @@
+{
+  "experiment": "CS01/E02/v001",
+  "split_to_criteo_sample": {
+    "101": 301,
+    "102": 302,
+    "103": 303
+  },
+  "context_seeds": [
+    201,
+    202,
+    203
+  ],
+  "datasets": [
+    "Hillstrom",
+    "Retailhero-uplift",
+    "LZD",
+    "Criteo-ITE-v2.1"
+  ],
+  "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+  "runner_sha256": "c91fc1642c60efab60ddc210d500887e83fc47283a01adc96d7b481e74e8defa",
+  "packaging_script_sha256": "e4b11bf72ebbcc6ab10eff1bdc08a080ea27ca7e5fa4a9f41a297b37e3e1f4e0",
+  "source_runs": {
+    "101": "artifacts/local/cs01_e02_results/split_101/20261017T133338_102637Z",
+    "102": "artifacts/local/cs01_e02_results/split_102/20261017T133352_201103Z",
+    "103": "artifacts/local/cs01_e02_results/split_103/20261017T133402_828097Z"
+  },
+  "primary_contrast": "feature_knn - mean(random_query_s201/s202/s203)",
+  "primary_metric": "normalized_qini_auc (Q-hat)",
+  "descriptive_rule": "mean delta > 0 and at least 2/3 positive splits on at least 3/4 datasets",
+  "supported_datasets": 3,
+  "criterion_met": true,
+  "base_git_commit_at_packaging": "032ae7c691134caf87093dc0cf1fe2cdd4ea1243",
+  "runner_matches_base_commit": false,
+  "runner_snapshot": "code/multi_dataset_context.py",
+  "packaging_script_snapshot": "code/package_cs01_e02.py"
+}
