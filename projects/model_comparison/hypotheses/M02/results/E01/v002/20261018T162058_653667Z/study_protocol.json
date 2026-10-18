@@ -1,0 +1,38 @@
+{
+  "experiment": "M02/E01/v002",
+  "run_id": "20261018T162058_653667Z",
+  "datasets": [
+    "Hillstrom",
+    "Retailhero-uplift",
+    "LZD",
+    "Criteo-ITE-v2.1"
+  ],
+  "split_seeds": [
+    101,
+    102,
+    103
+  ],
+  "source_snapshots": [
+    "projects/context_selection/hypotheses/CS01/results/E02/v001/20261017T170010_816255Z",
+    "projects/model_comparison/hypotheses/M01/results/E02/v001/20261018T160846_900882Z"
+  ],
+  "fm": "feature_knn_K512",
+  "classic": [
+    "s_learner",
+    "t_learner",
+    "x_learner"
+  ],
+  "alpha": 0.5,
+  "normalization": "average percentile rank within each eval batch",
+  "bootstrap_draws": 500,
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scipy": "1.17.1",
+    "scikit-uplift": "0.5.1"
+  },
+  "interpretation": "exploratory reuse of viewed eval predictions",
+  "code_git_commit": "df146c120278e66191790665684d7051188df9f1",
+  "code_dirty": false,
+  "code_sha256": "d6bc394c7ffe686965e5af3c2400f3306bef1d4d4c9fff0c87e5a27ea678d1f0"
+}
