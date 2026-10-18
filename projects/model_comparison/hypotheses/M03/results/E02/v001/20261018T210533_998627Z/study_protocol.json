@@ -1,0 +1,57 @@
+{
+  "experiment": "M03/E02/v001",
+  "run_id": "20261018T210533_998627Z",
+  "source_snapshot": "projects/context_selection/hypotheses/CS01/results/E03/v001/20261018T201230_193386Z",
+  "source_scores_reused": true,
+  "sample_seeds": [
+    401,
+    402,
+    403
+  ],
+  "split_seeds": {
+    "401": 111,
+    "402": 112,
+    "403": 113
+  },
+  "context_seeds": [
+    201,
+    202,
+    203
+  ],
+  "fm_feature": "feature_knn_K512",
+  "fm_random": [
+    "random_query_s201_K512",
+    "random_query_s202_K512",
+    "random_query_s203_K512"
+  ],
+  "classic": "x_learner",
+  "blend_weight": 0.5,
+  "rank_method": "average",
+  "bootstrap_draws": 500,
+  "bootstrap_seeds": {
+    "401": 5401,
+    "402": 5402,
+    "403": 5403
+  },
+  "interpretation": "exploratory reuse of E03 viewed eval outcomes",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scipy": "1.17.1",
+    "scikit-uplift": "0.5.1"
+  },
+  "source_manifest_sha256": "383ab35494f60997aabbdba839eba8ca377a49a519434c854739cd037edfeaf8",
+  "source_run_ids": {
+    "401": "artifacts/local/cs01_e03_results/cohort_401/20261018T191458_882758Z",
+    "402": "artifacts/local/cs01_e03_results/cohort_402/20261018T193322_546184Z",
+    "403": "artifacts/local/cs01_e03_results/cohort_403/20261018T195145_004464Z"
+  },
+  "raw_source_sha256": {
+    "features": "a172c0c811c0f53826c797dc504bd47e7a2c58baa3b4390b6a4dd792d31d9464",
+    "outcomes": "dd864b66d2307132cecce7f5b39e7841ede3377d3313a875c6cffcdfb6abfa61",
+    "cleaning": "d032b4d820dfed1b5c3bb1aededd894ced1d35b66ebda426a094fa48bfa9d8b0"
+  },
+  "code_git_commit": "2a5712f3272ee54aa47a49dc91bd2c5c490de4c4",
+  "code_dirty": false,
+  "code_sha256": "132e1deaa3ec801e681b612e37dac55df71bc6bcbbba5b0359a8dc5add3acb60"
+}

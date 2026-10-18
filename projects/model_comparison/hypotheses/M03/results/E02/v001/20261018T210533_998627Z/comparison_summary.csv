@@ -1,0 +1,7 @@
+contrast,mean_delta_qhat,positive_cohorts,negative_cohorts,cohorts,descriptive_gate
+interaction,-0.04410306839822173,0,3,3,True
+joint_vs_best,-0.021906166190973336,1,2,3,False
+mix_feature_minus_feature,-0.021906166190973336,1,2,3,False
+mix_feature_minus_x,0.06048461552079107,3,0,3,False
+selector_no_mix,0.10942193279028818,3,0,3,False
+selector_with_mix,0.06531886439206645,3,0,3,False
