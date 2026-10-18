@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M03",
+  "experiment": "E01",
+  "experiment_version": "v002",
+  "run_id": "20261018T163258_462386Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Fixed X-Learner blend by CausalPFN context interaction.",
+  "original_local_path": "artifacts/local/m03_e01_results/20261018T163258_462386Z",
+  "code_git_commit": "625229c1954b7ab0aeb01106a4ccbce70ba33bd7",
+  "code_sha256": "874cea7132037b1882dd8a5f086b69421b8ace5998bd7bb578337326f1e65fca",
+  "code_snapshot": "projects/model_comparison/hypotheses/M03/results/E01/v002/20261018T163258_462386Z/code/run_m03_e01_v002.py",
+  "dependency_sha256": "d6bc394c7ffe686965e5af3c2400f3306bef1d4d4c9fff0c87e5a27ea678d1f0",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 13763,
+      "sha256": "6e6306a43ffdb3ac21dbb00ef9f2ab55042215fbf25c5cfae00646e3074c6809"
+    },
+    {
+      "path": "all_paired_deltas.csv",
+      "size": 8756,
+      "sha256": "fc8e60c644aaa8b8cf5dc0c4401e013bf7b42f2c44fa278c6f24863057c4d2e8"
+    },
+    {
+      "path": "code/run_m02_e01_v002.py",
+      "size": 17418,
+      "sha256": "d6bc394c7ffe686965e5af3c2400f3306bef1d4d4c9fff0c87e5a27ea678d1f0"
+    },
+    {
+      "path": "code/run_m03_e01_v002.py",
+      "size": 15716,
+      "sha256": "874cea7132037b1882dd8a5f086b69421b8ace5998bd7bb578337326f1e65fca"
+    },
+    {
+      "path": "comparison_summary.csv",
+      "size": 1542,
+      "sha256": "cb3af811bc0e6119d1c9e7693468225fa2947b6ebd7246cc4832fa9b35bc347c"
+    },
+    {
+      "path": "local_output_files.csv",
+      "size": 6894,
+      "sha256": "1df2281d28005e49d05b5147d1c7b5b6cbc61c7fe47fda2206ebe3469fed1b50"
+    },
+    {
+      "path": "source_files.csv",
+      "size": 5154,
+      "sha256": "d48f5e37d942f8c5785321403c6365e9b9a21d5d2c998d5bbafd8e7c156ee237"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 1239,
+      "sha256": "70c0fc9cb8b42faddc6abd3a835f4e1de39fd9d89973b9ee83682341145bbd97"
+    }
+  ]
+}
