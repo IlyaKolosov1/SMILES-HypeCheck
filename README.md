@@ -27,4 +27,4 @@ python3.11 -m venv .venv
 .venv/bin/python projects/context_selection/src/multi_dataset_context.py --audit
 ```
 
-`--audit` читает пять подпапок в `artifacts/local/data_A_cleaned/`. Полные команды и ограничения — в [руководстве эксперимента CS01](projects/context_selection/hypotheses/CS01/experiment-guide.md). Внутри текущей миграции существующие результаты сохранены как исторические; смешение моделей и совместная комбинация пока только запланированы.
+`--audit` читает пять подпапок в `artifacts/local/data_A_cleaned/`. Полные команды и ограничения — в [руководстве эксперимента CS01](projects/context_selection/hypotheses/CS01/experiment-guide.md). Текущие результаты выбора контекста, сравнения моделей и смешения перечислены в README соответствующих гипотез; все выводы пока разведочные.
