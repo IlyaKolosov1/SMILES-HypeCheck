@@ -1,0 +1,45 @@
+{
+  "experiment": "M01/E02/v001",
+  "split_seed": 102,
+  "datasets": [
+    "Hillstrom",
+    "Retailhero-uplift",
+    "LZD",
+    "Criteo-ITE-v2.1"
+  ],
+  "source_snapshot": "projects/context_selection/hypotheses/CS01/results/E02/v001/20261017T170010_816255Z",
+  "source_run": "20261017T133352_201103Z",
+  "classic_models": [
+    "s_learner",
+    "t_learner",
+    "x_learner"
+  ],
+  "fm_methods": [
+    "feature_knn_K512",
+    "random_query_mean_K512"
+  ],
+  "random_methods": [
+    "random_query_s201_K512",
+    "random_query_s202_K512",
+    "random_query_s203_K512"
+  ],
+  "model_params": {
+    "learning_rate": 0.05,
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 1.0,
+    "random_state": 42
+  },
+  "bootstrap_draws": 500,
+  "versions": {
+    "scikit-learn": "1.5.2",
+    "scikit-uplift": "0.5.1",
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "pyarrow": "19.0.1",
+    "scipy": "1.17.1"
+  },
+  "code_git_commit": "a6db7dfb7e8dd15ced8868dd907ef67341a385c1",
+  "code_dirty": true,
+  "code_sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+}

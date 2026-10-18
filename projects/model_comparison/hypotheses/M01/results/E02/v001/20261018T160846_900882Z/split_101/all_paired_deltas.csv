@@ -1,0 +1,25 @@
+dataset,split_seed,comparison,fm,classic,metric,delta,low,high,valid_draws
+Hillstrom,101,feature_knn_K512 - s_learner,feature_knn_K512,s_learner,normalized_qini_auc,-0.0010238205676614646,-0.04333803143540535,0.039896794738442626,500
+Hillstrom,101,feature_knn_K512 - t_learner,feature_knn_K512,t_learner,normalized_qini_auc,-0.028005341368877116,-0.07173006930960078,0.021323072250286797,500
+Hillstrom,101,feature_knn_K512 - x_learner,feature_knn_K512,x_learner,normalized_qini_auc,-0.020104076205605847,-0.061684010642443145,0.024626308692796577,500
+Hillstrom,101,random_query_mean_K512 - s_learner,random_query_mean_K512,s_learner,normalized_qini_auc,-0.014712170977396605,-0.06750395796859292,0.04003849881975325,500
+Hillstrom,101,random_query_mean_K512 - t_learner,random_query_mean_K512,t_learner,normalized_qini_auc,-0.041693691778612256,-0.09750933557577683,0.016467826312002592,500
+Hillstrom,101,random_query_mean_K512 - x_learner,random_query_mean_K512,x_learner,normalized_qini_auc,-0.03379242661534099,-0.08844546498026801,0.023559137343328686,500
+Retailhero-uplift,101,feature_knn_K512 - s_learner,feature_knn_K512,s_learner,normalized_qini_auc,-0.021921059485961104,-0.03968863223024007,-0.003289690654642104,500
+Retailhero-uplift,101,feature_knn_K512 - t_learner,feature_knn_K512,t_learner,normalized_qini_auc,-0.013870485962197695,-0.03431826681668453,0.005436668195514745,500
+Retailhero-uplift,101,feature_knn_K512 - x_learner,feature_knn_K512,x_learner,normalized_qini_auc,-0.0070517785691563625,-0.025254149909093578,0.010092704193951913,500
+Retailhero-uplift,101,random_query_mean_K512 - s_learner,random_query_mean_K512,s_learner,normalized_qini_auc,-0.021766041066230275,-0.043349101857431675,-0.0018428627764075787,500
+Retailhero-uplift,101,random_query_mean_K512 - t_learner,random_query_mean_K512,t_learner,normalized_qini_auc,-0.013715467542466869,-0.03577152523976788,0.007658224969310476,500
+Retailhero-uplift,101,random_query_mean_K512 - x_learner,random_query_mean_K512,x_learner,normalized_qini_auc,-0.0068967601494255345,-0.027465819954951978,0.015555854980870315,500
+LZD,101,feature_knn_K512 - s_learner,feature_knn_K512,s_learner,normalized_qini_auc,0.024889955771299464,-0.11205785438597807,0.17215880428826585,500
+LZD,101,feature_knn_K512 - t_learner,feature_knn_K512,t_learner,normalized_qini_auc,-0.07671650690212359,-0.20022600972172974,0.052935537427048644,500
+LZD,101,feature_knn_K512 - x_learner,feature_knn_K512,x_learner,normalized_qini_auc,0.06089243071657218,-0.06882046563616648,0.18048581546425302,500
+LZD,101,random_query_mean_K512 - s_learner,random_query_mean_K512,s_learner,normalized_qini_auc,-0.0229790581534516,-0.14331226265673175,0.10387969230100756,500
+LZD,101,random_query_mean_K512 - t_learner,random_query_mean_K512,t_learner,normalized_qini_auc,-0.12458552082687466,-0.24061338613265393,0.016554894280969082,500
+LZD,101,random_query_mean_K512 - x_learner,random_query_mean_K512,x_learner,normalized_qini_auc,0.013023416791821119,-0.1310508286439076,0.143655413108424,500
+Criteo-ITE-v2.1,101,feature_knn_K512 - s_learner,feature_knn_K512,s_learner,normalized_qini_auc,-0.050171966600152815,-0.16297637049383384,0.06633529095768344,500
+Criteo-ITE-v2.1,101,feature_knn_K512 - t_learner,feature_knn_K512,t_learner,normalized_qini_auc,0.023534047037670883,-0.16713430441041335,0.19773094882061631,500
+Criteo-ITE-v2.1,101,feature_knn_K512 - x_learner,feature_knn_K512,x_learner,normalized_qini_auc,-0.004697241195992477,-0.20178852733952343,0.17165886900977612,500
+Criteo-ITE-v2.1,101,random_query_mean_K512 - s_learner,random_query_mean_K512,s_learner,normalized_qini_auc,-0.18321454610809995,-0.3188112808341456,-0.011982478620301208,500
+Criteo-ITE-v2.1,101,random_query_mean_K512 - t_learner,random_query_mean_K512,t_learner,normalized_qini_auc,-0.10950853247027625,-0.2978197369181144,0.09301917434549176,500
+Criteo-ITE-v2.1,101,random_query_mean_K512 - x_learner,random_query_mean_K512,x_learner,normalized_qini_auc,-0.1377398207039396,-0.3140074508579975,0.027107155772195007,500

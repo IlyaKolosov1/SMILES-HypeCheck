@@ -4,7 +4,7 @@
 
 | Гипотеза | Статус |
 | --- | --- |
-| [M01: FM против baseline](hypotheses/M01/README.md) | Только старый Hillstrom notebook-пилот; общий benchmark запланирован |
+| [M01: FM против baseline](hypotheses/M01/README.md) | Старый Hillstrom пилот; новый benchmark завершён как разведочный, разбор ожидается |
 | [M02: смешение](hypotheses/M02/README.md) | План, реализации и результатов нет |
 | [M03: контекст + смешение](hypotheses/M03/README.md) | План, реализации и результатов нет |
 | [M04: PEHE и targeting](hypotheses/M04/README.md) | Исторический синтетический отчёт, отдельного CSV не было |

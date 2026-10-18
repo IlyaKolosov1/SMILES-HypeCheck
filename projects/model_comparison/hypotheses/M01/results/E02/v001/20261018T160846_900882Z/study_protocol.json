@@ -1,0 +1,23 @@
+{
+  "experiment": "M01/E02/v001",
+  "source_experiment": "CS01/E02/v001",
+  "source_snapshot": "projects/context_selection/hypotheses/CS01/results/E02/v001/20261017T170010_816255Z",
+  "source_run_ids": {
+    "101": "20261018T160501_493672Z",
+    "102": "20261018T160525_604351Z",
+    "103": "20261018T160548_254922Z"
+  },
+  "primary_metric": "normalized_qini_auc (Q-hat)",
+  "primary_comparisons": [
+    "feature_knn_K512 - s_learner",
+    "feature_knn_K512 - t_learner",
+    "feature_knn_K512 - x_learner",
+    "random_query_mean_K512 - s_learner",
+    "random_query_mean_K512 - t_learner",
+    "random_query_mean_K512 - x_learner"
+  ],
+  "random_baseline": "mean of three separately computed Q-hat metrics",
+  "bootstrap": "500 paired, treatment-stratified eval-row resamples per split; conditional",
+  "packaging_script_sha256": "0b9bf1e15b838af0d09a325922a43e5f84f66dfbd29f17853022e38e9d8e81a9",
+  "interpretation": "exploratory; overlapping split source rows; no formal significance"
+}

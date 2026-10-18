@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E02",
+  "experiment_version": "v001",
+  "run_id": "20261018T160846_900882Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Fixed S/T/X comparison with two reused CausalPFN variants.",
+  "code_git_commit": "a6db7dfb7e8dd15ced8868dd907ef67341a385c1",
+  "code_sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44",
+  "packaging_script_sha256": "0b9bf1e15b838af0d09a325922a43e5f84f66dfbd29f17853022e38e9d8e81a9",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E02/v001/20261018T160846_900882Z/code/m01_e02.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 8750,
+      "sha256": "c27b16bf239553932db2873f9330e209e0ce8f89bfb6ab99a83e632bcbe204ba"
+    },
+    {
+      "path": "all_paired_deltas.csv",
+      "size": 11620,
+      "sha256": "591e49c137c4567e11f9d253e45197c7d1fc9f4423402a093640825903e3bb0c"
+    },
+    {
+      "path": "code/m01_e02.py",
+      "size": 19124,
+      "sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+    },
+    {
+      "path": "code/package_m01_e02.py",
+      "size": 11981,
+      "sha256": "0b9bf1e15b838af0d09a325922a43e5f84f66dfbd29f17853022e38e9d8e81a9"
+    },
+    {
+      "path": "comparison_summary.csv",
+      "size": 1678,
+      "sha256": "32c3ce87f9eaa721060c66575463773b556b2b8d28bfe5b80dfa84f642b2db72"
+    },
+    {
+      "path": "cs01_source_files.csv",
+      "size": 19748,
+      "sha256": "df93a650b7e8423189f89eef43c5a608ac993aac07c3e0655c44a220a0766c49"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 12023,
+      "sha256": "7af7459daa749c5efa4885134df05418ccd8bd54e211a3ea2091bf857c623614"
+    },
+    {
+      "path": "split_101/Criteo-ITE-v2.1/fit.json",
+      "size": 116,
+      "sha256": "5327a1f70b820d31aee9c98bda90bdf31cfa6a58bcdd1889bb02d14707594c41"
+    },
+    {
+      "path": "split_101/Hillstrom/fit.json",
+      "size": 117,
+      "sha256": "e3e8249039b3c86b26918381379110f03cc7dac05e34ad9003f06e68f2569f8e"
+    },
+    {
+      "path": "split_101/LZD/fit.json",
+      "size": 117,
+      "sha256": "d3aee64d05981c1915b5cd044f97eff57948ec2e2ca48e55b5a94f565154d679"
+    },
+    {
+      "path": "split_101/Retailhero-uplift/fit.json",
+      "size": 115,
+      "sha256": "4f7a04d1501706fb55c6894016bc67ae91a89e192ec889cc638615157052bc22"
+    },
+    {
+      "path": "split_101/all_metrics.csv",
+      "size": 3095,
+      "sha256": "1280d8cdbdcac58e44151497f5b73f50122c5139efb3f9328a5a1a1c453b9d3f"
+    },
+    {
+      "path": "split_101/all_paired_deltas.csv",
+      "size": 4041,
+      "sha256": "b67f6b2414162f6ec09bbeb7376af630e09484ff6d2fd0fca65950b39c9520e3"
+    },
+    {
+      "path": "split_101/protocol.json",
+      "size": 1094,
+      "sha256": "181bc420ce4f83cb39e71932c26e22ff7e69eaafdba945087ffc2bb7ba413174"
+    },
+    {
+      "path": "split_101/status.json",
+      "size": 65,
+      "sha256": "3900c77856500c47f6ca580bc9d7bd3c20bdba0c453628b6009436d72fc32048"
+    },
+    {
+      "path": "split_102/Criteo-ITE-v2.1/fit.json",
+      "size": 116,
+      "sha256": "6225d7aec75592c64c9b8735f28371d9421e834a13d3e3b7cea4e7ad247798ab"
+    },
+    {
+      "path": "split_102/Hillstrom/fit.json",
+      "size": 117,
+      "sha256": "e3e8249039b3c86b26918381379110f03cc7dac05e34ad9003f06e68f2569f8e"
+    },
+    {
+      "path": "split_102/LZD/fit.json",
+      "size": 116,
+      "sha256": "86277ba78553731a9afa5a43b17ec1851367f6b7726918084dc3aeea659c9c79"
+    },
+    {
+      "path": "split_102/Retailhero-uplift/fit.json",
+      "size": 115,
+      "sha256": "4f7a04d1501706fb55c6894016bc67ae91a89e192ec889cc638615157052bc22"
+    },
+    {
+      "path": "split_102/all_metrics.csv",
+      "size": 3070,
+      "sha256": "fca39da3f28edefd2c034952432477de71cdf4f9151a5d2496fddbb838f3c41a"
+    },
+    {
+      "path": "split_102/all_paired_deltas.csv",
+      "size": 4014,
+      "sha256": "83a5ddde91faddbb24d8089762ed976280453f2d1a9da840c366f6d0e62a0591"
+    },
+    {
+      "path": "split_102/protocol.json",
+      "size": 1094,
+      "sha256": "75ee139f918c4dbfcedffa3b6266f427c8fff1a50a63915a73c8c47954fff6e2"
+    },
+    {
+      "path": "split_102/status.json",
+      "size": 65,
+      "sha256": "3900c77856500c47f6ca580bc9d7bd3c20bdba0c453628b6009436d72fc32048"
+    },
+    {
+      "path": "split_103/Criteo-ITE-v2.1/fit.json",
+      "size": 117,
+      "sha256": "dc5ed9849c09bf403ff70fdb0136ef285d4f89684bef2b58d7fb85379d6b50a7"
+    },
+    {
+      "path": "split_103/Hillstrom/fit.json",
+      "size": 117,
+      "sha256": "e3e8249039b3c86b26918381379110f03cc7dac05e34ad9003f06e68f2569f8e"
+    },
+    {
+      "path": "split_103/LZD/fit.json",
+      "size": 117,
+      "sha256": "0bfe141db8d8e355e244bb6fb9057bb432062ac0303d94ac101713cef89149d6"
+    },
+    {
+      "path": "split_103/Retailhero-uplift/fit.json",
+      "size": 115,
+      "sha256": "4f7a04d1501706fb55c6894016bc67ae91a89e192ec889cc638615157052bc22"
+    },
+    {
+      "path": "split_103/all_metrics.csv",
+      "size": 3098,
+      "sha256": "8fd2b8273b8786abfd497389a22f398b7dcc71170d718b9c9e1a703f61f04d26"
+    },
+    {
+      "path": "split_103/all_paired_deltas.csv",
+      "size": 4028,
+      "sha256": "6c97c0a72fe54995217100e90a71574b83073f87a61fe6573d45dcc788eea1eb"
+    },
+    {
+      "path": "split_103/protocol.json",
+      "size": 1094,
+      "sha256": "ed594b3c296cf72e99d38affd101e3ececed611d4f88f0564dca29c4629e7011"
+    },
+    {
+      "path": "split_103/status.json",
+      "size": 65,
+      "sha256": "3900c77856500c47f6ca580bc9d7bd3c20bdba0c453628b6009436d72fc32048"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 990,
+      "sha256": "1b762e08e4729a7e4688ee1c03b7a1a524c286d44a672b44eef9c7f5ff03647d"
+    }
+  ]
+}

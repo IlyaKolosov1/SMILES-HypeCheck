@@ -1,0 +1,6 @@
+{
+  "train_rows": 51200,
+  "eval_rows": 4096,
+  "transformed_features": 18,
+  "treatment_propensity": 0.66708984375
+}
