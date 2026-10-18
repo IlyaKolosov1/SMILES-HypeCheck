@@ -1,0 +1,217 @@
+{
+  "experiment": "CS01/E03/v001",
+  "run_id": "20261018T201230_193386Z",
+  "local_runs": {
+    "401": "artifacts/local/cs01_e03_results/cohort_401/20261018T191458_882758Z",
+    "402": "artifacts/local/cs01_e03_results/cohort_402/20261018T193322_546184Z",
+    "403": "artifacts/local/cs01_e03_results/cohort_403/20261018T195145_004464Z"
+  },
+  "cohort_protocols": {
+    "401": {
+      "experiment": "CS01/E03/v001",
+      "sample_seed": 401,
+      "split_seed": 111,
+      "train_max": 51200,
+      "eval_max": 8192,
+      "context_size": 512,
+      "context_seeds": [
+        201,
+        202,
+        203
+      ],
+      "bootstrap_draws": 500,
+      "x_learner_params": {
+        "learning_rate": 0.05,
+        "max_iter": 200,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1.0,
+        "random_state": 42
+      },
+      "outcome": "visit",
+      "device": "cpu",
+      "source_rows": 13979592,
+      "old_sample_seeds": [
+        42,
+        301,
+        302,
+        303
+      ],
+      "old_excluded_rows": 395670,
+      "old_excluded_sha256": "3fc10871bbcca03cd0f3c00675270d6075129d9726b230430cd968c683094193",
+      "archived_old_ids_checked": 442368,
+      "cohort_sample_seeds": [
+        401,
+        402,
+        403
+      ],
+      "split_seeds": {
+        "401": 111,
+        "402": 112,
+        "403": 113
+      },
+      "cohort_sha256": {
+        "401": "201943e952e1919d48c6b44ebc299006e31cbf25af3fa75fe2e10849f770818e",
+        "402": "23445e6480ffc91f71d4833183beff8add7bf01df930657f13378bf5e0219ac1",
+        "403": "be3975fb6f9bb31031c696459913484c5d5d4072386aa01cfc696ee8b09aa098"
+      },
+      "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+      "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+      "feature_sha256": "a172c0c811c0f53826c797dc504bd47e7a2c58baa3b4390b6a4dd792d31d9464",
+      "outcome_sha256": "dd864b66d2307132cecce7f5b39e7841ede3377d3313a875c6cffcdfb6abfa61",
+      "cleaning_metadata_sha256": "d032b4d820dfed1b5c3bb1aededd894ced1d35b66ebda426a094fa48bfa9d8b0",
+      "code_git_commit": "ebcad7f924e7d283a8088b19ab87aa0843f82ebf",
+      "code_dirty": false,
+      "code_sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+      "launcher_sha256": "b9d4417fd42a5c0b10c44ae71573667a2f1bac2a196c7b328d1dc248e5a69bd6",
+      "context_dependency_sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a",
+      "classic_dependency_sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44",
+      "versions": {
+        "causalpfn": "0.1.5",
+        "scikit-uplift": "0.5.1",
+        "scikit-learn": "1.5.2",
+        "torch": "2.3.1",
+        "numpy": "1.26.4",
+        "pandas": "2.3.0",
+        "pyarrow": "19.0.1"
+      }
+    },
+    "402": {
+      "experiment": "CS01/E03/v001",
+      "sample_seed": 402,
+      "split_seed": 112,
+      "train_max": 51200,
+      "eval_max": 8192,
+      "context_size": 512,
+      "context_seeds": [
+        201,
+        202,
+        203
+      ],
+      "bootstrap_draws": 500,
+      "x_learner_params": {
+        "learning_rate": 0.05,
+        "max_iter": 200,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1.0,
+        "random_state": 42
+      },
+      "outcome": "visit",
+      "device": "cpu",
+      "source_rows": 13979592,
+      "old_sample_seeds": [
+        42,
+        301,
+        302,
+        303
+      ],
+      "old_excluded_rows": 395670,
+      "old_excluded_sha256": "3fc10871bbcca03cd0f3c00675270d6075129d9726b230430cd968c683094193",
+      "archived_old_ids_checked": 442368,
+      "cohort_sample_seeds": [
+        401,
+        402,
+        403
+      ],
+      "split_seeds": {
+        "401": 111,
+        "402": 112,
+        "403": 113
+      },
+      "cohort_sha256": {
+        "401": "201943e952e1919d48c6b44ebc299006e31cbf25af3fa75fe2e10849f770818e",
+        "402": "23445e6480ffc91f71d4833183beff8add7bf01df930657f13378bf5e0219ac1",
+        "403": "be3975fb6f9bb31031c696459913484c5d5d4072386aa01cfc696ee8b09aa098"
+      },
+      "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+      "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+      "feature_sha256": "a172c0c811c0f53826c797dc504bd47e7a2c58baa3b4390b6a4dd792d31d9464",
+      "outcome_sha256": "dd864b66d2307132cecce7f5b39e7841ede3377d3313a875c6cffcdfb6abfa61",
+      "cleaning_metadata_sha256": "d032b4d820dfed1b5c3bb1aededd894ced1d35b66ebda426a094fa48bfa9d8b0",
+      "code_git_commit": "ebcad7f924e7d283a8088b19ab87aa0843f82ebf",
+      "code_dirty": false,
+      "code_sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+      "launcher_sha256": "b9d4417fd42a5c0b10c44ae71573667a2f1bac2a196c7b328d1dc248e5a69bd6",
+      "context_dependency_sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a",
+      "classic_dependency_sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44",
+      "versions": {
+        "causalpfn": "0.1.5",
+        "scikit-uplift": "0.5.1",
+        "scikit-learn": "1.5.2",
+        "torch": "2.3.1",
+        "numpy": "1.26.4",
+        "pandas": "2.3.0",
+        "pyarrow": "19.0.1"
+      }
+    },
+    "403": {
+      "experiment": "CS01/E03/v001",
+      "sample_seed": 403,
+      "split_seed": 113,
+      "train_max": 51200,
+      "eval_max": 8192,
+      "context_size": 512,
+      "context_seeds": [
+        201,
+        202,
+        203
+      ],
+      "bootstrap_draws": 500,
+      "x_learner_params": {
+        "learning_rate": 0.05,
+        "max_iter": 200,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1.0,
+        "random_state": 42
+      },
+      "outcome": "visit",
+      "device": "cpu",
+      "source_rows": 13979592,
+      "old_sample_seeds": [
+        42,
+        301,
+        302,
+        303
+      ],
+      "old_excluded_rows": 395670,
+      "old_excluded_sha256": "3fc10871bbcca03cd0f3c00675270d6075129d9726b230430cd968c683094193",
+      "archived_old_ids_checked": 442368,
+      "cohort_sample_seeds": [
+        401,
+        402,
+        403
+      ],
+      "split_seeds": {
+        "401": 111,
+        "402": 112,
+        "403": 113
+      },
+      "cohort_sha256": {
+        "401": "201943e952e1919d48c6b44ebc299006e31cbf25af3fa75fe2e10849f770818e",
+        "402": "23445e6480ffc91f71d4833183beff8add7bf01df930657f13378bf5e0219ac1",
+        "403": "be3975fb6f9bb31031c696459913484c5d5d4072386aa01cfc696ee8b09aa098"
+      },
+      "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+      "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+      "feature_sha256": "a172c0c811c0f53826c797dc504bd47e7a2c58baa3b4390b6a4dd792d31d9464",
+      "outcome_sha256": "dd864b66d2307132cecce7f5b39e7841ede3377d3313a875c6cffcdfb6abfa61",
+      "cleaning_metadata_sha256": "d032b4d820dfed1b5c3bb1aededd894ced1d35b66ebda426a094fa48bfa9d8b0",
+      "code_git_commit": "ebcad7f924e7d283a8088b19ab87aa0843f82ebf",
+      "code_dirty": false,
+      "code_sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+      "launcher_sha256": "b9d4417fd42a5c0b10c44ae71573667a2f1bac2a196c7b328d1dc248e5a69bd6",
+      "context_dependency_sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a",
+      "classic_dependency_sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44",
+      "versions": {
+        "causalpfn": "0.1.5",
+        "scikit-uplift": "0.5.1",
+        "scikit-learn": "1.5.2",
+        "torch": "2.3.1",
+        "numpy": "1.26.4",
+        "pandas": "2.3.0",
+        "pyarrow": "19.0.1"
+      }
+    }
+  },
+  "packager_sha256": "eb85cd4d266700b05a3fdde6506f5299612aa9c79e551437e69a398631b33e04",
+  "interpretation": "exploratory Criteo-only replication"
+}

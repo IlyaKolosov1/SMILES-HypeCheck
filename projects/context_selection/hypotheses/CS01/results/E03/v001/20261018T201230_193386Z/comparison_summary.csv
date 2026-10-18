@@ -1,0 +1,3 @@
+comparison,mean_delta_qhat,positive_cohorts,cohorts,descriptive_gate
+feature_knn_K512 - random_query_mean_K512,0.10942193279028813,3,3,True
+feature_knn_K512 - x_learner,0.08239078171176437,3,3,False

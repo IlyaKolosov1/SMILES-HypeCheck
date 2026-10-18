@@ -1,0 +1,4 @@
+kind,path,sha256
+features,artifacts/local/data_A_cleaned/Criteo-ITE-v2.1/features.parquet,a172c0c811c0f53826c797dc504bd47e7a2c58baa3b4390b6a4dd792d31d9464
+outcomes,artifacts/local/data_A_cleaned/Criteo-ITE-v2.1/outcomes.parquet,dd864b66d2307132cecce7f5b39e7841ede3377d3313a875c6cffcdfb6abfa61
+cleaning,artifacts/local/data_A_cleaned/Criteo-ITE-v2.1/cleaning_metadata.json,d032b4d820dfed1b5c3bb1aededd894ced1d35b66ebda426a094fa48bfa9d8b0
