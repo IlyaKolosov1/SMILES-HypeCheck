@@ -202,13 +202,15 @@ def git_state() -> dict:
 
 
 def snapshot(run_id: str, local: Path, protocol: dict, metrics: pd.DataFrame,
-             pairs: pd.DataFrame, summary: pd.DataFrame, sources: list[dict]):
+             pairs: pd.DataFrame, summary: pd.DataFrame, sources: list[dict],
+             local_outputs: list[dict]):
     target = TARGET / run_id
     target.mkdir(parents=True, exist_ok=False)
     metrics.to_csv(target / "all_metrics.csv", index=False)
     pairs.to_csv(target / "all_paired_deltas.csv", index=False)
     summary.to_csv(target / "comparison_summary.csv", index=False)
     pd.DataFrame(sources).to_csv(target / "source_files.csv", index=False)
+    pd.DataFrame(local_outputs).to_csv(target / "local_output_files.csv", index=False)
     (target / "study_protocol.json").write_text(json.dumps(
         protocol, indent=2, ensure_ascii=False))
     (target / "code").mkdir()
@@ -224,7 +226,8 @@ def snapshot(run_id: str, local: Path, protocol: dict, metrics: pd.DataFrame,
                      f"{row.jointly_positive_splits}/3 |")
     lines += ["", "[Все метрики](all_metrics.csv), [парные разности и условные интервалы]"
               "(all_paired_deltas.csv), [сводка](comparison_summary.csv), "
-              "[хеши источников](source_files.csv), [точный код](code/run_m02_e01_v002.py).", "",
+              "[хеши источников](source_files.csv), [хеши локальных выходов]"
+              "(local_output_files.csv), [точный код](code/run_m02_e01_v002.py).", "",
               "Это разведочный повторный анализ уже просмотренных eval-данных. "
               "Интервалы условны; split зависимы, а вес и форма смеси не проверены "
               "на независимом test. Статистическая значимость не утверждается.", ""]
@@ -300,7 +303,11 @@ def main() -> int:
         pd.DataFrame(sources).to_csv(local / "source_files.csv", index=False)
         (local / "status.json").write_text(json.dumps(dict(
             status="complete_exploratory", combinations=12), indent=2))
-        result = snapshot(run_id, local, protocol, metrics, pairs, summary, sources)
+        local_outputs = [dict(local_path=file.relative_to(ROOT).as_posix(),
+                              size=file.stat().st_size, sha256=sha256(file))
+                         for file in sorted(local.rglob("*")) if file.is_file()]
+        result = snapshot(run_id, local, protocol, metrics, pairs, summary,
+                          sources, local_outputs)
     except Exception as exc:
         (local / "status.json").write_text(json.dumps(dict(
             status="incomplete", error=str(exc)), indent=2))
