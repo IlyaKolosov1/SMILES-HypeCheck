@@ -29,7 +29,6 @@ import torch
 from causalpfn import CATEEstimator
 from huggingface_hub import hf_hub_download
 from sklearn.ensemble import HistGradientBoostingClassifier, HistGradientBoostingRegressor
-from tqdm.auto import tqdm
 
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -81,6 +80,22 @@ def require(condition: bool, message: str) -> None:
 
 def json_save(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False))
+
+
+def report_progress(items, total: int, label: str):
+    """Print one terminal-safe line per 10% instead of repainting a progress bar."""
+    started = time.perf_counter()
+    print(f"{label}: 0/{total} (0%)", flush=True)
+    next_tenth = 1
+    for count, item in enumerate(items, 1):
+        yield item
+        if count * 10 >= next_tenth * total or count == total:
+            elapsed = time.perf_counter() - started
+            remaining = elapsed * (total - count) / count
+            print(f"{label}: {count}/{total} ({100 * count // total}%), "
+                  f"elapsed {elapsed / 60:.1f}m, ETA {remaining / 60:.1f}m",
+                  flush=True)
+            next_tenth = count * 10 // total + 1
 
 
 def git_state() -> dict:
@@ -186,9 +201,9 @@ def read_cohort(rows: np.ndarray) -> pd.DataFrame:
     pieces = []
     reader = pq.ParquetFile(DATA / "features.parquet")
     offset = 0
-    for batch in tqdm(reader.iter_batches(batch_size=65536),
-                      total=math.ceil(reader.metadata.num_rows / 65536),
-                      desc="Criteo features scan", unit="batch"):
+    for batch in report_progress(reader.iter_batches(batch_size=65536),
+                                 math.ceil(reader.metadata.num_rows / 65536),
+                                 "Criteo features scan"):
         left, right = np.searchsorted(rows, (offset, offset + batch.num_rows))
         if right > left:
             part = batch.take(pa.array(rows[left:right] - offset)).to_pandas()
@@ -203,10 +218,10 @@ def read_cohort(rows: np.ndarray) -> pd.DataFrame:
     wanted = pd.Index(features.epk_id)
     outcome_parts = []
     reader = pq.ParquetFile(DATA / "outcomes.parquet")
-    for batch in tqdm(reader.iter_batches(batch_size=65536,
-                                          columns=["epk_id", "visit"]),
-                      total=math.ceil(reader.metadata.num_rows / 65536),
-                      desc="Criteo outcomes scan", unit="batch"):
+    for batch in report_progress(reader.iter_batches(batch_size=65536,
+                                                    columns=["epk_id", "visit"]),
+                                 math.ceil(reader.metadata.num_rows / 65536),
+                                 "Criteo outcomes scan"):
         part = batch.to_pandas()
         hit = part[part.epk_id.isin(wanted)]
         if not hit.empty:
@@ -362,8 +377,9 @@ def cohort_run(seed: int, rows: np.ndarray, excluded: np.ndarray,
             partial[:] = np.nan
             start = time.perf_counter()
             calls = 0
-            for lo in tqdm(range(0, len(q), 2), desc=f"Cohort {seed} {key}",
-                           unit="batch", leave=True):
+            for lo in report_progress(range(0, len(q), 2),
+                                      math.ceil(len(q) / 2),
+                                      f"Cohort {seed} {key}"):
                 hi = min(lo + 2, len(q))
                 partial[lo:hi] = forward(index[lo:hi], q[lo:hi])
                 calls += 1
@@ -379,10 +395,13 @@ def cohort_run(seed: int, rows: np.ndarray, excluded: np.ndarray,
             pd.DataFrame(timing).to_csv(run / "timings.csv", index=False)
             print(f"Cohort {seed}: finished {key}", flush=True)
         json_save(run / "status.json", dict(status="incomplete", stage="paired_bootstrap"))
+        print(f"Cohort {seed}: paired bootstrap ({BOOTSTRAP} draws) started",
+              flush=True)
         points, pairs = context.paired_intervals(
             ye, te, predictions, [(FEATURE, RANDOM_MEAN), (FEATURE, X)],
             BOOTSTRAP, 9000 + seed,
-            {RANDOM_MEAN: RANDOM})
+            {RANDOM_MEAN: RANDOM}, show_progress=False)
+        print(f"Cohort {seed}: paired bootstrap finished", flush=True)
         pd.DataFrame([dict(method=name, **values) for name, values in points.items()]
                      ).to_csv(run / "metrics.csv", index=False)
         pairs.to_csv(run / "paired_deltas.csv", index=False)
@@ -421,6 +440,12 @@ def show_status() -> None:
             completed = pd.read_csv(timings)
             print("  completed methods:", ", ".join(completed.method),
                   f"({completed.inference_sec.sum() / 60:.1f} inference minutes)")
+        partial = run / f"partial_{status.get('stage', '')}.npy"
+        if partial.is_file():
+            values = np.load(partial, mmap_mode="r")
+            done = int(np.isfinite(values).sum())
+            print(f"  saved predictions for this selector: {done}/{values.size} eval rows "
+                  f"({100 * done / values.size:.1f}%)", flush=True)
         if status.get("error"):
             print("  last error:", status["error"].strip().splitlines()[-1])
 

@@ -292,7 +292,7 @@ def metric_values(y, t, scores):
 
 
 def paired_intervals(y, t, predictions, comparisons, n_draws, seed,
-                     aggregate_groups):
+                     aggregate_groups, show_progress=True):
     rng = np.random.default_rng(seed)
     arms = [np.flatnonzero(t == arm) for arm in (0, 1)]
     point = {name: metric_values(y, t, pred) for name, pred in predictions.items()}
@@ -305,7 +305,9 @@ def paired_intervals(y, t, predictions, comparisons, n_draws, seed,
               if name in predictions}
     for members in aggregate_groups.values():
         needed.update(members)
-    for _ in tqdm(range(n_draws), desc="Paired bootstrap", leave=False):
+    draw_numbers = (tqdm(range(n_draws), desc="Paired bootstrap", leave=False)
+                    if show_progress else range(n_draws))
+    for _ in draw_numbers:
         ids = np.concatenate([rng.choice(arm, len(arm), replace=True) for arm in arms])
         rng.shuffle(ids)  # tie order must not be grouped by treatment arm
         values = {name: metric_values(y[ids], t[ids], predictions[name][ids])

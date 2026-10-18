@@ -1,4 +1,4 @@
-"""Launch the fresh-row Criteo CS01/E03/v001 experiment with progress bars."""
+"""Launch the fresh-row Criteo CS01/E03/v001 experiment with concise progress."""
 
 from __future__ import annotations
 

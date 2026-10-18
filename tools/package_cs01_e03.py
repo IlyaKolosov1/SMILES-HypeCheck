@@ -12,7 +12,6 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklift.metrics import qini_auc_score
-from tqdm.auto import tqdm
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -159,12 +158,13 @@ def collect(paths: dict[int, Path]) -> tuple[dict, pd.DataFrame, pd.DataFrame,
         pair_parts.append(pairs)
         samples.append(sample)
         olds.append(old)
-        for file in tqdm(sorted(run.rglob("*")), desc=f"Hash cohort {seed}",
-                         unit="file", leave=False):
+        for file in sorted(run.rglob("*")):
             if file.is_file():
                 files.append(dict(sample_seed=seed,
                                   local_path=file.relative_to(ROOT).as_posix(),
                                   size=file.stat().st_size, sha256=sha256(file)))
+        print(f"HASHED cohort {seed}: {sum(file['sample_seed'] == seed for file in files)} "
+              "files", flush=True)
     first = protocols["401"]
     stable = ("experiment", "code_git_commit", "code_sha256",
               "launcher_sha256",
