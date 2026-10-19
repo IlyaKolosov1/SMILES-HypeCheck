@@ -1,0 +1,44 @@
+{
+  "experiment": "M01/E04/v001",
+  "run_id": "20261019T063309_194771Z",
+  "source_experiment": "CS01/E03/v001",
+  "cohort_seeds": [
+    401,
+    402,
+    403
+  ],
+  "train_size": 51200,
+  "eval_size": 8192,
+  "context_size": 512,
+  "bootstrap_draws": 500,
+  "bootstrap_seeds": [
+    951,
+    952,
+    953
+  ],
+  "rank_metric": "normalized_qini_auc",
+  "versions": {
+    "scikit-uplift": "0.5.1",
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "pyarrow": "19.0.1"
+  },
+  "source_snapshot": "projects/context_selection/hypotheses/CS01/results/E03/v001/20261018T201230_193386Z",
+  "source_manifest_sha256": "383ab35494f60997aabbdba839eba8ca377a49a519434c854739cd037edfeaf8",
+  "source_runs": {
+    "401": "artifacts/local/cs01_e03_results/cohort_401/20261018T191458_882758Z",
+    "402": "artifacts/local/cs01_e03_results/cohort_402/20261018T193322_546184Z",
+    "403": "artifacts/local/cs01_e03_results/cohort_403/20261018T195145_004464Z"
+  },
+  "source_code_sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+  "feature_sha256": "a172c0c811c0f53826c797dc504bd47e7a2c58baa3b4390b6a4dd792d31d9464",
+  "outcome_sha256": "dd864b66d2307132cecce7f5b39e7841ede3377d3313a875c6cffcdfb6abfa61",
+  "cleaning_metadata_sha256": "d032b4d820dfed1b5c3bb1aededd894ced1d35b66ebda426a094fa48bfa9d8b0",
+  "code_git_commit": "37434897ff317716d3a33533fd084a90d2c3bf2e",
+  "code_dirty": false,
+  "code_sha256": "f15ebdf33a4a23f558098b974ed1f99d5c6b74fc42eaf023779bd10d5256bd24",
+  "local_dependency_sha256": "0d2b9ad18eb69ebddaba7c1483734a7a99ac4b11860d71f4b082f505f7337333",
+  "source_reader_sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+  "context_dependency_sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a",
+  "classic_import_sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+}

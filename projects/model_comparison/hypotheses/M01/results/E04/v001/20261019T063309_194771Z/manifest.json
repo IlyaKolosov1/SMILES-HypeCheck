@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E04",
+  "experiment_version": "v001",
+  "run_id": "20261019T063309_194771Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "CausalPFN versus direct local uplift on matched Criteo contexts.",
+  "original_local_path": "artifacts/local/m01_e04_results/20261019T063309_194771Z",
+  "code_git_commit": "37434897ff317716d3a33533fd084a90d2c3bf2e",
+  "code_sha256": "f15ebdf33a4a23f558098b974ed1f99d5c6b74fc42eaf023779bd10d5256bd24",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E04/v001/20261019T063309_194771Z/code/run_m01_e04.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 918,
+      "sha256": "0424f12b0680882cd5a589f16985f19fc77103ccf576df1aa4ba9cd497a023e6"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/m01_e02.py",
+      "size": 19124,
+      "sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35560,
+      "sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+    },
+    {
+      "path": "code/run_m01_e03.py",
+      "size": 18973,
+      "sha256": "0d2b9ad18eb69ebddaba7c1483734a7a99ac4b11860d71f4b082f505f7337333"
+    },
+    {
+      "path": "code/run_m01_e04.py",
+      "size": 17347,
+      "sha256": "f15ebdf33a4a23f558098b974ed1f99d5c6b74fc42eaf023779bd10d5256bd24"
+    },
+    {
+      "path": "cohort_summary.csv",
+      "size": 366,
+      "sha256": "054fb8154eb4fbb9df56ce9c3caf324ca8203725b9e17ce17167b4db7206f7b9"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 2104,
+      "sha256": "38b63eed5ef25f9c4b7cce2cf5e67f3476c3a7c68f0e0a5832a6f71cb4d8aea3"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 2188,
+      "sha256": "ca910ed56f274eb34bb7846f880977c9c63a8ec764da92a0f4d1e5f30effa280"
+    },
+    {
+      "path": "source_files.csv",
+      "size": 3206,
+      "sha256": "d4284c58997e4a2461ba73afeb10c6797e20fac4bc781241f51c934b20056680"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 1869,
+      "sha256": "c9442cfe880a170ad591dce46e1c00ee644ea2a15cf3935788eda5e13511cae2"
+    }
+  ]
+}

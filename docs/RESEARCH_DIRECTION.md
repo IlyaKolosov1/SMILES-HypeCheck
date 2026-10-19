@@ -10,6 +10,7 @@
 | [CS01/E04: новый LZD holdout](../projects/context_selection/hypotheses/CS01/experiments/E04/v001.md) | Feature-контекст − среднее random | `+0.0859`, 3/3 блока положительны; один общий train bank |
 | [CS01/E05: отдельные LZD train banks](../projects/context_selection/hypotheses/CS01/experiments/E05/v001.md) | Feature-контекст − среднее random | `+0.0611`, 3/3 когорты положительны; новые context seeds |
 | [M01/E03: те же LZD соседи](../projects/model_comparison/hypotheses/M01/experiments/E03/v001.md) | CausalPFN − прямой локальный uplift | `+0.0481`, 3/3 когорты положительны |
+| [M01/E04: те же Criteo соседи](../projects/model_comparison/hypotheses/M01/experiments/E04/v001.md) | CausalPFN − прямой локальный uplift | `+0.0755`, 3/3 когорты положительны; все условные интервалы пересекают ноль |
 | [CS03/E01: синтетика с известным CATE](../projects/context_selection/hypotheses/CS03/experiments/E01/v001.md) | Feature-контекст − random | Qini `+0.0135` и CATE RMSE `−0.0247`, оба 5/5 по нужному направлению; regret@10% улучшился 3/5 |
 | [M03/E02: фиксированная смесь](../projects/model_comparison/hypotheses/M03/experiments/E02/v001.md) | Interaction контекста и смеси с X-Learner | `−0.0441` в среднем; смесь не дала устойчивого выигрыша сверх feature-контекста |
 
@@ -21,9 +22,8 @@
 
 ## Ближайшие проверки
 
-1. На уже сохранённых новых Criteo-когортах сравнить CausalPFN с прямым локальным uplift по **тем же** feature-контекстам, без повторного FM-инференса. Это проверит, повторяется ли добавочная ценность FM за пределами LZD.
-2. Выполнить [CS04/E01](../projects/context_selection/hypotheses/CS04/experiments/E01/v001.md): на синтетике с известным CATE добавить 24 нерелевантных признака к тем же объектам и проверить, ослабевает ли польза feature-kNN против query-dependent random при равном `K` и одинаковых labels. CATE RMSE — primary, policy regret и Q̂ — отдельно. Это первый тест механизма; изменение гладкости эффекта и шума можно исследовать следующей версией, не подбирая их по E01.
-3. Для подтверждающего утверждения заранее выбрать новый независимый RCT-источник и primary контраст до просмотра его результатов. Нынешние LZD/Criteo проверки не заменяют такую валидацию.
+1. Выполнить [CS04/E01](../projects/context_selection/hypotheses/CS04/experiments/E01/v001.md): на синтетике с известным CATE добавить 24 нерелевантных признака и сравнить поиск соседей по 8 полезным и по всем 32 признакам **при одном входе FM**. Равный `K`, одинаковые labels и CATE RMSE как primary отделяют эффект поиска от реакции FM на размерность; policy regret и Q̂ — отдельно. Это первый тест механизма; изменение гладкости эффекта и шума можно исследовать следующей версией, не подбирая их по E01.
+2. Для подтверждающего утверждения заранее выбрать новый независимый RCT-источник и primary контраст до просмотра его результатов. Нынешние LZD/Criteo проверки не заменяют такую валидацию.
 
 Существующая [CS03/E02 диагностика](../projects/context_selection/hypotheses/CS03/README.md) уточняет пункт 2: effect-score retrieval чуть снижал среднюю дистанцию до истинного CATE соседей, но давал худший CATE RMSE CausalPFN, хотя Qini была немного выше. Эти pipelines имеют разный доступ к labels, поэтому следующий синтетический тест должен фиксировать **не только `K`, но и весь доступный train budget**. Иначе разницу нельзя приписать выбору контекста.
 
