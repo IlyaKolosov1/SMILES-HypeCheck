@@ -1,0 +1,10 @@
+{
+  "delta_qhat": 0.10616282156391055,
+  "bootstrap_95": [
+    0.04792006624809651,
+    0.1584612658718526
+  ],
+  "valid_draws": 1000,
+  "descriptive_gate": true,
+  "conditional_ci_excludes_zero": true
+}
