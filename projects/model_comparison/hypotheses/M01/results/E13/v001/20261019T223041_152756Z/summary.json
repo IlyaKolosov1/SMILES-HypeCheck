@@ -1,0 +1,45 @@
+{
+  "fm_over_local": {
+    "positive_replications": 84,
+    "mean_normalized_delta": 0.2801765129200443,
+    "conditional_95": [
+      0.26476948962918395,
+      0.29158241797329154
+    ]
+  },
+  "fm_over_t": {
+    "positive_replications": 95,
+    "mean_normalized_delta": 0.09670447117458832,
+    "conditional_95": [
+      0.08743491380962169,
+      0.10477948112367877
+    ]
+  },
+  "fm_retrieval": {
+    "positive_replications": 97,
+    "mean_normalized_delta": 0.09122975376400962,
+    "conditional_95": [
+      0.08313020893073231,
+      0.09656666629972761
+    ]
+  },
+  "local_retrieval": {
+    "positive_replications": 100,
+    "mean_normalized_delta": 0.2031129378002628,
+    "conditional_95": [
+      0.1981988114974857,
+      0.2089134280188367
+    ]
+  },
+  "retrieval_interaction": {
+    "positive_replications": 10,
+    "mean_normalized_delta": -0.1118831840362531,
+    "conditional_95": [
+      -0.12048314103374219,
+      -0.1063467051147691
+    ]
+  },
+  "lead_descriptive_criterion_met": true,
+  "status": "complete_exploratory",
+  "caveat": "IHDP replications share original subjects; each official test has only 75 rows."
+}
