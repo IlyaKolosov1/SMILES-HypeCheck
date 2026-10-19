@@ -4,7 +4,7 @@
 
 | Гипотеза | Статус |
 | --- | --- |
-| [M01: FM против baseline](hypotheses/M01/README.md) | Старый Hillstrom пилот; новый benchmark завершён как разведочный, разбор ожидается |
+| [M01: FM против baseline](hypotheses/M01/README.md) | E02: фиксированные S/T/X; E03: FM лучше простого uplift по тем же соседям на LZD, но не устойчиво лучше S/T/X |
 | [M02: смешение](hypotheses/M02/README.md) | Фиксированная смесь 50/50 не показала устойчивого выигрыша сверх feature-kNN на новых Criteo-строках |
 | [M03: контекст + смешение](hypotheses/M03/README.md) | Отрицательное interaction повторилось на новых Criteo-строках; вывод разведочный |
 | [M04: PEHE и targeting](hypotheses/M04/README.md) | Исторический синтетический отчёт, отдельного CSV не было |

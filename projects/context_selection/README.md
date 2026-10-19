@@ -4,7 +4,7 @@
 
 | Гипотеза | Эксперименты и статус |
 | --- | --- |
-| [CS01: selector против random](hypotheses/CS01/README.md) | E01/E02: cross-dataset проверки; E03: новые Criteo-выборки; E04: новый LZD holdout, оба сигнала положительные и разведочные |
+| [CS01: selector против random](hypotheses/CS01/README.md) | E01/E02: cross-dataset проверки; E03: новые Criteo-выборки; E04/E05: новые LZD holdout и отдельные train banks; сигнал положительный и разведочный |
 | [CS02: устойчивость на Hillstrom](hypotheses/CS02/README.md) | Локальный пилот, пять seeds и sweep размера контекста; есть неполные запуски |
 | [CS03: качество effect-score selector](hypotheses/CS03/README.md) | Две синтетические серии с известным CATE; разведочные результаты |
 

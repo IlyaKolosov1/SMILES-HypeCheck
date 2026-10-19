@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS01",
+  "experiment": "E05",
+  "experiment_version": "v001",
+  "run_id": "20261018T232327_431673Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Feature-context replication across disjoint LZD train/eval cohorts.",
+  "original_local_path": "artifacts/local/cs01_e05_results/20261018T232327_431673Z",
+  "code_git_commit": "221dc95a88bac12f3f54675abd2d97a61071d101",
+  "code_sha256": "e7131a21e679b7deb089e18e205f5af4cfdf2fcb9be0591d68bb9475a4df08de",
+  "code_snapshot": "projects/context_selection/hypotheses/CS01/results/E05/v001/20261018T232327_431673Z/code/run_cs01_e05.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 2271,
+      "sha256": "38eb01973ca726c0758c0c0d7a3e649233b60c5c9614d53c488c59f48a965faf"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/m01_e02.py",
+      "size": 19124,
+      "sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35560,
+      "sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+    },
+    {
+      "path": "code/run_cs01_e04.py",
+      "size": 21197,
+      "sha256": "abfd944d34ac63a34993ae8ba5ffc2b6a7716f570a2ab6bcf6bacf296f2e4420"
+    },
+    {
+      "path": "code/run_cs01_e05.py",
+      "size": 21866,
+      "sha256": "e7131a21e679b7deb089e18e205f5af4cfdf2fcb9be0591d68bb9475a4df08de"
+    },
+    {
+      "path": "code/v001_prior_eval_sources.csv",
+      "size": 2149,
+      "sha256": "e4e1e850cfd13a0f7ee3feb65bc6920f999730f0b6c9e3e592a2646c216b054a"
+    },
+    {
+      "path": "cohort_summary.csv",
+      "size": 373,
+      "sha256": "931994ef7e26a8dcbf9bd293e259fa702f47bc8d21eb0a6ff1e1137b4dc44829"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 8247,
+      "sha256": "f1b03cf36c9caab0c7465719a064d45e671a0e4cb8681767e571bb081b4af064"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 2230,
+      "sha256": "0c471d1e1e06b3f37ed74ae6c5644590f6a75327becd7b71f2a99715b2020753"
+    },
+    {
+      "path": "source_files.csv",
+      "size": 2952,
+      "sha256": "75c35ef9d646107208ece1d70eb7615e4e7f5ea9da37619e2903c180b1d1ccaf"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 3366,
+      "sha256": "a2e8c46bb68a1a883461226b0c458f7382d16129aae1ccfa7849c16202366777"
+    }
+  ]
+}
