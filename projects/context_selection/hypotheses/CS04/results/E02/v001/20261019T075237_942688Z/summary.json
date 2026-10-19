@@ -1,0 +1,13 @@
+{
+  "mean_local8_minus_mix50": -0.0010712927767271396,
+  "positive_local8_minus_mix50": 4,
+  "mean_random_minus_mix50": 0.010170936278163928,
+  "positive_random_minus_mix50": 10,
+  "mean_feature32_minus_mix50": -0.00964499795894362,
+  "bootstrap_95": [
+    -0.0033812346701266385,
+    0.0008861621949472865
+  ],
+  "sign_test_p": 0.75390625,
+  "descriptive_gate": false
+}
