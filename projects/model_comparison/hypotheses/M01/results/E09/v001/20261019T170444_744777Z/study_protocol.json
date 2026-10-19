@@ -1,0 +1,129 @@
+{
+  "experiment": "M01/E09/v001",
+  "run_id": "20261019T170444_744777Z",
+  "source_snapshot": "projects/context_selection/hypotheses/CS01/results/E02/v001/20261017T170010_816255Z",
+  "source_manifest_sha256": "c771fd81c29c044aad3167caca39e0b9c36387f27ff33e7c85b7394675d8fe0f",
+  "source_code_git_commit": "032ae7c691134caf87093dc0cf1fe2cdd4ea1243",
+  "local_run": "artifacts/local/m01_e09_results/20261019T170444_744777Z",
+  "bootstrap_draws": 300,
+  "datasets": [
+    "Hillstrom",
+    "Retailhero-uplift",
+    "LZD",
+    "Criteo-ITE-v2.1"
+  ],
+  "splits": [
+    101,
+    102,
+    103
+  ],
+  "selectors": [
+    "feature_knn_K512",
+    "random_query_s201_K512",
+    "random_query_s202_K512",
+    "random_query_s203_K512"
+  ],
+  "caveat": "Retrospective reused CS01/E02 eval outcomes and overlapping splits; conditional intervals",
+  "audits": [
+    {
+      "split_seed": 101,
+      "dataset": "Hillstrom",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    },
+    {
+      "split_seed": 101,
+      "dataset": "Retailhero-uplift",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    },
+    {
+      "split_seed": 101,
+      "dataset": "LZD",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    },
+    {
+      "split_seed": 101,
+      "dataset": "Criteo-ITE-v2.1",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    },
+    {
+      "split_seed": 102,
+      "dataset": "Hillstrom",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    },
+    {
+      "split_seed": 102,
+      "dataset": "Retailhero-uplift",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    },
+    {
+      "split_seed": 102,
+      "dataset": "LZD",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    },
+    {
+      "split_seed": 102,
+      "dataset": "Criteo-ITE-v2.1",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    },
+    {
+      "split_seed": 103,
+      "dataset": "Hillstrom",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    },
+    {
+      "split_seed": 103,
+      "dataset": "Retailhero-uplift",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    },
+    {
+      "split_seed": 103,
+      "dataset": "LZD",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    },
+    {
+      "split_seed": 103,
+      "dataset": "Criteo-ITE-v2.1",
+      "train_rows": 51200,
+      "eval_rows": 4096,
+      "source_label_check": true,
+      "context_ids_checked": 4
+    }
+  ],
+  "code_git_commit": "2b00ae01dd572f123431010159edc5583db9405a",
+  "code_dirty": false,
+  "code_sha256": "052482fa5507c0366f26564e0517a5d7f48dfdd6d12cf44ca9a8873896d39206",
+  "protocol_sha256": "669f057346a59ff14a72b45b1a569bf4636d39b15c9a6aac805aee6011364572"
+}
