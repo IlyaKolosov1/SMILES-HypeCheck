@@ -1,0 +1,15 @@
+{
+  "mean_pfn_far_minus_near": -0.009273672402410718,
+  "positive": 0,
+  "mean_direct_far_minus_near": -0.00022991956811401759,
+  "mean_interaction": -0.0090437528342967,
+  "mean_near_minus_far_useful_distance": 4.89361584186554e-05,
+  "mean_far_minus_near_noise_distance": 1.956132036447525,
+  "mean_near_minus_far_cate_neighbor_mae": 1.1581737771231699e-05,
+  "bootstrap_95": [
+    -0.011568924340674844,
+    -0.006952808277585466
+  ],
+  "sign_test_p": 0.001953125,
+  "descriptive_gate": false
+}

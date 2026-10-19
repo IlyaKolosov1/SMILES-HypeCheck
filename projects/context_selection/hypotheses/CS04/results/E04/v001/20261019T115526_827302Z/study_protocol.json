@@ -1,0 +1,42 @@
+{
+  "experiment": "CS04/E04/v001",
+  "run_id": "20261019T115526_827302Z",
+  "generated_seeds": [
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+  ],
+  "train_size": 8192,
+  "eval_size": 2048,
+  "context_size": 512,
+  "candidates_per_arm": 1024,
+  "bin_size": 64,
+  "picked_per_bin": 16,
+  "bootstrap_seed": 985,
+  "bootstrap_draws": 10000,
+  "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+  "versions": {
+    "causalpfn": "0.1.5",
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "torch": "2.3.1",
+    "scikit-learn": "1.5.2",
+    "scikit-uplift": "0.5.1",
+    "scipy": "1.17.1"
+  },
+  "code_git_commit": "83d795c7cbf67f42dfdde90b637646a3fc98231d",
+  "code_dirty": false,
+  "code_sha256": "bc878b801c85b114a388979e6f54e1194ee344c8010c9ed03b70d7d85d517815",
+  "e02_dependency_sha256": "5c59ce2bfba503d692112d42d1cd51bfd1d637100c1032f36cbba331012f9db3",
+  "e01_dependency_sha256": "2ddbbad3322f90deff0eaff39f1e4b5fcb464c28896c9c324f87c5bf5318adbb",
+  "generator_sha256": "87801f4a7c4391b49d2e88e52daf9ba88bbc2dad012c7ff25e363ebcdb4e737f",
+  "protocol_sha256": "1f45bd60da4aff6ed01db852befef3b3d4c74e42e7b983655f95a3c941852c76"
+}
