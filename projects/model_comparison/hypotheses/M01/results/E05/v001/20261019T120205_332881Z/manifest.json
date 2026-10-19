@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E05",
+  "experiment_version": "v001",
+  "run_id": "20261019T120205_332881Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Fixed classical baselines on the external Starbucks campaign.",
+  "original_local_path": "artifacts/local/m01_e05_results/20261019T120205_332881Z",
+  "code_git_commit": "23861f926acd0c980a7fcc1b4a4cdec5d773a60b",
+  "code_sha256": "6b69f01c3291111f7eff169fb0d602e1a49839ab83a80f87bc829d79a7c11acb",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E05/v001/20261019T120205_332881Z/code/run_m01_e05.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 1314,
+      "sha256": "ed32b74bb604f63d8aac4c015268b8e887774479447f691ad9497829c41f51d0"
+    },
+    {
+      "path": "code/m01_e02.py",
+      "size": 19124,
+      "sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35560,
+      "sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+    },
+    {
+      "path": "code/run_cs01_e06.py",
+      "size": 19505,
+      "sha256": "b9ea2e6ff0cfda82eb728ae42158c9c5a372f768c5ec88db6568ebc26c1e2f23"
+    },
+    {
+      "path": "code/run_m01_e05.py",
+      "size": 12901,
+      "sha256": "6b69f01c3291111f7eff169fb0d602e1a49839ab83a80f87bc829d79a7c11acb"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 871,
+      "sha256": "8ec1fc0a389e80ced8cdb796ffa50fadd33f6fe7cb1d71e7184dff283b23a6d4"
+    },
+    {
+      "path": "paired_differences.csv",
+      "size": 3458,
+      "sha256": "02b58d524411f3f1affe2f6d3468364e7f69fb2a507b2f777c3a03e209b81954"
+    },
+    {
+      "path": "source_files.csv",
+      "size": 1119,
+      "sha256": "6a4c1d67bffc0d7de005c0858f99fc2984b68e43df135020f39aec0a330787c5"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 2005,
+      "sha256": "546129b5f4472d9791001dc1da02a0451397a7f8da46b766e5cbb2dd0ddc13d5"
+    },
+    {
+      "path": "summary.json",
+      "size": 210,
+      "sha256": "9334f2e086b9e1412201adf4c7464a9d41328b8fc2346c172b0a51f397b09d05"
+    }
+  ]
+}
