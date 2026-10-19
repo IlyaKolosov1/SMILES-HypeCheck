@@ -1,0 +1,13 @@
+{
+  "mean_local_feature32_minus_feature8": 0.014619498436733533,
+  "mean_pfn_feature32_minus_feature8": -0.01251141890852101,
+  "mean_interaction": -0.02713091734525454,
+  "negative_interaction": 10,
+  "bootstrap_95": [
+    -0.03072526533115112,
+    -0.023498811701382624
+  ],
+  "mean_pfn_minus_local_feature8": 0.0699987430453585,
+  "mean_pfn_minus_local_feature32": 0.04286782570010396,
+  "retrospective": true
+}

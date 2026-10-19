@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS04",
+  "experiment": "E03",
+  "experiment_version": "v001",
+  "run_id": "20261019T081002_608943Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Retrospective PFN versus direct local context interaction.",
+  "original_local_path": "artifacts/local/cs04_e03_results/20261019T081002_608943Z",
+  "code_git_commit": "474bb3d9d5786ca9ef03a2e822e625e9f6d59d61",
+  "code_sha256": "65fb658226b0dc61840ea5b2eea30489f3ad3077da9206ab668726863fecddba",
+  "code_snapshot": "projects/context_selection/hypotheses/CS04/results/E03/v001/20261019T081002_608943Z/code/analyze_cs04_e03.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 4070,
+      "sha256": "092eb7467b64de5840b848537d16704ca97b6879f4785205cb84310f04bf4999"
+    },
+    {
+      "path": "code/analyze_cs04_e03.py",
+      "size": 15744,
+      "sha256": "65fb658226b0dc61840ea5b2eea30489f3ad3077da9206ab668726863fecddba"
+    },
+    {
+      "path": "code/synthetic_pilot.py",
+      "size": 22764,
+      "sha256": "87801f4a7c4391b49d2e88e52daf9ba88bbc2dad012c7ff25e363ebcdb4e737f"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 3976,
+      "sha256": "a602712d5d0b8ab6b38c14f6d05eec181a9e50fa4a840dbf0c1674639224b7e4"
+    },
+    {
+      "path": "paired_interaction.csv",
+      "size": 1201,
+      "sha256": "a2ae5727290e940ec077173c0fd7d868c2210db16cab5223c07c1160ce0b2257"
+    },
+    {
+      "path": "source_files.csv",
+      "size": 17427,
+      "sha256": "5a8356dcb0332b76425c2a0604fc235b80ed82d5830b08d338d42b72aa88803f"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 898,
+      "sha256": "18d470b4a49116dba0f68d6b79aa2451ffd79e1c33a8e99aef12f56035b21316"
+    },
+    {
+      "path": "summary.json",
+      "size": 415,
+      "sha256": "1686f3e1186561afff531c15809021be01b142018480f3041c9585058ef2f276"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "experiment": "CS04/E03/v001",
+  "run_id": "20261019T081002_608943Z",
+  "source_experiment": "CS04/E01/v001",
+  "source_run_id": "20261019T064211_090052Z",
+  "source_manifest_sha256": "8e497913be7c0452546c8a1f4701e394048629566c9d93c06afc8c696c99e205",
+  "generated_seeds": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70
+  ],
+  "bootstrap_seed": 985,
+  "bootstrap_draws": 10000,
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scikit-uplift": "0.5.1"
+  },
+  "retrospective": true,
+  "code_git_commit": "474bb3d9d5786ca9ef03a2e822e625e9f6d59d61",
+  "code_dirty": false,
+  "code_sha256": "65fb658226b0dc61840ea5b2eea30489f3ad3077da9206ab668726863fecddba",
+  "metric_dependency_sha256": "87801f4a7c4391b49d2e88e52daf9ba88bbc2dad012c7ff25e363ebcdb4e737f",
+  "protocol_sha256": "752c6b12a3cc6ed4a5f57a0712396a49c0887457aae7b10258e4025cf10cd4ce"
+}
