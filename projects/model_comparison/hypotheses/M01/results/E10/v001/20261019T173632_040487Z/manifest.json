@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E10",
+  "experiment_version": "v001",
+  "run_id": "20261019T173632_040487Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Post-hoc fixed rank blend of local uplift and S-Learner.",
+  "original_local_path": "artifacts/local/m01_e10_results/20261019T173632_040487Z",
+  "code_git_commit": "a2d0c1e2502f08b0f3c7c99dc6ba323364211c8a",
+  "code_sha256": "e1c0d7604bff17e2a6f113af124b4f7d1a5affbdf3f5d8552e67a005452e9d8f",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E10/v001/20261019T173632_040487Z/code/run_m01_e10.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 1755,
+      "sha256": "3fd7df904146138f6081a6339685b5f52b48f5a7ace25bd6f56b07a4647db590"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/m01_e02.py",
+      "size": 19124,
+      "sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35560,
+      "sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+    },
+    {
+      "path": "code/run_cs05_e01.py",
+      "size": 26599,
+      "sha256": "aa2c778640613b675f05b274bb3d71da7f9c3d542e0695fb4c251d04dacbffae"
+    },
+    {
+      "path": "code/run_m01_e06.py",
+      "size": 23648,
+      "sha256": "a97652c67c3e79b7638df75772902dd1ede8c7d9c781fcaa0c2e6c25a7e8e8e2"
+    },
+    {
+      "path": "code/run_m01_e08.py",
+      "size": 26781,
+      "sha256": "f2fbcbae6047f3abda2d2f10a9acc4a91459eca4fb7b31550d2d172cd1dad77c"
+    },
+    {
+      "path": "code/run_m01_e10.py",
+      "size": 17616,
+      "sha256": "e1c0d7604bff17e2a6f113af124b4f7d1a5affbdf3f5d8552e67a005452e9d8f"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 881,
+      "sha256": "84e17c95ecab6bee10990751554cac343ec9f9472515c8d28149b1d8314b8f04"
+    },
+    {
+      "path": "mean_bootstrap_draws.csv",
+      "size": 23060,
+      "sha256": "e045418662e53b236ba3641da0419a697f9502fb46518a2d167aa39f06abc479"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 1479,
+      "sha256": "caea5d5cf834d37751bd966cb34eb39649e18a94e41da2d7131c3df70deb54f9"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 3261,
+      "sha256": "6f4d2970ad8443c299d9d7554339d0a6e9b463cf46c11ccc8d6dbbba3e836cba"
+    },
+    {
+      "path": "summary.json",
+      "size": 1087,
+      "sha256": "ecac87a94cb9d8bcaab3f8fe2c90b129071ab4110dbcd7c23a0805765c49cc73"
+    }
+  ]
+}

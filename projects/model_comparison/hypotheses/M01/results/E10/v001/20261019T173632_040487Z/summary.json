@@ -1,0 +1,42 @@
+{
+  "primary_contrasts": [
+    "rank_blend_50_50 - local",
+    "rank_blend_50_50 - s_learner"
+  ],
+  "contrasts": {
+    "rank_blend_50_50 - local": {
+      "mean": 0.007328952424785987,
+      "positive": 4,
+      "cohort_deltas": [
+        -0.01040112668152783,
+        0.007417369007092507,
+        0.014615520376975485,
+        0.010551643219229134,
+        0.022753606689267084,
+        -0.0009632980623204557
+      ],
+      "bootstrap_95": [
+        -0.003055781604623218,
+        0.018262347052978856
+      ]
+    },
+    "rank_blend_50_50 - s_learner": {
+      "mean": 0.009511596490949995,
+      "positive": 5,
+      "cohort_deltas": [
+        0.01842175894762045,
+        0.011732141161542267,
+        0.00040310003689084106,
+        0.017221770954704396,
+        -0.007568992307443151,
+        0.016859800152385168
+      ],
+      "bootstrap_95": [
+        -0.004737139995698379,
+        0.02345508727700775
+      ]
+    }
+  },
+  "prospective_test_lead": false,
+  "caveat": "Post-hoc fixed blend on six viewed Criteo cohorts; conditional bootstrap is not independent confirmation"
+}

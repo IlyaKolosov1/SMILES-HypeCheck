@@ -1,0 +1,83 @@
+{
+  "experiment": "M01/E10/v001",
+  "run_id": "20261019T173632_040487Z",
+  "local_run": "artifacts/local/m01_e10_results/20261019T173632_040487Z",
+  "source_cohorts": [
+    {
+      "sample_seed": 407,
+      "source_run": "artifacts/local/m01_e08_results/cohort_407/20261019T132259_429112Z",
+      "source_rows": 200000,
+      "train_rows": 51200,
+      "eval_rows": 32768,
+      "source_label_check": true
+    },
+    {
+      "sample_seed": 408,
+      "source_run": "artifacts/local/m01_e08_results/cohort_408/20261019T134103_079570Z",
+      "source_rows": 200000,
+      "train_rows": 51200,
+      "eval_rows": 32768,
+      "source_label_check": true
+    },
+    {
+      "sample_seed": 409,
+      "source_run": "artifacts/local/m01_e08_results/cohort_409/20261019T135906_901800Z",
+      "source_rows": 200000,
+      "train_rows": 51200,
+      "eval_rows": 32768,
+      "source_label_check": true
+    },
+    {
+      "sample_seed": 410,
+      "source_run": "artifacts/local/cs05_e01_results/cohort_410/20261019T172208_223728Z",
+      "source_rows": 200000,
+      "train_rows": 51200,
+      "eval_rows": 32768,
+      "source_label_check": true
+    },
+    {
+      "sample_seed": 411,
+      "source_run": "artifacts/local/cs05_e01_results/cohort_411/20261019T172234_617896Z",
+      "source_rows": 200000,
+      "train_rows": 51200,
+      "eval_rows": 32768,
+      "source_label_check": true
+    },
+    {
+      "sample_seed": 412,
+      "source_run": "artifacts/local/cs05_e01_results/cohort_412/20261019T172301_284681Z",
+      "source_rows": 200000,
+      "train_rows": 51200,
+      "eval_rows": 32768,
+      "source_label_check": true
+    }
+  ],
+  "source_snapshots": {
+    "E08": "projects/model_comparison/hypotheses/M01/results/E08/v001/20261019T141726_397774Z",
+    "CS05": "projects/context_selection/hypotheses/CS05/results/E01/v001/20261019T172329_275728Z"
+  },
+  "source_manifest_sha256": {
+    "E08": "cf79a453bc4b5ee9634a631476c9be4cc933874eb1c9bf0e58297f8adb66880a",
+    "CS05": "c307d6ee91d1328971f0c32b06201b7ba697257a7dff12e0f15b3b0f7b7d8cd5"
+  },
+  "source_code_git_commits": {
+    "E08": "f947651598809eb9c7d9ede2d4449cb04a6e08f8",
+    "CS05": "26839738a3b2262dfa390109c27f69438fb10645"
+  },
+  "feature_sha256": "a172c0c811c0f53826c797dc504bd47e7a2c58baa3b4390b6a4dd792d31d9464",
+  "outcome_sha256": "dd864b66d2307132cecce7f5b39e7841ede3377d3313a875c6cffcdfb6abfa61",
+  "bootstrap_draws": 500,
+  "rank_weight": 0.5,
+  "code_git_commit": "a2d0c1e2502f08b0f3c7c99dc6ba323364211c8a",
+  "code_dirty": false,
+  "code_sha256": "e1c0d7604bff17e2a6f113af124b4f7d1a5affbdf3f5d8552e67a005452e9d8f",
+  "protocol_sha256": "378311243f2bc278357e099bebb672586ee8732fa4489e8cd7b8030ce399ef16",
+  "dependency_sha256": {
+    "run_cs05_e01.py": "aa2c778640613b675f05b274bb3d71da7f9c3d542e0695fb4c251d04dacbffae",
+    "run_m01_e08.py": "f2fbcbae6047f3abda2d2f10a9acc4a91459eca4fb7b31550d2d172cd1dad77c",
+    "run_m01_e06.py": "a97652c67c3e79b7638df75772902dd1ede8c7d9c781fcaa0c2e6c25a7e8e8e2",
+    "cs01_e03.py": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+    "multi_dataset_context.py": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a",
+    "m01_e02.py": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+  }
+}
