@@ -1,0 +1,46 @@
+{
+  "primary_contrast": "interaction",
+  "contrasts": {
+    "fm_natural_minus_balanced": {
+      "mean": -0.003096193110908001,
+      "positive": 1,
+      "cohort_deltas": [
+        0.0376966975556461,
+        -0.0108790829703866,
+        -0.0361061939179835
+      ],
+      "bootstrap_95": [
+        -0.041279816089798846,
+        0.030869085502552043
+      ]
+    },
+    "local_natural_minus_balanced": {
+      "mean": -0.0303118937475694,
+      "positive": 0,
+      "cohort_deltas": [
+        -0.0564379911418303,
+        -0.0038220292549557,
+        -0.0306756608459222
+      ],
+      "bootstrap_95": [
+        -0.08059329024093882,
+        0.017551991345572823
+      ]
+    },
+    "interaction": {
+      "mean": 0.027215700636661466,
+      "positive": 1,
+      "cohort_deltas": [
+        0.0941346886974765,
+        -0.0070570537154308,
+        -0.0054305330720613
+      ],
+      "bootstrap_95": [
+        -0.029193288332372343,
+        0.08558123243026886
+      ]
+    }
+  },
+  "descriptive_lead_gate": false,
+  "caveat": "One Criteo source; conditional bootstrap on fixed trained models and samples"
+}
