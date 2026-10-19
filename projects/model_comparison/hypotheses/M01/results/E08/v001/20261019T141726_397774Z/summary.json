@@ -1,0 +1,62 @@
+{
+  "primary_contrasts": [
+    "feature_knn_K512 - t_learner",
+    "feature_knn_K512 - local_feature_mean"
+  ],
+  "contrasts": {
+    "feature_knn_K512 - t_learner": {
+      "mean": -1.48480415552626,
+      "positive": 1,
+      "cohort_deltas": [
+        0.6095823699177769,
+        -3.62956003281556,
+        -1.4344348036809975
+      ],
+      "bootstrap_95": [
+        -3.4500193641449948,
+        0.347058661439229
+      ]
+    },
+    "feature_knn_K512 - local_feature_mean": {
+      "mean": -3.4117939301488587,
+      "positive": 0,
+      "cohort_deltas": [
+        -3.325541974693466,
+        -2.336447048078555,
+        -4.573392767674555
+      ],
+      "bootstrap_95": [
+        -5.421834431152695,
+        -1.6653385695245473
+      ]
+    },
+    "feature_knn_K512 - s_learner": {
+      "mean": -2.959303780514354,
+      "positive": 0,
+      "cohort_deltas": [
+        -0.818120187948149,
+        -5.052847076747285,
+        -3.0069440768476285
+      ],
+      "bootstrap_95": [
+        -4.926454695142501,
+        -1.1282112668439455
+      ]
+    },
+    "feature_knn_K512 - x_learner": {
+      "mean": -1.3239863228882565,
+      "positive": 1,
+      "cohort_deltas": [
+        0.1999972306768596,
+        -1.980140489736296,
+        -2.191815709605333
+      ],
+      "bootstrap_95": [
+        -3.3346693153543647,
+        0.5980188665579188
+      ]
+    }
+  },
+  "joint_descriptive_gate": false,
+  "caveat": "Criteo, budget and comparator selected after prior outcomes; bootstrap conditional on these train/eval rows"
+}

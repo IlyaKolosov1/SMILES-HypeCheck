@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E08",
+  "experiment_version": "v001",
+  "run_id": "20261019T141726_397774Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Fresh Criteo top-decile FM versus T and local uplift.",
+  "original_local_path": "artifacts/local/m01_e08_results",
+  "code_git_commit": "f947651598809eb9c7d9ede2d4449cb04a6e08f8",
+  "code_sha256": "f2fbcbae6047f3abda2d2f10a9acc4a91459eca4fb7b31550d2d172cd1dad77c",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E08/v001/20261019T141726_397774Z/code/run_m01_e08.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 1568,
+      "sha256": "4ffb5bd8190032b997e25b22949f164250a0756dece69e7e789c0fad43d1971b"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/m01_e02.py",
+      "size": 19124,
+      "sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35560,
+      "sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+    },
+    {
+      "path": "code/run_m01_e06.py",
+      "size": 23648,
+      "sha256": "a97652c67c3e79b7638df75772902dd1ede8c7d9c781fcaa0c2e6c25a7e8e8e2"
+    },
+    {
+      "path": "code/run_m01_e08.py",
+      "size": 26781,
+      "sha256": "f2fbcbae6047f3abda2d2f10a9acc4a91459eca4fb7b31550d2d172cd1dad77c"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 7013,
+      "sha256": "c06ffca2a13b541482d6d7b533c0e318281fbb12a5e100aae9fc848098b7a443"
+    },
+    {
+      "path": "mean_bootstrap_draws.csv",
+      "size": 82391,
+      "sha256": "8f73375b348058268abb16a269774c037fc2e46253c50513752a45b69fda760a"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 1384,
+      "sha256": "8c5e035d41596abd53a6796416a1208dbff35c7d1c8010071cf96107297d286a"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 2274,
+      "sha256": "227c3001652643d09cf2789b6e808002318c1f607f1f12d1050ad571ae15c451"
+    },
+    {
+      "path": "summary.json",
+      "size": 1521,
+      "sha256": "0308c561dec729feb889989a257eb8241e80fefa1f720138d6997f47519ea61f"
+    }
+  ]
+}
