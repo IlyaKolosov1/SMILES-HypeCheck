@@ -1,0 +1,50 @@
+{
+  "experiment": "M01/E06/v001",
+  "run_id": "20261019T125852_487521Z",
+  "local_runs": {
+    "404": "artifacts/local/m01_e06_results/cohort_404/20261019T123104_601161Z",
+    "405": "artifacts/local/m01_e06_results/cohort_405/20261019T124020_269645Z",
+    "406": "artifacts/local/m01_e06_results/cohort_406/20261019T124933_917987Z"
+  },
+  "source_rows": 13979592,
+  "old_sample_seeds": [
+    42,
+    301,
+    302,
+    303,
+    401,
+    402,
+    403
+  ],
+  "old_excluded_rows": 695670,
+  "old_excluded_sha256": "c5ce6c16d63cd913304df76013234786bdfafc217644a5312dd19655f4ffd76d",
+  "sample_seeds": [
+    404,
+    405,
+    406
+  ],
+  "split_seeds": {
+    "404": 114,
+    "405": 115,
+    "406": 116
+  },
+  "sample_sha256": {
+    "404": "23956982ca8c912d600788412d94cf678eca562e13c0beeea57946004527e414",
+    "405": "8b931af25391410e14f9a175e9a10fe176363fb810e72567d694dc6995dd86be",
+    "406": "841e96785e08eeb32577955a34a020de8d6debd35c1d0d09cdb88d6568d03388"
+  },
+  "source_snapshot": "projects/context_selection/hypotheses/CS01/results/E03/v001/20261018T201230_193386Z",
+  "source_snapshot_manifest_sha256": "383ab35494f60997aabbdba839eba8ca377a49a519434c854739cd037edfeaf8",
+  "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+  "feature_sha256": "a172c0c811c0f53826c797dc504bd47e7a2c58baa3b4390b6a4dd792d31d9464",
+  "outcome_sha256": "dd864b66d2307132cecce7f5b39e7841ede3377d3313a875c6cffcdfb6abfa61",
+  "cleaning_metadata_sha256": "d032b4d820dfed1b5c3bb1aededd894ced1d35b66ebda426a094fa48bfa9d8b0",
+  "code_git_commit": "8eaa8cee8f3ad21c8e190a26cb9c0ba50a976960",
+  "code_dirty": false,
+  "code_sha256": "a97652c67c3e79b7638df75772902dd1ede8c7d9c781fcaa0c2e6c25a7e8e8e2",
+  "protocol_sha256": "4a63828311c6bea5169c54e472125021e8a96f3f4d2419b5876eb05863f13e89",
+  "source_dependency_sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+  "context_dependency_sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a",
+  "classic_dependency_sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+}

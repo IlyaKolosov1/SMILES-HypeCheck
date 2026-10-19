@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E06",
+  "experiment_version": "v001",
+  "run_id": "20261019T125852_487521Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Fresh Criteo FM versus X-Learner and matched local uplift.",
+  "original_local_path": "artifacts/local/m01_e06_results",
+  "code_git_commit": "8eaa8cee8f3ad21c8e190a26cb9c0ba50a976960",
+  "code_sha256": "a97652c67c3e79b7638df75772902dd1ede8c7d9c781fcaa0c2e6c25a7e8e8e2",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E06/v001/20261019T125852_487521Z/code/run_m01_e06.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 1292,
+      "sha256": "364b9e77859d98ce4e79d42deca28f6b12f4e2fa682577cf90673c46ffaa9dc9"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/m01_e02.py",
+      "size": 19124,
+      "sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35560,
+      "sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+    },
+    {
+      "path": "code/run_m01_e06.py",
+      "size": 23648,
+      "sha256": "a97652c67c3e79b7638df75772902dd1ede8c7d9c781fcaa0c2e6c25a7e8e8e2"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 6530,
+      "sha256": "a38fa27b483cfd23b3994dc956ade47ce2e21fe7addcb5430c6b66ec7e838eaf"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 4121,
+      "sha256": "47c6b0ec31eb512b5386a5f0134a0e64710bb06323d909976df0de22b21a81ea"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 2168,
+      "sha256": "fe5a492e7ef9538dcd61cb6f9bc4618e89433fe8e31261b2409a2f925688c1e3"
+    },
+    {
+      "path": "summary.json",
+      "size": 630,
+      "sha256": "68a022f548397e360518a4f095b5c1efcf5b160875021fc6e176a90b935204fe"
+    }
+  ]
+}

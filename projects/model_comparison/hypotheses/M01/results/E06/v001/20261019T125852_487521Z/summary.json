@@ -1,0 +1,25 @@
+{
+  "contrasts": {
+    "feature_knn_K512 - x_learner": {
+      "mean": 0.03777868219319623,
+      "positive": 2,
+      "cohort_deltas": [
+        -0.0103407386768308,
+        0.034258601666874,
+        0.0894181835895455
+      ]
+    },
+    "feature_knn_K512 - local_feature_mean": {
+      "mean": -0.017738923504337135,
+      "positive": 1,
+      "cohort_deltas": [
+        -0.0559702183030892,
+        0.0066460183611523,
+        -0.0038925705710745
+      ]
+    }
+  },
+  "joint_descriptive_gate": false,
+  "source": "Criteo-ITE-v2.1",
+  "caveat": "Same selected RCT source; conditional bootstrap, no cross-dataset significance"
+}
