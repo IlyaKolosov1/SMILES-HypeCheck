@@ -1,0 +1,15 @@
+{
+  "status": "complete_exploratory",
+  "mechanism_criterion_met": false,
+  "method_criterion_met": false,
+  "mean_interaction": 0.07727573564221861,
+  "median_interaction": 0.06203223722864021,
+  "sd_interaction": 0.10971049774448995,
+  "positive_interactions": 6,
+  "continuous_fm_better_local_ridge": 8,
+  "continuous_fm_better_global_t": 8,
+  "continuous_mean_regret_fm": 0.060790271666045274,
+  "continuous_mean_regret_local_ridge": 0.06149505261970397,
+  "continuous_mean_regret_global_t": 0.06637219265896495,
+  "caveat": "One synthetic DGP, eight generated datasets; outcome family is paired and is not independent RCT validation."
+}

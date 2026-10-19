@@ -1,0 +1,29 @@
+{
+  "experiment": "M05/E01/v001",
+  "run_id": "20261019T232756_544624Z",
+  "local_path": "artifacts/local/m05_e01_results/20261019T232756_544624Z",
+  "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+  "seeds": [
+    2401,
+    2402,
+    2403,
+    2404,
+    2405,
+    2406,
+    2407,
+    2408
+  ],
+  "outcome_kinds": [
+    "binary",
+    "continuous"
+  ],
+  "train_rows": 4096,
+  "eval_rows": 512,
+  "context_size": 512,
+  "code_git_commit": "60f0c4906a873396ea3192df1e0257f6b7e2948f",
+  "code_dirty": false,
+  "code_sha256": "e7416118423137427b996e87a8e73130bd3cc87e70009ddf5e9333175d95bf65",
+  "protocol_sha256": "83bc150175db294f04c3da056efd5d726c35032ee00b3acd0d01cc856a9ace82",
+  "source_sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+}
