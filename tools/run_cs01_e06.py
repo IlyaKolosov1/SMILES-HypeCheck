@@ -241,7 +241,7 @@ def infer(forward, index: np.ndarray, q: np.ndarray, path: Path,
 
 
 def snapshot(run: Path, plan: dict, state: dict, metrics: pd.DataFrame,
-             pairs: pd.DataFrame, predictions: dict[str, np.ndarray]) -> Path:
+             pairs: pd.DataFrame) -> Path:
     result = TARGET / run.name
     result.mkdir(parents=True, exist_ok=False)
     metrics.to_csv(result / "all_metrics.csv", index=False)
@@ -360,6 +360,7 @@ def main() -> int:
             idx = build_context(run / f"context_train_row_{name}.npy", a, q, tt, name)
             selection_sec = time.monotonic() - started
             local = local_mean(idx, yt)
+            _, local_counts = np.unique(local, return_counts=True)
             table[f"direct_local_{name}"] = local
             predictions[f"direct_local_{name}"] = local
             save_json(run / "status.json", dict(status="incomplete", stage=name))
@@ -370,8 +371,9 @@ def main() -> int:
             table.to_csv(run / "predictions.csv", index=False)
             timings.append(dict(method=name, context_seconds=selection_sec,
                                 inference_seconds=time.monotonic() - started,
-                                direct_local_unique_scores=int(np.unique(local).size),
-                                direct_local_tie_fraction=float(1-np.unique(local).size/EVAL_N)))
+                                direct_local_unique_scores=int(len(local_counts)),
+                                direct_local_tie_fraction=float(
+                                    local_counts[local_counts > 1].sum() / EVAL_N)))
             pd.DataFrame(timings).to_csv(run / "timings.csv", index=False)
             print(f"FINISHED {name}", flush=True)
         save_json(run / "status.json", dict(status="incomplete", stage="paired_bootstrap"))
@@ -386,7 +388,7 @@ def main() -> int:
         metrics.to_csv(run / "all_metrics.csv", index=False)
         pairs.to_csv(run / "paired_differences.csv", index=False)
         save_json(run / "status.json", dict(status="complete_exploratory", stage="done"))
-        result = snapshot(run, prepared["plan"], state, metrics, pairs, predictions)
+        result = snapshot(run, prepared["plan"], state, metrics, pairs)
     except Exception as exc:
         save_json(run / "status.json", dict(status="incomplete", error=str(exc)))
         raise
