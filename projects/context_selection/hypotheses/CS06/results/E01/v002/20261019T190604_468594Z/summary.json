@@ -1,0 +1,48 @@
+{
+  "primary_contrast": "interaction",
+  "contrasts": {
+    "fm_natural_minus_balanced": {
+      "mean": -0.0030961931109080277,
+      "positive": 1,
+      "cohort_deltas": [
+        0.03769669755564613,
+        -0.010879082970386617,
+        -0.036106193917983594
+      ],
+      "bootstrap_95": [
+        -0.04127981608979886,
+        0.030869085502552077
+      ]
+    },
+    "local_natural_minus_balanced": {
+      "mean": -0.03031189374756946,
+      "positive": 0,
+      "cohort_deltas": [
+        -0.056437991141830395,
+        -0.0038220292549557833,
+        -0.030675660845922204
+      ],
+      "bootstrap_95": [
+        -0.08059329024093888,
+        0.017551991345572837
+      ]
+    },
+    "interaction": {
+      "mean": 0.02721570063666143,
+      "positive": 1,
+      "cohort_deltas": [
+        0.09413468869747652,
+        -0.007057053715430833,
+        -0.005430533072061389
+      ],
+      "bootstrap_95": [
+        -0.02919328833237238,
+        0.08558123243026888
+      ]
+    }
+  },
+  "descriptive_lead_gate": false,
+  "source_result": "projects/context_selection/hypotheses/CS06/results/E01/v001/20261019T185002_258957Z",
+  "correction": "Lossless float64 local scores; point estimates unchanged",
+  "caveat": "Same viewed cohorts and one Criteo source; conditional intervals"
+}

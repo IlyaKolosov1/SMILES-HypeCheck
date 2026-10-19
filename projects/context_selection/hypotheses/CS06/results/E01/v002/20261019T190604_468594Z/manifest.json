@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS06",
+  "experiment": "E01",
+  "experiment_version": "v002",
+  "run_id": "20261019T190604_468594Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Correct exact-score serialization; no new FM inference.",
+  "supersedes": "projects/context_selection/hypotheses/CS06/results/E01/v001/20261019T185002_258957Z",
+  "supersedes_reason": "v001 CSV rounds near-tied float64 local scores",
+  "original_local_path": "artifacts/local/cs06_e01_v002/20261019T190604_468594Z",
+  "code_git_commit": "3561cc9708f7d0962c2d313453951e67f74cdc03",
+  "code_sha256": "b01137b09ddb79d4e1ac6bf21b8f1411afbf4129fc06bcc2cdb9b895dc75639e",
+  "code_snapshot": "projects/context_selection/hypotheses/CS06/results/E01/v002/20261019T190604_468594Z/code/package_cs06_e01_v002.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 1494,
+      "sha256": "fbc3e75e8d7c36b5b235a41f3b1e3655ad4951cdddcb90f062a1e0d34062abe6"
+    },
+    {
+      "path": "code/package_cs06_e01_v002.py",
+      "size": 15466,
+      "sha256": "b01137b09ddb79d4e1ac6bf21b8f1411afbf4129fc06bcc2cdb9b895dc75639e"
+    },
+    {
+      "path": "code/run_cs06_e01.py",
+      "size": 26364,
+      "sha256": "9355d4021ea05dd253bc4fddabc7cf9bcab8f9eb1ede855ee33efc937359f91b"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 8617,
+      "sha256": "20351604aced38d8eea15020f030c9b29992fa140ca74de360645e767125e999"
+    },
+    {
+      "path": "mean_bootstrap_draws.csv",
+      "size": 33716,
+      "sha256": "8427ce0035f85b18b24ba453291a4e3821d8058dcbafc24bc36f2fd562f9dbdb"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 1076,
+      "sha256": "1c5538074fdd04dff9e7e50855a0477b7cce76745b13e694c71a67814cb1d12e"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 1318,
+      "sha256": "54e6d422b5449c03b8c89f0ac3c573c4ba4576c156033ef747802a6f7524ffe0"
+    },
+    {
+      "path": "summary.json",
+      "size": 1290,
+      "sha256": "0bb6b7f47ca1aab918c361f7cb4009207d7b2757e3c0501588c6a685609b27bb"
+    }
+  ]
+}

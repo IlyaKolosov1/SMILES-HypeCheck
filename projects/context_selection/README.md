@@ -9,7 +9,7 @@
 | [CS03: качество effect-score selector](hypotheses/CS03/README.md) | Две синтетические серии с известным CATE; разведочные результаты |
 | [CS04: лишние признаки и локальность](hypotheses/CS04/README.md) | E01 завершён: поиск по шумным признакам неожиданно снизил CATE RMSE при фиксированном входе FM; проверяем роль разнообразия контекста |
 | [CS05: retrieval без FM-инференса](hypotheses/CS05/README.md) | E01: на новых Criteo-строках local feature > random по Q̂ в 3/3, но не превосходит устойчиво S-Learner; разведочный результат |
-| [CS06: доля treatment arms в контексте](hypotheses/CS06/README.md) | E01: план парного теста balanced 256/256 против долей train при фиксированном K на новых Criteo-строках |
+| [CS06: доля treatment arms в контексте](hypotheses/CS06/README.md) | E01: три новые Criteo-когорты; interaction FM−local при смене доли arms неустойчив, ориентир не выполнен; v002 сохраняет точные score |
 
 Текущий код: [src](src/). Оригинальные версии скриптов до переноса сохранены в [source_snapshots](source_snapshots/) для проверки SHA исторических запусков. Это архив источников, новые команды запуска используют `src/`.
 
