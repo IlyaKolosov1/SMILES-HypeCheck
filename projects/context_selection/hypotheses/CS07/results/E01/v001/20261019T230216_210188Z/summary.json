@@ -1,0 +1,13 @@
+{
+  "status": "complete_exploratory",
+  "criterion_met": false,
+  "positive_fm_interactions": 4,
+  "mean_fm_interaction": 0.0020811715713992263,
+  "median_fm_interaction": 0.0020211649247324215,
+  "high_regime_fm_cepo_pehe_wins": 3,
+  "high_regime_fm_cepo_regret_wins": 3,
+  "high_regime_fm_cepo_feature_wins": 0,
+  "high_regime_fm_specific_wins": 4,
+  "mean_fm_specific_interaction": 0.004831363690128409,
+  "caveat": "Five generated samples from one fixed synthetic DGP; paired regimes are dependent. Screening, not real-RCT confirmation."
+}

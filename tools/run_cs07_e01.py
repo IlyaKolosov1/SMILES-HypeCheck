@@ -324,7 +324,7 @@ def package(run: Path, pre: dict, code: dict) -> Path:
     save_json(target / "study_protocol.json", dict(experiment="CS07/E01/v001",
         run_id=run.name, local_path=run.relative_to(ROOT).as_posix(),
         weak_folds=FOLDS, context_size=K, random_seed_offset=2900,
-        **{k:v for k,v in pre.items() if k != "checkpoint_path"}, **code))
+        **{k:v for k,v in pre.items() if k not in ("checkpoint_path", "context_size")}, **code))
     snapshot = target / "code"
     snapshot.mkdir()
     for path in (Path(__file__), Path(source.__file__)):

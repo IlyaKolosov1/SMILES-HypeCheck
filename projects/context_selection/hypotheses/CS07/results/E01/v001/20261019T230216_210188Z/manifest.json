@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS07",
+  "experiment": "E01",
+  "experiment_version": "v001",
+  "run_id": "20261019T230216_210188Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "CEPO-versus-effect retrieval mechanism screen",
+  "original_local_path": "artifacts/local/cs07_e01_results/20261019T230216_210188Z",
+  "code_git_commit": "36fd1e36be1e1a0ec15558a7943a5372756d0494",
+  "code_sha256": "1ccf36304623127b54a51ca12767aa03e5224724da2811c6937e07fc69b93981",
+  "code_snapshot": "projects/context_selection/hypotheses/CS07/results/E01/v001/20261019T230216_210188Z/code/run_cs07_e01.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 5070,
+      "sha256": "66a620bb5d047a65206984132ed14c4b6ec40b393f0c5c9410fbf617cec97e62"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/run_cs07_e01.py",
+      "size": 21557,
+      "sha256": "1ccf36304623127b54a51ca12767aa03e5224724da2811c6937e07fc69b93981"
+    },
+    {
+      "path": "interactions.csv",
+      "size": 410,
+      "sha256": "f409a71b47fdf9e5f3e283f8eb780bf8ce9213b316627725faff5c90df1f9af8"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 35473,
+      "sha256": "0c8f1f094536f2be9c086f0add2f44a08ac68937467787035120dd9d701b99b5"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 1054,
+      "sha256": "d5a878ccb4e44349582ad87d9d0e80395f6ea10475a3ddaf863917c70a22605f"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 873,
+      "sha256": "7c256c4d42540e0344a37d00afa1738ac7ab1a7ef45d151f726baa3cc3443c64"
+    },
+    {
+      "path": "summary.json",
+      "size": 543,
+      "sha256": "4fd858ebd09511f9baa6b197e42f86406c11c2cc71788468c3eef420a2d72ce3"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "experiment": "CS07/E01/v001",
+  "run_id": "20261019T230216_210188Z",
+  "local_path": "artifacts/local/cs07_e01_results/20261019T230216_210188Z",
+  "weak_folds": 5,
+  "context_size": 512,
+  "random_seed_offset": 2900,
+  "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+  "train_rows": 4096,
+  "eval_rows": 512,
+  "seeds": [
+    1901,
+    1902,
+    1903,
+    1904,
+    1905
+  ],
+  "regimes": [
+    0,
+    1
+  ],
+  "code_git_commit": "36fd1e36be1e1a0ec15558a7943a5372756d0494",
+  "code_dirty": false,
+  "code_sha256": "1ccf36304623127b54a51ca12767aa03e5224724da2811c6937e07fc69b93981",
+  "protocol_sha256": "ec843581e2f9b0a4c4f781c07e05c69709550ebe7aa1fa48d34bc225f2fecffc",
+  "source_sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+}
