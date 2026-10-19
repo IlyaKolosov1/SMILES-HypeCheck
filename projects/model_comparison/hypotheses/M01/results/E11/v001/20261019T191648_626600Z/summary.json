@@ -1,0 +1,28 @@
+{
+  "contrasts": {
+    "fm_feature_minus_random_mean": 0.10616282156391055,
+    "local_feature_minus_random_mean": 0.13137207892743866,
+    "fm_specific_interaction": -0.02520925736352811,
+    "fm_minus_local_feature": -0.0017865505169963325
+  },
+  "bootstrap_95": {
+    "fm_feature_minus_random_mean": [
+      0.05374224192309094,
+      0.15811623787758755
+    ],
+    "local_feature_minus_random_mean": [
+      0.07457697496252351,
+      0.1917816940404769
+    ],
+    "fm_specific_interaction": [
+      -0.05963744439451197,
+      0.006228925549687202
+    ],
+    "fm_minus_local_feature": [
+      -0.02564396825109359,
+      0.0202573098651528
+    ]
+  },
+  "status": "complete_exploratory",
+  "caveat": "Retrospective analysis of already viewed Starbucks test outcomes"
+}

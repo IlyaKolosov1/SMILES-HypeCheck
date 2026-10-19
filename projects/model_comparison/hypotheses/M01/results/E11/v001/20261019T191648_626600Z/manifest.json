@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E11",
+  "experiment_version": "v001",
+  "run_id": "20261019T191648_626600Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Starbucks FM versus local feature retrieval attribution.",
+  "original_local_path": "artifacts/local/cs01_e06_results/20261019T083837_511040Z",
+  "code_git_commit": "a38176b1e6132d0370f5aa844e746b91b1ea4342",
+  "code_sha256": "28a448a3aa3d0d198e71968078abcb2e474beafdab1e1464a90ac7c8b322036e",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E11/v001/20261019T191648_626600Z/code/run_m01_e11.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 607,
+      "sha256": "2c6c2dfe97795c7bccbcd551f338f1cd66d5884e5dc58346b5702e25274132d4"
+    },
+    {
+      "path": "bootstrap_draws.csv",
+      "size": 86769,
+      "sha256": "bcea2c739f2d111dd16616c313df9f51c8525a6221ad3e413ece0cc60dae24c2"
+    },
+    {
+      "path": "code/run_m01_e11.py",
+      "size": 12993,
+      "sha256": "28a448a3aa3d0d198e71968078abcb2e474beafdab1e1464a90ac7c8b322036e"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 498,
+      "sha256": "fe5252d8c314c7eaa37b3b557fcba3cc2b2584683ab0481c4d81e14ce20fa330"
+    },
+    {
+      "path": "source_local_files.csv",
+      "size": 2669,
+      "sha256": "155998f6040bc7b6695574a842aa591e50bacdbf802eea57fc7a7591d7182a93"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 1106,
+      "sha256": "f8f7d1900471cae007fa4d5e778c878a7d7472824e62d3aaeb715de718d50e96"
+    },
+    {
+      "path": "summary.json",
+      "size": 772,
+      "sha256": "44745ae045e5efee05e4f38fd315c909b2b16cd39bf189fdba8e7a2526b638ef"
+    }
+  ]
+}
