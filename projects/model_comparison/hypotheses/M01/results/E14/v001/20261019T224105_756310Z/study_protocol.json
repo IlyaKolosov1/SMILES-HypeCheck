@@ -1,0 +1,34 @@
+{
+  "experiment": "M01/E14/v001",
+  "run_id": "20261019T224105_756310Z",
+  "local_path": "artifacts/local/m01_e14_results/20261019T224105_756310Z",
+  "source_snapshots": {
+    "ACIC": {
+      "snapshot": "projects/model_comparison/hypotheses/M01/results/E12/v001/20261019T220135_061366Z",
+      "manifest_sha256": "74a922d2540c42cc7453d6c3dee5ba20be4553bfab9d35018ae1126108021c2f",
+      "source_code_git_commit": "fb6be6f554494566bc55e7ae7a3c58ad05d11271",
+      "snapshot_files": 10,
+      "local_files": 211
+    },
+    "IHDP": {
+      "snapshot": "projects/model_comparison/hypotheses/M01/results/E13/v001/20261019T223041_152756Z",
+      "manifest_sha256": "4dc8e64d085577826c422c45ff43de7fe24a66b6c7d6aa6b16500f3cb12ef4ab",
+      "source_code_git_commit": "c5dd367c2d0d0f39cf0d3769f24317879a40ac45",
+      "snapshot_files": 11,
+      "local_files": 1901
+    }
+  },
+  "ridge_alpha": 10.0,
+  "ridge_solver": "cholesky",
+  "bootstrap_draws": 300,
+  "code_git_commit": "7ace8e11be5d978c9e7791141acd68d3c4924542",
+  "code_dirty": false,
+  "code_sha256": "ccfe03aa8c0f0ee73709c9ee46ccc0ee1e4d06cf194bcada220657b90476ff83",
+  "protocol_sha256": "fefb1abaa54a2b23eec4b81a58934eb97d5f17b8d35496272410fcb074810aed",
+  "dependency_sha256": {
+    "run_m01_e12.py": "38e6f681b672e962b32a394762882a7fb35a1392736c30dc55d3bcb67f89e707",
+    "run_m01_e13.py": "894a30180aa0d41f1e96f8d06bb2347ddfcda704f668a6434f4b979bb2e70560",
+    "cs01_e03.py": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+    "multi_dataset_context.py": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+  }
+}

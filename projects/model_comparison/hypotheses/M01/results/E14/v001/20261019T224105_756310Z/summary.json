@@ -1,0 +1,98 @@
+{
+  "status": "complete_exploratory",
+  "diagnostic_after_outcomes_viewed": true,
+  "ACIC": {
+    "fm_over_local_ridge": {
+      "cases": 8,
+      "positive_cases": 8,
+      "mean_normalized_delta": 0.5426458338166953,
+      "conditional_95": [
+        0.5236388558553742,
+        0.5819177315603737
+      ]
+    },
+    "fm_over_global_ridge": {
+      "cases": 8,
+      "positive_cases": 8,
+      "mean_normalized_delta": 0.3469433617661685,
+      "conditional_95": [
+        0.33029205482736446,
+        0.37688668054814667
+      ]
+    },
+    "local_ridge_over_local_mean": {
+      "cases": 8,
+      "positive_cases": 4,
+      "mean_normalized_delta": -0.029677778276056603,
+      "conditional_95": [
+        -0.06097424756410896,
+        -0.004540432442965075
+      ]
+    },
+    "fm_over_hist_t": {
+      "cases": 8,
+      "positive_cases": 5,
+      "mean_normalized_delta": 0.007411010332487225,
+      "conditional_95": [
+        -0.022570996826121643,
+        0.03663657188649239
+      ]
+    },
+    "local_ridge_over_hist_t": {
+      "cases": 8,
+      "positive_cases": 0,
+      "mean_normalized_delta": -0.535234823484208,
+      "conditional_95": [
+        -0.5743081751083007,
+        -0.5086530832386074
+      ]
+    }
+  },
+  "IHDP": {
+    "fm_over_local_ridge": {
+      "cases": 100,
+      "positive_cases": 100,
+      "mean_normalized_delta": 0.14454025037418675,
+      "conditional_95": [
+        0.13847278476534883,
+        0.15063720833845629
+      ]
+    },
+    "fm_over_global_ridge": {
+      "cases": 100,
+      "positive_cases": 85,
+      "mean_normalized_delta": 0.07947892132186293,
+      "conditional_95": [
+        0.06966036605742279,
+        0.08696190783386494
+      ]
+    },
+    "local_ridge_over_local_mean": {
+      "cases": 100,
+      "positive_cases": 74,
+      "mean_normalized_delta": 0.1356362625458575,
+      "conditional_95": [
+        0.1215011399920166,
+        0.14345593510285284
+      ]
+    },
+    "fm_over_hist_t": {
+      "cases": 100,
+      "positive_cases": 95,
+      "mean_normalized_delta": 0.09670447117458832,
+      "conditional_95": [
+        0.08882909236037655,
+        0.10347251456520362
+      ]
+    },
+    "local_ridge_over_hist_t": {
+      "cases": 100,
+      "positive_cases": 16,
+      "mean_normalized_delta": -0.04783577919959837,
+      "conditional_95": [
+        -0.05599172246696115,
+        -0.04004099958843457
+      ]
+    }
+  }
+}
