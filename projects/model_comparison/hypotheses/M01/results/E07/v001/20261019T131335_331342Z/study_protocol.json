@@ -1,0 +1,43 @@
+{
+  "experiment": "M01/E07/v001",
+  "run_id": "20261019T131335_331342Z",
+  "source_snapshot": "projects/model_comparison/hypotheses/M01/results/E06/v001/20261019T125852_487521Z",
+  "source_manifest_sha256": "fa52a86b58018e1da846ac608dfb633198833f573ea27acfb4e5c8b42fcba5b7",
+  "source_code_git_commit": "8eaa8cee8f3ad21c8e190a26cb9c0ba50a976960",
+  "cohort_seeds": [
+    404,
+    405,
+    406
+  ],
+  "train_size": 51200,
+  "eval_size": 16384,
+  "bootstrap_draws": 500,
+  "bootstrap_seeds": {
+    "404": 10104,
+    "405": 10105,
+    "406": 10106
+  },
+  "model_params": {
+    "learning_rate": 0.05,
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 1.0,
+    "random_state": 42
+  },
+  "code_git_commit": "a6d0efabe53eb51d70b15a0a0b6b90a359d7e3bb",
+  "code_dirty": false,
+  "code_sha256": "0450f9d56f3a75f85e01339bea8a855e4801f3a145e1efdacf3f5f9734247de0",
+  "protocol_sha256": "798a3467541f1d1ec639ace28d6b27463cc924e37b48236494e0d836534dcb41",
+  "dependency_sha256": {
+    "run_m01_e06.py": "a97652c67c3e79b7638df75772902dd1ede8c7d9c781fcaa0c2e6c25a7e8e8e2",
+    "cs01_e03.py": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+    "multi_dataset_context.py": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a",
+    "m01_e02.py": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+  },
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scikit-learn": "1.5.2",
+    "scikit-uplift": "0.5.1"
+  }
+}
