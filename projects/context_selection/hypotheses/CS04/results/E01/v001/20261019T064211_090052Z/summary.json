@@ -1,0 +1,14 @@
+{
+  "mean_retrieval_penalty_d32": -0.012511418945679786,
+  "positive_retrieval_penalty_d32": 0,
+  "mean_benefit_d8": 0.01988576013550514,
+  "mean_benefit_d32": 0.021705191548251297,
+  "mean_attenuation": -0.0018194314127461572,
+  "positive_benefit_d8": 10,
+  "bootstrap_95": [
+    -0.015314774643446457,
+    -0.009798444399371265
+  ],
+  "sign_test_p": 0.001953125,
+  "descriptive_gate": false
+}

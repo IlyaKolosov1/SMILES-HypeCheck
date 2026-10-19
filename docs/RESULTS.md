@@ -5,6 +5,7 @@
 - [CS01: cross-dataset context](../projects/context_selection/hypotheses/CS01/README.md)
 - [CS02: Hillstrom и размер контекста](../projects/context_selection/hypotheses/CS02/README.md)
 - [CS03: синтетические проверки](../projects/context_selection/hypotheses/CS03/README.md)
+- [CS04: границы локального контекста](../projects/context_selection/hypotheses/CS04/README.md)
 - [M01: baseline notebook](../projects/model_comparison/hypotheses/M01/README.md)
 - [M02: смешение FM с классической моделью](../projects/model_comparison/hypotheses/M02/README.md)
 - [M03: контекст и смешение](../projects/model_comparison/hypotheses/M03/README.md)
