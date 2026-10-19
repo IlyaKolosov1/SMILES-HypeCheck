@@ -1,0 +1,36 @@
+{
+  "primary_contrasts": [
+    "local_feature_knn_K512 - random_mean",
+    "local_feature_knn_K512 - s_learner"
+  ],
+  "contrasts": {
+    "local_feature_knn_K512 - random_mean": {
+      "mean": 0.0783146607788522,
+      "positive": 3,
+      "cohort_deltas": [
+        0.1027948058761522,
+        0.0551676938611287,
+        0.0769814825992757
+      ],
+      "bootstrap_95": [
+        0.03816233843006113,
+        0.11424963940159305
+      ]
+    },
+    "local_feature_knn_K512 - s_learner": {
+      "mean": -0.0019431243488431335,
+      "positive": 2,
+      "cohort_deltas": [
+        0.0066701277354752,
+        -0.0303225989967102,
+        0.0178230982147056
+      ],
+      "bootstrap_95": [
+        -0.03371159241929827,
+        0.02956756207279508
+      ]
+    }
+  },
+  "joint_descriptive_gate": false,
+  "caveat": "Criteo and strong comparator selected after E08/E09; bootstrap conditional on these train/eval rows"
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS05",
+  "experiment": "E01",
+  "experiment_version": "v001",
+  "run_id": "20261019T172329_275728Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Fresh Criteo direct local retrieval versus random and S-Learner.",
+  "original_local_path": "artifacts/local/cs05_e01_results",
+  "code_git_commit": "26839738a3b2262dfa390109c27f69438fb10645",
+  "code_sha256": "aa2c778640613b675f05b274bb3d71da7f9c3d542e0695fb4c251d04dacbffae",
+  "code_snapshot": "projects/context_selection/hypotheses/CS05/results/E01/v001/20261019T172329_275728Z/code/run_cs05_e01.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 2170,
+      "sha256": "68222ea5cec935a8546f19502d5574165041709201765b1671e19c87c9e06cbb"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/m01_e02.py",
+      "size": 19124,
+      "sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35560,
+      "sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+    },
+    {
+      "path": "code/run_cs05_e01.py",
+      "size": 26599,
+      "sha256": "aa2c778640613b675f05b274bb3d71da7f9c3d542e0695fb4c251d04dacbffae"
+    },
+    {
+      "path": "code/run_m01_e06.py",
+      "size": 23648,
+      "sha256": "a97652c67c3e79b7638df75772902dd1ede8c7d9c781fcaa0c2e6c25a7e8e8e2"
+    },
+    {
+      "path": "code/run_m01_e08.py",
+      "size": 26781,
+      "sha256": "f2fbcbae6047f3abda2d2f10a9acc4a91459eca4fb7b31550d2d172cd1dad77c"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 8201,
+      "sha256": "ef5486b2d2f903b1c7466463b58de2cf6466a2dc4271560bde19bb83b0122af5"
+    },
+    {
+      "path": "mean_bootstrap_draws.csv",
+      "size": 22530,
+      "sha256": "99b3780fc3621408a0db701b07aefe7eccc923a84553d8645b35202eb7fe2daa"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 786,
+      "sha256": "9b6fd1e64ab3b0724ef54a0274672ac7b4c6885d916deeb065a954cdbdedb013"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 2288,
+      "sha256": "1071514dcbf738773cccc3b6654950868e12e5ef4712882e8610d7a77d09cd16"
+    },
+    {
+      "path": "summary.json",
+      "size": 920,
+      "sha256": "6a1212909d37c39139306862b1221a8ccffa6928180fd25fa98498b5805da43b"
+    }
+  ]
+}

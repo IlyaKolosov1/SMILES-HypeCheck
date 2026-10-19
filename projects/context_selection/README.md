@@ -8,7 +8,7 @@
 | [CS02: устойчивость на Hillstrom](hypotheses/CS02/README.md) | Локальный пилот, пять seeds и sweep размера контекста; есть неполные запуски |
 | [CS03: качество effect-score selector](hypotheses/CS03/README.md) | Две синтетические серии с известным CATE; разведочные результаты |
 | [CS04: лишние признаки и локальность](hypotheses/CS04/README.md) | E01 завершён: поиск по шумным признакам неожиданно снизил CATE RMSE при фиксированном входе FM; проверяем роль разнообразия контекста |
-| [CS05: retrieval без FM-инференса](hypotheses/CS05/README.md) | E01: план проверки прямого локального uplift на новых Criteo-строках против random-контекста и S-Learner |
+| [CS05: retrieval без FM-инференса](hypotheses/CS05/README.md) | E01: на новых Criteo-строках local feature > random по Q̂ в 3/3, но не превосходит устойчиво S-Learner; разведочный результат |
 
 Текущий код: [src](src/). Оригинальные версии скриптов до переноса сохранены в [source_snapshots](source_snapshots/) для проверки SHA исторических запусков. Это архив источников, новые команды запуска используют `src/`.
 

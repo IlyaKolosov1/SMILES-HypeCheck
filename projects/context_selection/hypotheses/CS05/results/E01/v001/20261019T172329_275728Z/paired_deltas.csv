@@ -1,0 +1,7 @@
+sample_seed,comparison,metric,delta,low,high,valid_draws
+410,local_feature_knn_K512 - random_mean,normalized_qini_auc,0.1027948058761522,0.0350926095121812,0.1722771677806615,500
+410,local_feature_knn_K512 - s_learner,normalized_qini_auc,0.0066701277354752,-0.058438086137814,0.0607335204477623,500
+411,local_feature_knn_K512 - random_mean,normalized_qini_auc,0.0551676938611287,-0.0053127013872414,0.1186214415196582,500
+411,local_feature_knn_K512 - s_learner,normalized_qini_auc,-0.0303225989967102,-0.0865159316336591,0.0322478506997222,500
+412,local_feature_knn_K512 - random_mean,normalized_qini_auc,0.0769814825992757,0.0143948912669533,0.143942886219671,500
+412,local_feature_knn_K512 - s_learner,normalized_qini_auc,0.0178230982147056,-0.0342875659640272,0.0700968840291156,500
