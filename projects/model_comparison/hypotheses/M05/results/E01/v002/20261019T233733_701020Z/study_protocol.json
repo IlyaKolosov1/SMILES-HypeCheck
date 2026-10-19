@@ -1,0 +1,13 @@
+{
+  "experiment": "M05/E01/v002",
+  "run_id": "20261019T233733_701020Z",
+  "source_v001_run_id": "20261019T232756_544624Z",
+  "source_v001_git_commit": "60f0c4906a873396ea3192df1e0257f6b7e2948f",
+  "source_v001_manifest_sha256": "eeee2088600351df2807c1e02eb3dc12057812198fd2f96c5cb39adce827da02",
+  "source_local_files_sha256": "6b76ff9720dfd45e32e0608784c2bfc7ae7c017ba038cf86f5cf4eb8f5f4be15",
+  "source_local_path": "artifacts/local/m05_e01_results/20261019T232756_544624Z",
+  "code_git_commit": "483ab0dc8d304b6913293eb10c18db6f4b33c893",
+  "code_dirty": false,
+  "code_sha256": "80982ae40ee1c9eae2cdc396e96bed38845ad191b32fd9b27a4a13f1e5a85521",
+  "protocol_sha256": "ed12584211ade66fb56f4c04bae69fd985c853b54c42b72435144f37e352185e"
+}

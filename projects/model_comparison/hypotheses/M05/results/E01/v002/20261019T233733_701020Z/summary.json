@@ -1,0 +1,23 @@
+{
+  "status": "complete_exploratory",
+  "analysis": "post_hoc_after_v001",
+  "source_v001_run_id": "20261019T232756_544624Z",
+  "outcome": {
+    "binary": {
+      "fm_pehe_better_than_train_ate": 0,
+      "mean_train_ate_minus_fm_pehe": -0.01634662518477087,
+      "fm_pehe_better_than_local_mean": 0,
+      "mean_local_mean_minus_fm_pehe": -0.011050459811021181,
+      "fm_targeting_better_than_random": 8,
+      "mean_random_minus_fm_regret": 0.018445925663068994
+    },
+    "continuous": {
+      "fm_pehe_better_than_train_ate": 0,
+      "mean_train_ate_minus_fm_pehe": -0.009636721987741712,
+      "fm_pehe_better_than_local_mean": 1,
+      "mean_local_mean_minus_fm_pehe": -0.002962156353385829,
+      "fm_targeting_better_than_random": 7,
+      "mean_random_minus_fm_regret": 0.01864394652061092
+    }
+  }
+}

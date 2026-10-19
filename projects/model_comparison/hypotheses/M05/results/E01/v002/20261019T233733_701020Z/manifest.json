@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M05",
+  "experiment": "E01",
+  "experiment_version": "v002",
+  "run_id": "20261019T233733_701020Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Post-hoc constant-effect control",
+  "original_local_path": "artifacts/local/m05_e01_results/20261019T232756_544624Z",
+  "code_git_commit": "483ab0dc8d304b6913293eb10c18db6f4b33c893",
+  "code_sha256": "80982ae40ee1c9eae2cdc396e96bed38845ad191b32fd9b27a4a13f1e5a85521",
+  "code_snapshot": "projects/model_comparison/hypotheses/M05/results/E01/v002/20261019T233733_701020Z/code/reanalyze_m05_e01_v002.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 16150,
+      "sha256": "0b5c0b2efbd53efbb11ba5265a0f8913ee58073aea0c2d4969c0b65570458fff"
+    },
+    {
+      "path": "code/reanalyze_m05_e01_v002.py",
+      "size": 10862,
+      "sha256": "80982ae40ee1c9eae2cdc396e96bed38845ad191b32fd9b27a4a13f1e5a85521"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 1342,
+      "sha256": "2a12c99c43bcdf7ce3b2ae842a6abfb2183b345320a37c092dced383cbd11ee8"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 740,
+      "sha256": "0287f4ab843ba57fe414c757ef3bb45224a52edee8067150f14c510031bf66f1"
+    },
+    {
+      "path": "summary.json",
+      "size": 813,
+      "sha256": "dcd197642fbd7480c2598fdb1da003e29cff11af1bfce30092115004896b9a7e"
+    }
+  ]
+}
