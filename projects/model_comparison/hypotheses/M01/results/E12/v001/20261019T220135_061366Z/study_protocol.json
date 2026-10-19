@@ -1,0 +1,103 @@
+{
+  "experiment": "M01/E12/v001",
+  "run_id": "20261019T220135_061366Z",
+  "local_path": "artifacts/local/m01_e12_results/20261019T220135_061366Z",
+  "scenarios": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "heterogeneous": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "context_size": 512,
+  "context_seeds": [
+    41,
+    42,
+    43
+  ],
+  "bootstrap_draws": 500,
+  "input_file_sha256": {
+    "x.csv": "0d6387ad45d23e54b11cbf967248fb68ad5e578db80d193208b8b4c98b1ed0c1",
+    "zymu_1.csv": "002fad96bb55d54edec08a0af46ef4f8ad69e0cfe6294ab48f351f22976a6e76",
+    "zymu_2.csv": "bc3a03bb461bb1629add09c01dfc77053cf36e8faf8e48a7645b35ddb4005d1c",
+    "zymu_3.csv": "8090562d3fcf5a3b02ff5493592a2880b95b106e1c12e2c3a6e6c28ae8468ff6",
+    "zymu_4.csv": "61b405c545a451b7e2ce31614150834f94aa4b27069e2755876ed6e11cfee5fd",
+    "zymu_5.csv": "e350ac76d0b8e83f45f7f04a4b76b9a32a0d53098452075617e61ce62ad0463a",
+    "zymu_6.csv": "a059950f0b51056660364eca14524a3d3254f93c608d8a1df9240c2c4179a7b5",
+    "zymu_7.csv": "ac102c3f34680ff901c30fb95985297eea0f20efaf02108f287ceec60b6a2a1f",
+    "zymu_8.csv": "bbcde6ad666640adcd39fd50cab00865d22b5c463ce9db6d0940d8eccd5afcf3",
+    "zymu_9.csv": "02663b776fa87cd3d91ee7871e98c1b4d63579957b12ef9bb1ecf367b7afc366",
+    "zymu_10.csv": "c8ee8ca537ef4315a0ee5753bd01d792a1b3cdacb1fd69e1288b2bb89944d1b7",
+    "README.md": "06f3e71634f476a8f00fb44e614168d4343c0024b95f26ac1b1fa344438a12f6",
+    "LICENSE": "f1a5475437a47ef318c773f459784f3b29039c40a259bce060ef46b4277960d8"
+  },
+  "source_rows": 4802,
+  "train_rows": 3841,
+  "eval_rows": 961,
+  "split_seed": 42,
+  "train_treatment_counts": {
+    "1": [
+      3167,
+      674
+    ],
+    "2": [
+      2660,
+      1181
+    ],
+    "3": [
+      2768,
+      1073
+    ],
+    "4": [
+      2476,
+      1365
+    ],
+    "5": [
+      2680,
+      1161
+    ],
+    "6": [
+      2834,
+      1007
+    ],
+    "7": [
+      2629,
+      1212
+    ],
+    "8": [
+      2854,
+      987
+    ],
+    "9": [
+      2736,
+      1105
+    ],
+    "10": [
+      2869,
+      972
+    ]
+  },
+  "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+  "code_git_commit": "fb6be6f554494566bc55e7ae7a3c58ad05d11271",
+  "code_dirty": false,
+  "code_sha256": "38e6f681b672e962b32a394762882a7fb35a1392736c30dc55d3bcb67f89e707",
+  "protocol_sha256": "784cbfbf5719634d257a9d0da270a62540e7c4720c663bb7036264a95f1b3899",
+  "source_sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+  "context_sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+}

@@ -1,0 +1,21 @@
+{
+  "fm_over_local": {
+    "positive_scenarios": 8,
+    "mean_normalized_delta": 0.5129680555406386,
+    "conditional_95": [
+      0.49342619579773855,
+      0.5381062909464367
+    ]
+  },
+  "fm_over_t": {
+    "positive_scenarios": 5,
+    "mean_normalized_delta": 0.007411010332487225,
+    "conditional_95": [
+      -0.02004173293074392,
+      0.03907008742500398
+    ]
+  },
+  "lead_descriptive_criterion_met": false,
+  "status": "complete_exploratory",
+  "caveat": "Ten ACIC scenarios share covariates; intervals condition on one split and source family."
+}

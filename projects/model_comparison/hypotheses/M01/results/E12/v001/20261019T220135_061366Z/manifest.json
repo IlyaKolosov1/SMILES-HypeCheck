@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E12",
+  "experiment_version": "v001",
+  "run_id": "20261019T220135_061366Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "ACIC known-CATE FM comparison",
+  "original_local_path": "artifacts/local/m01_e12_results/20261019T220135_061366Z",
+  "code_git_commit": "fb6be6f554494566bc55e7ae7a3c58ad05d11271",
+  "code_sha256": "38e6f681b672e962b32a394762882a7fb35a1392736c30dc55d3bcb67f89e707",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E12/v001/20261019T220135_061366Z/code/run_m01_e12.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 8221,
+      "sha256": "b4ca7b20b86a06bff0d12bba75eadff9a1cd6073fd766398d64934059667e83d"
+    },
+    {
+      "path": "bootstrap_draws.csv",
+      "size": 506077,
+      "sha256": "523d4c143fa2ff1fb2e19e6cd23762371f1f9aa4c88a531fdd0c94670f7c734d"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35560,
+      "sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+    },
+    {
+      "path": "code/run_m01_e12.py",
+      "size": 20622,
+      "sha256": "38e6f681b672e962b32a394762882a7fb35a1392736c30dc55d3bcb67f89e707"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 33497,
+      "sha256": "707ad7b5d521a1031a172ecbb1e0d2f166f28d89b303f4bbd416273f638e9273"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 5717,
+      "sha256": "aee186458e5d61a975a6de2397452bcfd769898698958bd320872aa56d66899a"
+    },
+    {
+      "path": "pooled_bootstrap_draws.csv",
+      "size": 21971,
+      "sha256": "4aa9854573cf9ffcc3b8c79779488b7e7d93844dcc32c37fa9d73ef81a132db6"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 2683,
+      "sha256": "f5d0acd310fbe6fc81135f4b2a8feb8375568aed4f59f120732f108747055212"
+    },
+    {
+      "path": "summary.json",
+      "size": 557,
+      "sha256": "1fc0840bf91ed4a4a407426059e4f3910103e08d93134297185515e9aa050384"
+    }
+  ]
+}
