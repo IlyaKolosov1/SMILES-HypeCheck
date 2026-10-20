@@ -1,0 +1,107 @@
+{
+  "experiment": "M06/E11/v001",
+  "run_id": "20261020T144232_220031Z",
+  "local_path": "artifacts/local/m06_e11_results/20261020T144232_220031Z",
+  "source": {
+    "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+    "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+    "checkpoint_path": "/Users/ilya-kolosov/.cache/huggingface/hub/models--vdblm--causalpfn/snapshots/83aad07da1cb077cfda4236878a1b07dc9f72a54/causalpfn_v0.pt",
+    "seeds": [
+      5201,
+      5202,
+      5203,
+      5204,
+      5205,
+      5206,
+      5207,
+      5208
+    ],
+    "amplitudes": [
+      0.02,
+      0.15
+    ],
+    "train_rows": 2048,
+    "eval_rows": 512,
+    "features": 12,
+    "context_sizes": [
+      128,
+      512
+    ],
+    "train_treatment_counts": {
+      "5201": [
+        1045,
+        1003
+      ],
+      "5202": [
+        1052,
+        996
+      ],
+      "5203": [
+        1026,
+        1022
+      ],
+      "5204": [
+        1040,
+        1008
+      ],
+      "5205": [
+        1034,
+        1014
+      ],
+      "5206": [
+        1033,
+        1015
+      ],
+      "5207": [
+        1037,
+        1011
+      ],
+      "5208": [
+        1023,
+        1025
+      ]
+    },
+    "clipped_train_fractions": {
+      "5201/0.02": 0.0,
+      "5201/0.15": 0.00244140625,
+      "5202/0.02": 0.0,
+      "5202/0.15": 0.0029296875,
+      "5203/0.02": 0.0,
+      "5203/0.15": 0.00244140625,
+      "5204/0.02": 0.0,
+      "5204/0.15": 0.00244140625,
+      "5205/0.02": 0.0,
+      "5205/0.15": 0.00390625,
+      "5206/0.02": 0.0,
+      "5206/0.15": 0.00341796875,
+      "5207/0.02": 0.0,
+      "5207/0.15": 0.001953125,
+      "5208/0.02": 0.0,
+      "5208/0.15": 0.0009765625
+    },
+    "model": {
+      "learning_rate": 0.05,
+      "max_iter": 200,
+      "max_leaf_nodes": 31,
+      "l2_regularization": 1.0,
+      "random_state": 42
+    },
+    "bootstrap_draws": 1000,
+    "bootstrap_seed": 5211
+  },
+  "python": "3.11.15",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scikit-learn": "1.5.2",
+    "torch": "2.3.1",
+    "tqdm": "4.67.1",
+    "causalpfn": "0.1.5"
+  },
+  "code_git_commit": "0b0100dd8ffcdeae33b38aa2745664118bb6c738",
+  "code_sha256": "06ed344e67dcf2f867c50a0de7ce092ff6aa9904009b359c7a434c3e8672c965",
+  "protocol_sha256": "2cd89447282a2d8dd749a9e0c525dead876ccfce49c7560a442710b86c473e88",
+  "dependency_sha256": {
+    "projects/context_selection/src/cs01_e03.py": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "status": "complete_exploratory",
+  "primary": {
+    "mean_interaction": -0.05731784933033103,
+    "positive_draws": 0,
+    "bootstrap_ci": [
+      -0.0651675401294954,
+      -0.04896932628673602
+    ]
+  },
+  "descriptive_gate_met": false,
+  "cell_means": [
+    {
+      "alpha": 0.02,
+      "method": "fm_K128",
+      "normalized_pehe": 0.44384379008085106,
+      "normalized_regret_at_20": 0.9143844479694963,
+      "regret_at_20": 0.018287688959389925
+    },
+    {
+      "alpha": 0.02,
+      "method": "fm_K512",
+      "normalized_pehe": 0.13552060782205336,
+      "normalized_regret_at_20": 0.817641883622855,
+      "regret_at_20": 0.0163528376724571
+    },
+    {
+      "alpha": 0.02,
+      "method": "local_K128",
+      "normalized_pehe": 0.18046873656756324,
+      "normalized_regret_at_20": 0.8577338478062302,
+      "regret_at_20": 0.017154676956124604
+    },
+    {
+      "alpha": 0.02,
+      "method": "local_K512",
+      "normalized_pehe": 0.09800161253870524,
+      "normalized_regret_at_20": 0.7792009972035885,
+      "regret_at_20": 0.01558401994407177
+    },
+    {
+      "alpha": 0.02,
+      "method": "t_learner",
+      "normalized_pehe": 0.5864774791738622,
+      "normalized_regret_at_20": 0.8585753035731614,
+      "regret_at_20": 0.017171506071463227
+    },
+    {
+      "alpha": 0.02,
+      "method": "zero",
+      "normalized_pehe": 0.026887337546934342,
+      "normalized_regret_at_20": 0.8907675859518349,
+      "regret_at_20": 0.0178153517190367
+    },
+    {
+      "alpha": 0.15,
+      "method": "fm_K128",
+      "normalized_pehe": 0.47340096379834695,
+      "normalized_regret_at_20": 0.803925512979428,
+      "regret_at_20": 0.1205888269469142
+    },
+    {
+      "alpha": 0.15,
+      "method": "fm_K512",
+      "normalized_pehe": 0.18830256508534204,
+      "normalized_regret_at_20": 0.40024419004718464,
+      "regret_at_20": 0.060036628507077694
+    },
+    {
+      "alpha": 0.15,
+      "method": "local_K128",
+      "normalized_pehe": 0.22190204281628267,
+      "normalized_regret_at_20": 0.48635505760709447,
+      "regret_at_20": 0.07295325864106417
+    },
+    {
+      "alpha": 0.15,
+      "method": "local_K512",
+      "normalized_pehe": 0.18196689479401107,
+      "normalized_regret_at_20": 0.3282702652116617,
+      "regret_at_20": 0.04924053978174925
+    },
+    {
+      "alpha": 0.15,
+      "method": "t_learner",
+      "normalized_pehe": 0.5819415871068199,
+      "normalized_regret_at_20": 0.5966582956413429,
+      "regret_at_20": 0.08949874434620142
+    },
+    {
+      "alpha": 0.15,
+      "method": "zero",
+      "normalized_pehe": 0.2015359511599706,
+      "normalized_regret_at_20": 0.8901867518822353,
+      "regret_at_20": 0.13352801278233528
+    }
+  ],
+  "interpretation": "One designed binary DGP after prior results; no external confirmation"
+}
