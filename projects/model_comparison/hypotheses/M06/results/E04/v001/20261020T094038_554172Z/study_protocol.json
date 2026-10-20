@@ -1,0 +1,41 @@
+{
+  "experiment": "M06/E04/v001",
+  "run_id": "20261020T094038_554172Z",
+  "local_path": "artifacts/local/m06_e04_results/20261020T094038_554172Z",
+  "python": "3.11.15",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scikit-learn": "1.5.2",
+    "tqdm": "4.67.1"
+  },
+  "source_run_id": "20261020T064050_536130Z",
+  "source_manifest_sha256": "116b6df34d0e33a874c6c850e0b560bb1af79a83253594037be71ebd20c0b03c",
+  "source_index_sha256": "7593483e3a600f7653ed86849e173a137faa56382d5a883c684c0b5dadf1d4d6",
+  "source_code_git_commit": "bec82ac7c5995b143e52cbcb28e37e340f33b4f0",
+  "source_checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "source_checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+  "source_files": 54,
+  "seeds": [
+    2601,
+    2602,
+    2603,
+    2604
+  ],
+  "train_rows": 4096,
+  "eval_rows": 512,
+  "context_size": 512,
+  "model": {
+    "learning_rate": 0.05,
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 1.0,
+    "random_state": 42
+  },
+  "crossfit_folds": 5,
+  "bootstrap_draws": 1000,
+  "bootstrap_seed": 2804,
+  "code_git_commit": "0b0673d8867bb520241e70c443089f7020f0d3d3",
+  "code_sha256": "fe5b6cc92c391adb904dbd0f63e5ed0f6e6c888c71aac670e631979241df3f40",
+  "protocol_sha256": "fb64d111c8dcc8f5825583cdda7324a32fdfe60c31f8c9fb048f5033f81813b1"
+}

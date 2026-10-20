@@ -1,0 +1,24 @@
+{
+  "status": "complete_exploratory",
+  "diagnostic_gate_met": false,
+  "mean_normalized_pehe_delta": -0.0016317954897215152,
+  "median_normalized_pehe_delta": -0.004170432393182723,
+  "positive_seeds": 2,
+  "conditional_bootstrap_ci": [
+    -0.014831427950598396,
+    0.01124601190149885
+  ],
+  "mean_regret": {
+    "adjusted_feature": 0.04937275357916865,
+    "adjusted_random": 0.059432209360821636,
+    "fm_feature": 0.07338760567576225,
+    "fm_random": 0.13317935175342874,
+    "global_cv": 0.049745193190609605,
+    "global_t": 0.0575590832983931,
+    "local_feature": 0.2065812664301434,
+    "local_random": 0.6647708807505013,
+    "train_ate": 0.7418397147218777
+  },
+  "interpretation": "Retrospective reuse of viewed E02 outcomes; four draws of one DGP, conditional bootstrap only",
+  "label_access": "Adjusted local uses all train labels via arm regressors; FM sees K labels per query"
+}
