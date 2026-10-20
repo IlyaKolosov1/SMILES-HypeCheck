@@ -184,7 +184,11 @@ def package(run: Path, source: dict, code: dict, summary: dict) -> Path:
     stage.mkdir(parents=True, exist_ok=False)
     shutil.copy2(run / "cells.csv", stage / "cells.csv")
     shutil.copy2(run / "summary.json", stage / "summary.json")
-    shutil.copy2(PROTOCOL, stage / "v001.md")
+    # The archived copy lives three levels below M06/results; adapt only its
+    # relative documentation links. The committed source protocol stays exact.
+    archive_protocol = PROTOCOL.read_text(encoding="utf-8").replace(
+        "../../results/", "../../../")
+    (stage / "v001.md").write_text(archive_protocol, encoding="utf-8")
     code_dir = stage / "code"
     code_dir.mkdir()
     shutil.copy2(Path(__file__), code_dir / Path(__file__).name)
