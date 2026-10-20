@@ -1,0 +1,112 @@
+{
+  "experiment": "M06/E10/v001",
+  "run_id": "20261020T123825_210557Z",
+  "local_path": "artifacts/local/m06_e10_results/20261020T123825_210557Z",
+  "source": {
+    "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+    "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+    "checkpoint_path": "/Users/ilya-kolosov/.cache/huggingface/hub/models--vdblm--causalpfn/snapshots/83aad07da1cb077cfda4236878a1b07dc9f72a54/causalpfn_v0.pt",
+    "train_rows": 672,
+    "eval_rows": 512,
+    "features": 12,
+    "context_size": 128,
+    "train_treatment_counts": {
+      "4101": [
+        356,
+        316
+      ],
+      "4102": [
+        370,
+        302
+      ],
+      "4103": [
+        341,
+        331
+      ],
+      "4104": [
+        348,
+        324
+      ],
+      "4105": [
+        323,
+        349
+      ],
+      "4106": [
+        317,
+        355
+      ],
+      "4107": [
+        327,
+        345
+      ],
+      "4108": [
+        325,
+        347
+      ]
+    },
+    "seeds": [
+      4101,
+      4102,
+      4103,
+      4104,
+      4105,
+      4106,
+      4107,
+      4108
+    ],
+    "families": [
+      "smooth_oblique",
+      "threshold_oblique"
+    ],
+    "noise": {
+      "low": 0.25,
+      "high": 0.75
+    },
+    "model": {
+      "learning_rate": 0.05,
+      "max_iter": 200,
+      "max_leaf_nodes": 31,
+      "l2_regularization": 1.0,
+      "random_state": 42
+    },
+    "crossfit_folds": 5,
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 3010
+  },
+  "seeds": [
+    4101,
+    4102,
+    4103,
+    4104,
+    4105,
+    4106,
+    4107,
+    4108
+  ],
+  "families": [
+    "smooth_oblique",
+    "threshold_oblique"
+  ],
+  "noise": {
+    "low": 0.25,
+    "high": 0.75
+  },
+  "context_size": 128,
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 3010,
+  "python": "3.11.15",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scikit-learn": "1.5.2",
+    "torch": "2.3.1",
+    "tqdm": "4.67.1"
+  },
+  "code_git_commit": "72d911ec3a9569d4ef8e55b7fca04a67516302a9",
+  "code_sha256": "644c33ca4d7468ff1312f0283cdb84e888c405c2dbc4815820f7596495fcd5d5",
+  "protocol_sha256": "a29607cb4a468eab6627c7cb12e329dadfc2531769ec8847e0f65223d3201c8d",
+  "dependency_sha256": {
+    "tools/run_m06_e08.py": "33b7b7a9e024b967189d23d1c2c2530f30388724f335cd423894ca5ed20d3848",
+    "projects/context_selection/src/cs01_e03.py": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "status": "complete_exploratory",
+  "prospective_generator": true,
+  "primary": {
+    "low": {
+      "mean_interaction": 0.06646769149059976,
+      "median_interaction": 0.09127024518145449,
+      "positive_seeds": 6,
+      "seed_bootstrap_ci": [
+        -0.08105876067088998,
+        0.19814570140249924
+      ]
+    },
+    "high": {
+      "mean_interaction": 0.03911795122377277,
+      "median_interaction": 0.041619906775599354,
+      "positive_seeds": 6,
+      "seed_bootstrap_ci": [
+        -0.012096294466917432,
+        0.09044420288088337
+      ]
+    }
+  },
+  "descriptive_gate_met": false,
+  "cell_means": [
+    {
+      "family": "smooth_oblique",
+      "noise": "high",
+      "method": "adjusted",
+      "normalized_pehe": 1.693826355971791,
+      "normalized_regret": 1.372315636230921,
+      "regret_at_10": 0.4265700497736151
+    },
+    {
+      "family": "smooth_oblique",
+      "noise": "high",
+      "method": "fm",
+      "normalized_pehe": 1.1938819788579222,
+      "normalized_regret": 1.3387214152359643,
+      "regret_at_10": 0.41567242783136094
+    },
+    {
+      "family": "smooth_oblique",
+      "noise": "high",
+      "method": "global_cv",
+      "normalized_pehe": 1.6379233449443014,
+      "normalized_regret": 1.3716966856947355,
+      "regret_at_10": 0.4264756173002892
+    },
+    {
+      "family": "smooth_oblique",
+      "noise": "high",
+      "method": "local",
+      "normalized_pehe": 0.944196627989354,
+      "normalized_regret": 1.267708858115707,
+      "regret_at_10": 0.3933082794269117
+    },
+    {
+      "family": "smooth_oblique",
+      "noise": "low",
+      "method": "adjusted",
+      "normalized_pehe": 0.9049221968979939,
+      "normalized_regret": 0.9191298162297956,
+      "regret_at_10": 0.2855395364503448
+    },
+    {
+      "family": "smooth_oblique",
+      "noise": "low",
+      "method": "fm",
+      "normalized_pehe": 0.7544460658737906,
+      "normalized_regret": 0.6685015889142591,
+      "regret_at_10": 0.20794139639474452
+    },
+    {
+      "family": "smooth_oblique",
+      "noise": "low",
+      "method": "global_cv",
+      "normalized_pehe": 0.8994925946835786,
+      "normalized_regret": 0.9114673057055087,
+      "regret_at_10": 0.28347175794008833
+    },
+    {
+      "family": "smooth_oblique",
+      "noise": "low",
+      "method": "local",
+      "normalized_pehe": 0.8357017053134144,
+      "normalized_regret": 0.8785438435174164,
+      "regret_at_10": 0.271720827001935
+    },
+    {
+      "family": "threshold_oblique",
+      "noise": "high",
+      "method": "adjusted",
+      "normalized_pehe": 1.3932827218809314,
+      "normalized_regret": 1.430338430188636,
+      "regret_at_10": 0.6021634619969586
+    },
+    {
+      "family": "threshold_oblique",
+      "noise": "high",
+      "method": "fm",
+      "normalized_pehe": 1.0722389037891733,
+      "normalized_regret": 1.4064053089029482,
+      "regret_at_10": 0.5905048080505084
+    },
+    {
+      "family": "threshold_oblique",
+      "noise": "high",
+      "method": "global_cv",
+      "normalized_pehe": 1.3519542719980573,
+      "normalized_regret": 1.4002626281379467,
+      "regret_at_10": 0.5893028851168658
+    },
+    {
+      "family": "threshold_oblique",
+      "noise": "high",
+      "method": "local",
+      "normalized_pehe": 0.9487371139722961,
+      "normalized_regret": 1.4329043159603965,
+      "regret_at_10": 0.6015625003008886
+    },
+    {
+      "family": "threshold_oblique",
+      "noise": "low",
+      "method": "adjusted",
+      "normalized_pehe": 0.8837611470491219,
+      "normalized_regret": 0.9892339749894586,
+      "regret_at_10": 0.4162259617247259
+    },
+    {
+      "family": "threshold_oblique",
+      "noise": "low",
+      "method": "fm",
+      "normalized_pehe": 0.8115092609591638,
+      "normalized_regret": 0.8281348394189121,
+      "regret_at_10": 0.34807692347810804
+    },
+    {
+      "family": "threshold_oblique",
+      "noise": "low",
+      "method": "global_cv",
+      "normalized_pehe": 0.8777402999182308,
+      "normalized_regret": 1.004632864719562,
+      "regret_at_10": 0.4225961542759949
+    },
+    {
+      "family": "threshold_oblique",
+      "noise": "low",
+      "method": "local",
+      "normalized_pehe": 0.8885096791150268,
+      "normalized_regret": 1.0916283346231068,
+      "regret_at_10": 0.45757211539894327
+    }
+  ],
+  "diagnostic_means": [
+    {
+      "family": "smooth_oblique",
+      "noise": "high",
+      "tail_mse_fm_minus_global": -0.1051271702479241,
+      "rest_mse_fm_minus_global": -0.12142006784121276,
+      "overlap_fm": 0.30528846153846156,
+      "overlap_global": 0.27163461538461536,
+      "inference_seconds": 4.2131864582515846
+    },
+    {
+      "family": "smooth_oblique",
+      "noise": "low",
+      "tail_mse_fm_minus_global": -0.022660885912721425,
+      "rest_mse_fm_minus_global": -0.023203472911506626,
+      "overlap_fm": 0.5288461538461539,
+      "overlap_global": 0.43509615384615385,
+      "inference_seconds": 4.197409031246934
+    },
+    {
+      "family": "threshold_oblique",
+      "noise": "high",
+      "tail_mse_fm_minus_global": -0.06558928914450766,
+      "rest_mse_fm_minus_global": -0.12553908445193995,
+      "overlap_fm": 0.29086538461538464,
+      "overlap_global": 0.28365384615384615,
+      "inference_seconds": 4.18278729137819
+    },
+    {
+      "family": "threshold_oblique",
+      "noise": "low",
+      "tail_mse_fm_minus_global": 0.02037105427711864,
+      "rest_mse_fm_minus_global": -0.02421857922974699,
+      "overlap_fm": 0.47836538461538464,
+      "overlap_global": 0.3942307692307692,
+      "inference_seconds": 4.129277520631149
+    }
+  ],
+  "interpretation": "New designed synthetic mechanism after viewed E08/E09; no external policy confirmation"
+}
