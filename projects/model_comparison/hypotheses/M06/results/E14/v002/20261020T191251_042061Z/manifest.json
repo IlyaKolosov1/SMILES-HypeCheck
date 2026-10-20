@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M06",
+  "experiment": "E14",
+  "experiment_version": "v002",
+  "run_id": "20261020T191251_042061Z",
+  "result_revision": 2,
+  "status": "complete_exploratory",
+  "summary": "Published binary uplift generator K transfer test",
+  "original_local_path": "artifacts/local/m06_e14_v002_results/20261020T190615_332001Z",
+  "code_git_commit": "658bfb0ef2ccabc2fca62dded8d4a4d95c895d60",
+  "code_sha256": "aa925fd6b95aedf648237f010d6bbe652cc86fd2038a66a54e10605dc51ecfbe",
+  "code_snapshot": "projects/model_comparison/hypotheses/M06/results/E14/v002/20261020T191251_042061Z/code/run_m06_e14.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 38636,
+      "sha256": "209bad2d37cf4476b4cbcd0224a513634c5c4ffe7b3d858f8ea5fd887ed3cf6b"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/download_zhao_uplift.py",
+      "size": 6269,
+      "sha256": "b0708dcf967889e6afe1115a8cabc2e177748e2695a6af1fa816dc67429c9495"
+    },
+    {
+      "path": "code/run_m06_e14.py",
+      "size": 28164,
+      "sha256": "aa925fd6b95aedf648237f010d6bbe652cc86fd2038a66a54e10605dc51ecfbe"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 89040,
+      "sha256": "769120dc53cf9eced56ec4dc007947ac6cc0c49a6262576f1b0aa2d0e2a51bf6"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 5927,
+      "sha256": "189ba3c78ca97e76ec6eef303bc56d7105a030a76eaf4afe809321e8f502ba91"
+    },
+    {
+      "path": "protocol.md",
+      "size": 5352,
+      "sha256": "11e20153dc21e423eb592332ef951aa53e3fd2b5c10df4d40efffbbb5dfa4cc2"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 8348,
+      "sha256": "25de80004704cb2850f5136c24871fef971e12a735272697106bc070720b5bb6"
+    },
+    {
+      "path": "summary.json",
+      "size": 2724,
+      "sha256": "6a0546bb29f02de4688d5ccdffdc2ba78705fb4d0ac79cde39cea6dd995b3337"
+    },
+    {
+      "path": "v001.md",
+      "size": 9291,
+      "sha256": "ca18889baee7fc30d0ef7388be5e2d60906d2f2bb457511464b92390ba352563"
+    }
+  ],
+  "supersedes": "projects/model_comparison/hypotheses/M06/results/E14/v002/20261020T190615_332001Z",
+  "correction_reason": "Added the referenced E14/v001 protocol to preserve the original v002 protocol link inside the snapshot; metrics and source run are unchanged."
+}
