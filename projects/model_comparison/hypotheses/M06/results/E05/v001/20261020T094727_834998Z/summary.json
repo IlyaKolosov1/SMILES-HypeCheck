@@ -1,0 +1,61 @@
+{
+  "status": "complete_exploratory",
+  "diagnostic_after_outcomes_viewed": true,
+  "label_access": "adjusted uses all train labels; FM sees K labels per query",
+  "families": {
+    "ACIC": {
+      "mean_delta": -0.002736894071228931,
+      "median_delta": -0.007656420721217666,
+      "positive_cases": 3,
+      "primary_cases": 8,
+      "conditional_bootstrap_ci": [
+        -0.030868745428194056,
+        0.026863492221005703
+      ],
+      "mean_pehe": {
+        "adjusted_feature": 1.763176373302942,
+        "fm_feature": 1.6673712724309901,
+        "global_cv": 1.7618005754990276,
+        "local_feature": 3.441441512331879,
+        "t_learner": 1.8086473538144383,
+        "train_ate": 3.7966303214765107
+      },
+      "mean_regret": {
+        "adjusted_feature": 0.28988966671466626,
+        "fm_feature": 0.43501269549635885,
+        "global_cv": 0.28707752037383266,
+        "local_feature": 2.501562235800097,
+        "t_learner": 0.27282028276393205,
+        "train_ate": 5.159658806282382
+      }
+    },
+    "IHDP": {
+      "mean_delta": 0.07490417817002697,
+      "median_delta": 0.07397391070769103,
+      "positive_cases": 91,
+      "primary_cases": 100,
+      "conditional_bootstrap_ci": [
+        0.06639082188188886,
+        0.08082857336823364
+      ],
+      "mean_pehe": {
+        "adjusted_feature": 2.1297045799545273,
+        "fm_feature": 1.4513586898563222,
+        "global_cv": 2.2009659265721715,
+        "local_feature": 4.240850736721696,
+        "t_learner": 2.24776581459499,
+        "train_ate": 5.71168903563379
+      },
+      "mean_regret": {
+        "adjusted_feature": 0.25626181954747784,
+        "fm_feature": 0.17591847343031106,
+        "global_cv": 0.2535302801194088,
+        "local_feature": 0.7078913910854314,
+        "t_learner": 0.29503787663199865,
+        "train_ate": 6.627317473146417
+      }
+    }
+  },
+  "diagnostic_gate_met": false,
+  "interpretation": "ACIC scenarios share covariates; IHDP replications share children; within-case bootstrap conditions on training and selected contexts"
+}

@@ -1,0 +1,51 @@
+{
+  "experiment": "M06/E05/v001",
+  "run_id": "20261020T094727_834998Z",
+  "local_path": "artifacts/local/m06_e05_results/20261020T094727_834998Z",
+  "sources": {
+    "ACIC": {
+      "snapshot": "projects/model_comparison/hypotheses/M01/results/E12/v001/20261019T220135_061366Z",
+      "manifest_sha256": "74a922d2540c42cc7453d6c3dee5ba20be4553bfab9d35018ae1126108021c2f",
+      "source_code_git_commit": "fb6be6f554494566bc55e7ae7a3c58ad05d11271",
+      "snapshot_files": 10,
+      "local_files": 211,
+      "source_local_index_sha256": "707ad7b5d521a1031a172ecbb1e0d2f166f28d89b303f4bbd416273f638e9273",
+      "source_protocol_sha256": "f5d0acd310fbe6fc81135f4b2a8feb8375568aed4f59f120732f108747055212"
+    },
+    "IHDP": {
+      "snapshot": "projects/model_comparison/hypotheses/M01/results/E13/v001/20261019T223041_152756Z",
+      "manifest_sha256": "4dc8e64d085577826c422c45ff43de7fe24a66b6c7d6aa6b16500f3cb12ef4ab",
+      "source_code_git_commit": "c5dd367c2d0d0f39cf0d3769f24317879a40ac45",
+      "snapshot_files": 11,
+      "local_files": 1901,
+      "source_local_index_sha256": "1107797f7bc06bc7ec57d2cb3cdd8c740639bab25324450e5fc2b15b72134576",
+      "source_protocol_sha256": "a1a5617f57c26ccd8a6e2ed10cfe9a3a05b380ad5452dc721e46103bee118196"
+    }
+  },
+  "model": {
+    "learning_rate": 0.05,
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 1.0,
+    "random_state": 42
+  },
+  "crossfit_folds": 5,
+  "bootstrap_draws": 1000,
+  "python": "3.11.15",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scikit-learn": "1.5.2",
+    "tqdm": "4.67.1"
+  },
+  "code_git_commit": "e57525c5e725626c9680c96a37ea7a9e65dd9f53",
+  "code_sha256": "e3d47359fe86ae3115de96c4c226a5ddaf7bdf93d318c07e3b8b9584ba5fb83c",
+  "protocol_sha256": "a6cbf54a087afaf39eaaa78107f1ca5cf508b808adea313a6a7ecaeef2a14349",
+  "dependency_sha256": {
+    "tools/run_m01_e14.py": "ccfe03aa8c0f0ee73709c9ee46ccc0ee1e4d06cf194bcada220657b90476ff83",
+    "tools/run_m01_e12.py": "38e6f681b672e962b32a394762882a7fb35a1392736c30dc55d3bcb67f89e707",
+    "tools/run_m01_e13.py": "894a30180aa0d41f1e96f8d06bb2347ddfcda704f668a6434f4b979bb2e70560",
+    "projects/context_selection/src/cs01_e03.py": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+    "projects/context_selection/src/multi_dataset_context.py": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+  }
+}

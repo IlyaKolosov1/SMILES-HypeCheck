@@ -16,6 +16,6 @@
 | | [M03](../projects/model_comparison/hypotheses/M03/README.md) | Контекст + смешение | Отрицательное interaction повторилось на Criteo |
 | | [M04](../projects/model_comparison/hypotheses/M04/README.md) | PEHE против targeting | Исторический синтетический отчёт |
 | | [M05](../projects/model_comparison/hypotheses/M05/README.md) | Тип outcome и преимущество FM | Interaction не прошёл порог; constant train-ATE точнее FM по PEHE на проверенной DGP |
-| | [M06](../projects/model_comparison/hypotheses/M06/README.md) | Ошибка контекста и поправка FM | E02 показал механизм, но не policy-выигрыш; E03 не подтвердил выигрыш на RCT; в E04 классическая коррекция закрыла разрыв FM с direct local на просмотренном synthetic-семействе |
+| | [M06](../projects/model_comparison/hypotheses/M06/README.md) | Ошибка контекста и поправка FM | E04: классическая коррекция закрыла разрыв с FM на одной synthetic-семье; E05: на ACIC эффект не сохранился, на IHDP FM опередила adjusted в 91/100 репликаций; общий ориентир не выполнен, нужен контролируемый тест режима |
 
 Новая гипотеза получает следующий свободный ID внутри своего проекта, собственный README, папки `experiments/` и `results/`. В README до запуска пишутся вопрос, primary contrast/метрика, датасеты, статус и ограничения.
