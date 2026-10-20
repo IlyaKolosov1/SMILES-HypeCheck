@@ -1,0 +1,8 @@
+{
+  "mean_input_hits": 8.0,
+  "mean_retrieval_hits": 3.875,
+  "input_passes": 8,
+  "retrieval_passes": 8,
+  "joint_passes": 8,
+  "gate_met": true
+}

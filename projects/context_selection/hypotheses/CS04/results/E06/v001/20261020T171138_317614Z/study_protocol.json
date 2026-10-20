@@ -1,0 +1,33 @@
+{
+  "experiment": "CS04/E06/v001",
+  "run_id": "20261020T171138_317614Z",
+  "seeds": [
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218
+  ],
+  "train_size": 8192,
+  "columns": 32,
+  "permutation_repeats": 3,
+  "model": {
+    "learning_rate": 0.05,
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 1.0,
+    "random_state": 42
+  },
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scikit-learn": "1.5.2"
+  },
+  "code_git_commit": "3ab4b2cd5b2c59a386e61688e0ea95c9428410be",
+  "code_dirty": false,
+  "code_sha256": "175cebea8560ca2eeadb90458bb35fe116d13954d99cb504c81f84f0415cce05",
+  "protocol_sha256": "a6c1911112dfb175a8bba048d89a908dca453a8c48968999a6fdee70e205938b"
+}
