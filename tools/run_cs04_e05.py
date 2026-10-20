@@ -287,7 +287,10 @@ def snapshot(run: Path, protocol: dict, rows: pd.DataFrame,
     pairs.to_csv(result / "paired_differences.csv", index=False)
     save_json(result / "summary.json", summary)
     save_json(result / "study_protocol.json", protocol)
-    (result / "v001.md").write_bytes(PROTOCOL.read_bytes())
+    protocol_copy = PROTOCOL.read_text().replace(
+        "../../results/E04/v001/20261019T115526_827302Z/README.md",
+        "../../../E04/v001/20261019T115526_827302Z/README.md")
+    (result / "v001.md").write_text(protocol_copy)
     (result / "code").mkdir()
     for source in code_paths()[:-1]:
         shutil.copy2(source, result / "code" / source.name)

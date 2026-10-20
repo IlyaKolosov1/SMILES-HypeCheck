@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "project": "context_selection",
+  "hypothesis": "CS04",
+  "experiment": "E05",
+  "experiment_version": "v001",
+  "run_id": "20261020T165022_718458Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Nuisance geometry transfer and input-column factorial.",
+  "original_local_path": "artifacts/local/cs04_e05_results/20261020T152549_203377Z",
+  "code_git_commit": "e248e21fda44313ec69ec5d30f706299b49bfcd9",
+  "code_sha256": "79a94204d11a9992b105095250e83794b8467a670f7de9dbaa8006cba9501aa2",
+  "code_snapshot": "projects/context_selection/hypotheses/CS04/results/E05/v001/20261020T165022_718458Z/code/run_cs04_e05.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 8376,
+      "sha256": "0fb8cc05d0b9e3904969a304cd3f9b245f2b4b62b79a266868dc168d7e1051ec"
+    },
+    {
+      "path": "code/run_cs04_e01.py",
+      "size": 18321,
+      "sha256": "2ddbbad3322f90deff0eaff39f1e4b5fcb464c28896c9c324f87c5bf5318adbb"
+    },
+    {
+      "path": "code/run_cs04_e02.py",
+      "size": 16028,
+      "sha256": "5c59ce2bfba503d692112d42d1cd51bfd1d637100c1032f36cbba331012f9db3"
+    },
+    {
+      "path": "code/run_cs04_e04.py",
+      "size": 16623,
+      "sha256": "bc878b801c85b114a388979e6f54e1194ee344c8010c9ed03b70d7d85d517815"
+    },
+    {
+      "path": "code/run_cs04_e05.py",
+      "size": 19732,
+      "sha256": "79a94204d11a9992b105095250e83794b8467a670f7de9dbaa8006cba9501aa2"
+    },
+    {
+      "path": "code/synthetic_pilot.py",
+      "size": 22764,
+      "sha256": "87801f4a7c4391b49d2e88e52daf9ba88bbc2dad012c7ff25e363ebcdb4e737f"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 12872,
+      "sha256": "fac52d1541193eca832e91ea29a21f9923c9f9bf5dd9dd244d1768fc45aac7ac"
+    },
+    {
+      "path": "paired_differences.csv",
+      "size": 1381,
+      "sha256": "95245ff81919588fb980556abdfbfa50ea4702b30d32a9a274e34f6864a7ee0a"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 1321,
+      "sha256": "76fba4cc11c74fc2474cb60acc6dd5d60b400d778288815ebda0a4e1a37c4d27"
+    },
+    {
+      "path": "summary.json",
+      "size": 995,
+      "sha256": "1aaf82fc0f125c6ab80d6e93815b6112f0f52f73f9c0475e74dff3e108c459b3"
+    },
+    {
+      "path": "v001.md",
+      "size": 8273,
+      "sha256": "6d733cc85de923205deaadf2137da95e76f039400bd87c70a15ae343af3a707c"
+    }
+  ],
+  "supersedes": "20261020T152549_203377Z",
+  "correction_reason": "Packaging-only correction of protocol-copy relative link; original generated result archived locally and all scores/metrics unchanged."
+}
