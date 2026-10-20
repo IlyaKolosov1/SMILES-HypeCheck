@@ -359,7 +359,9 @@ def snapshot(run: Path, protocol: dict, selections: pd.DataFrame,
     save_json(target / "study_protocol.json", protocol)
     copied = PROTOCOL.read_text().replace(
         "../../results/E06/v001/20261020T171138_317614Z/README.md",
-        "../../../E06/v001/20261020T171138_317614Z/README.md")
+        "../../../E06/v001/20261020T171138_317614Z/README.md").replace(
+        "../../experiments/E06/v001.md",
+        "../../../../experiments/E06/v001.md")
     (target / "v001.md").write_text(copied)
     (target / "code").mkdir()
     for source in code_paths()[:-1]:

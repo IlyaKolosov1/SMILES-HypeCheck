@@ -1,0 +1,45 @@
+{
+  "experiment": "CS04/E07/v001",
+  "run_id": "20261020T171911_512594Z",
+  "seeds": [
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318
+  ],
+  "train_size": 8192,
+  "eval_size": 2048,
+  "context_size": 512,
+  "cells": [
+    "full_full",
+    "full_input8",
+    "shared8_input8",
+    "split4_input8",
+    "oracle4_input8"
+  ],
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 20261022,
+  "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+  "versions": {
+    "causalpfn": "0.1.5",
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "torch": "2.3.1",
+    "scikit-learn": "1.5.2",
+    "scipy": "1.17.1"
+  },
+  "code_git_commit": "0d2724441f2a2e3616af222e56810be54dface60",
+  "code_dirty": false,
+  "code_sha256": "0f293408fd4d249475f111f97e5597dd455fbf811c3e0d378bbc14cff49bb5b0",
+  "dependency_sha256": {
+    "run_cs04_e06.py": "175cebea8560ca2eeadb90458bb35fe116d13954d99cb504c81f84f0415cce05",
+    "run_cs04_e01.py": "2ddbbad3322f90deff0eaff39f1e4b5fcb464c28896c9c324f87c5bf5318adbb",
+    "synthetic_pilot.py": "87801f4a7c4391b49d2e88e52daf9ba88bbc2dad012c7ff25e363ebcdb4e737f"
+  },
+  "protocol_sha256": "f872a43240dccffd765136bdb45d41c5870cf16c94ab4d2790802b572d65ded5"
+}
