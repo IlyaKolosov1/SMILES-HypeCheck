@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E15",
+  "experiment_version": "v001",
+  "run_id": "20261020T195606_385161Z",
+  "result_revision": 1,
+  "status": "incomplete",
+  "summary": "Stopped before metrics after detecting 63,220 source-row overlaps with CS05/CS06.",
+  "original_local_path": "artifacts/local/m01_e15_results/20261020T195606_385161Z",
+  "code_git_commit": "c5adb9e406310eb30000d962fdcdbca4351910ad",
+  "code_sha256": "26431c8c77b128163ab54e6e5f1877ae97d0007aca3b364f72acf4d6ff4ec5a9",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E15/v001/20261020T195606_385161Z/code/run_m01_e15.py",
+  "files": [
+    {
+      "path": "code/run_m01_e15.py",
+      "size": 28679,
+      "sha256": "26431c8c77b128163ab54e6e5f1877ae97d0007aca3b364f72acf4d6ff4ec5a9"
+    },
+    {
+      "path": "exclusion_audit.json",
+      "size": 631,
+      "sha256": "d4b79b7d6cbdd0f25668cb5c9ee0a69306c0bb5b235919fd58008ed3e75a767f"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 1462,
+      "sha256": "5c58cbe813057d81732b07834cf4f83cee07fd228d52fed7b25c65054a9911ed"
+    },
+    {
+      "path": "status_at_stop.json",
+      "size": 106,
+      "sha256": "074db7517b08efc37ba1dfb467c9b3587861eb17948e6f22b687fd4a48b00537"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 2682,
+      "sha256": "56f84c0889969725d9b2dddb1757b4779858efff9b42a4ec36ef2d99d7e15326"
+    }
+  ],
+  "limitation": "Partial predictions are not a result; source sample overlaps previously studied cohorts."
+}

@@ -1,0 +1,20 @@
+{
+  "stopped_reason": "v001 omitted CS05/CS06 source cohorts from its exclusion registry",
+  "v001_sample_rows": 650000,
+  "historical_rows": 2795670,
+  "overlap_rows": 63220,
+  "overlap_by_cohort": {
+    "410": 10399,
+    "411": 10640,
+    "412": 10510,
+    "413": 10523,
+    "414": 10529,
+    "415": 10619
+  },
+  "processed_fm_rows": 55296,
+  "planned_eval_rows": 500000,
+  "final_metrics_present": false,
+  "score_arrays_inspected": false,
+  "analysis": "No policy or Qini results were computed; v001 is invalid as a fresh holdout.",
+  "next_version": "M01/E15/v002 excludes all historical rows and the complete v001 sample."
+}
