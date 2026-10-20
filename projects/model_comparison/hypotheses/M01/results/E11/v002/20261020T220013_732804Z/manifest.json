@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E11",
+  "experiment_version": "v002",
+  "run_id": "20261020T220013_732804Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Starbucks top-decile policy attribution from archived scores.",
+  "original_local_path": "artifacts/local/cs01_e06_results/20261019T083837_511040Z",
+  "code_git_commit": "147bbb55c30d503bf112e560460fdad504fd4c93",
+  "code_sha256": "3d90ec2c07d1aba1484bfc504db2a0c405e2907072c1e86e7a9592d5366faca0",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E11/v002/20261020T220013_732804Z/code/run_m01_e11_v002.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 645,
+      "sha256": "8798cacc4a32168dc3026c96b6589b869fc779f7639c6b13473065973f93c2df"
+    },
+    {
+      "path": "bootstrap_draws.csv",
+      "size": 82932,
+      "sha256": "57db30a81f9c6e22a1d85cf59867605356c2fe6fb87f495a325d1cc9c8c3cf7e"
+    },
+    {
+      "path": "code/run_m01_e08.py",
+      "size": 26781,
+      "sha256": "f2fbcbae6047f3abda2d2f10a9acc4a91459eca4fb7b31550d2d172cd1dad77c"
+    },
+    {
+      "path": "code/run_m01_e11.py",
+      "size": 12993,
+      "sha256": "28a448a3aa3d0d198e71968078abcb2e474beafdab1e1464a90ac7c8b322036e"
+    },
+    {
+      "path": "code/run_m01_e11_v002.py",
+      "size": 12280,
+      "sha256": "3d90ec2c07d1aba1484bfc504db2a0c405e2907072c1e86e7a9592d5366faca0"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 461,
+      "sha256": "78071be6db0079935765b27a78b784f26a611fc0b7e4d42ff3c4191a587fb18b"
+    },
+    {
+      "path": "source_local_files.csv",
+      "size": 2669,
+      "sha256": "155998f6040bc7b6695574a842aa591e50bacdbf802eea57fc7a7591d7182a93"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 1610,
+      "sha256": "6f0caa9ed587b36bf6034d05722b3d12b168aff2129eeb02bda9e6026f170db0"
+    },
+    {
+      "path": "summary.json",
+      "size": 953,
+      "sha256": "3dadc069cc4b2922b2c8dc8f58156870a6370e76cc2c3a60f420845979c25189"
+    }
+  ]
+}

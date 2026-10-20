@@ -1,0 +1,32 @@
+{
+  "contrasts_pp": {
+    "fm_feature_minus_random_mean": 0.3054452731939783,
+    "local_feature_minus_random_mean": 0.9433773418272011,
+    "fm_specific_interaction": -0.6379320686332228,
+    "fm_minus_local_feature": -0.12549495164275748
+  },
+  "conditional_bootstrap_95_pp": {
+    "fm_feature_minus_random_mean": [
+      -0.5043209322546945,
+      1.1254393874662754
+    ],
+    "local_feature_minus_random_mean": [
+      0.08199653751410187,
+      1.823505311876513
+    ],
+    "fm_specific_interaction": [
+      -1.4230999974784124,
+      0.10832689757422559
+    ],
+    "fm_minus_local_feature": [
+      -0.7037338569794104,
+      0.46914320180606733
+    ]
+  },
+  "selection_overlap": {
+    "fm_local_feature_top10": 3097,
+    "selected_per_policy": 4165
+  },
+  "status": "complete_exploratory",
+  "caveat": "Post-hoc reuse of already viewed Starbucks test outcomes; intervals conditional on fixed scores, test sample, tie rule and selected masks."
+}
