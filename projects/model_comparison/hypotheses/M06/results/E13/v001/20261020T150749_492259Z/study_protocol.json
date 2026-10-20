@@ -1,0 +1,54 @@
+{
+  "experiment": "M06/E13/v001",
+  "run_id": "20261020T150749_492259Z",
+  "sources": {
+    "E08": {
+      "run_id": "20261020T120435_272674Z",
+      "manifest_sha256": "f742daee2a3e16e6641392165d224ec65a64fb8133a5c417ed93976d4e48b758",
+      "code_git_commit": "859dd7ff2a028ee6f7370b66a54850e3d1272840",
+      "local_files_count": 258
+    },
+    "E11": {
+      "run_id": "20261020T144232_220031Z",
+      "manifest_sha256": "ea0812a94d4da0a2676bb132e5f4b7e5133a4439fc0119f7c44e6a5c8cf3248c",
+      "code_git_commit": "0b0100dd8ffcdeae33b38aa2745664118bb6c738",
+      "local_files_count": 173
+    },
+    "E12": {
+      "run_id": "20261020T145828_667013Z",
+      "manifest_sha256": "89f78669c386237dc50040b30e85e5d9cd5dff852e5b2e2b513f564e614d415f"
+    }
+  },
+  "feature_names": [
+    "arm0_d_small",
+    "arm0_d_extra",
+    "arm0_y_small_sd",
+    "arm0_y_small_mean",
+    "arm0_y_extra_mean",
+    "arm1_d_small",
+    "arm1_d_extra",
+    "arm1_y_small_sd",
+    "arm1_y_small_mean",
+    "arm1_y_extra_mean",
+    "abs_local_change",
+    "query_norm",
+    "train_treated_fraction",
+    "train_y_sd"
+  ],
+  "random_seed": 5301,
+  "random_repeats": 100,
+  "local_path": "artifacts/local/m06_e13_results/20261020T150749_492259Z",
+  "python": "3.11.15",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scikit-learn": "1.5.2",
+    "tqdm": "4.67.1"
+  },
+  "code_git_commit": "b21e469aae0f746ceb0f2290359bbcf54a600103",
+  "code_sha256": "3fc752aa44b29ce1b24338c37f4935073656d334924bee92c40d521f313f7109",
+  "protocol_sha256": "948b23d493f570699a9aab476554c92ca7cba55c74a910aa3f3517c3a5c35f9c",
+  "dependency_sha256": {
+    "tools/analyze_m06_e12.py": "3583a309ecbcd6727c52e9b5f27231d7397222a8da06d3f3e1563adbecd6ff35"
+  }
+}

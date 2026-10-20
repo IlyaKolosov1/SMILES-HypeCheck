@@ -1,0 +1,48 @@
+{
+  "project": "model_comparison",
+  "hypothesis": "M06",
+  "experiment": "E13",
+  "experiment_version": "v001",
+  "run_id": "20261020T150749_492259Z",
+  "status": "complete_exploratory",
+  "code_git_commit": "b21e469aae0f746ceb0f2290359bbcf54a600103",
+  "code_sha256": "3fc752aa44b29ce1b24338c37f4935073656d334924bee92c40d521f313f7109",
+  "code_snapshot": "projects/model_comparison/hypotheses/M06/results/E13/v001/20261020T150749_492259Z/code/analyze_m06_e13.py",
+  "files": [
+    {
+      "path": "cells.csv",
+      "size": 12563,
+      "sha256": "a87443e4b0827d08d58e7690fa79b59c089a51cd609087f1e1030a104835d326"
+    },
+    {
+      "path": "code/analyze_m06_e12.py",
+      "size": 14114,
+      "sha256": "3583a309ecbcd6727c52e9b5f27231d7397222a8da06d3f3e1563adbecd6ff35"
+    },
+    {
+      "path": "code/analyze_m06_e13.py",
+      "size": 19115,
+      "sha256": "3fc752aa44b29ce1b24338c37f4935073656d334924bee92c40d521f313f7109"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 5713,
+      "sha256": "b391d8df921c1e1c09ce3ca1c35343e25a588cdc86c302bf842c25dd85f28593"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 1732,
+      "sha256": "a083de6e9d42480857aabfd49e00f2f8e5dedfa2210fad60ce82517361e23652"
+    },
+    {
+      "path": "summary.json",
+      "size": 3360,
+      "sha256": "9a0173b9a050b40e2cf79e7659d0827dae0d5ff23f08d7f23bf07aaf3dc95350"
+    },
+    {
+      "path": "v001.md",
+      "size": 6691,
+      "sha256": "a05ba69a0692d8a643c7d651f11c5102c5f10082333ca492ddb55dc9190818a1"
+    }
+  ]
+}
