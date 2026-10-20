@@ -1,0 +1,180 @@
+{
+  "experiment": "M06/E08/v001",
+  "run_id": "20261020T120435_272674Z",
+  "local_path": "artifacts/local/m06_e08_results/20261020T120435_272674Z",
+  "source": {
+    "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+    "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+    "checkpoint_path": "/Users/ilya-kolosov/.cache/huggingface/hub/models--vdblm--causalpfn/snapshots/83aad07da1cb077cfda4236878a1b07dc9f72a54/causalpfn_v0.pt",
+    "train_rows": 672,
+    "eval_rows": 512,
+    "features": 12,
+    "context_sizes": [
+      64,
+      128
+    ],
+    "families": {
+      "smooth_gate": [
+        3101,
+        3102,
+        3103,
+        3104,
+        3105,
+        3106,
+        3107,
+        3108
+      ],
+      "threshold_gate": [
+        3101,
+        3102,
+        3103,
+        3104,
+        3105,
+        3106,
+        3107,
+        3108
+      ],
+      "constant_control": [
+        3191,
+        3192
+      ]
+    },
+    "train_treatment_counts": {
+      "smooth_gate/3101": [
+        335,
+        337
+      ],
+      "smooth_gate/3102": [
+        341,
+        331
+      ],
+      "smooth_gate/3103": [
+        327,
+        345
+      ],
+      "smooth_gate/3104": [
+        342,
+        330
+      ],
+      "smooth_gate/3105": [
+        359,
+        313
+      ],
+      "smooth_gate/3106": [
+        319,
+        353
+      ],
+      "smooth_gate/3107": [
+        336,
+        336
+      ],
+      "smooth_gate/3108": [
+        323,
+        349
+      ],
+      "threshold_gate/3101": [
+        335,
+        337
+      ],
+      "threshold_gate/3102": [
+        341,
+        331
+      ],
+      "threshold_gate/3103": [
+        327,
+        345
+      ],
+      "threshold_gate/3104": [
+        342,
+        330
+      ],
+      "threshold_gate/3105": [
+        359,
+        313
+      ],
+      "threshold_gate/3106": [
+        319,
+        353
+      ],
+      "threshold_gate/3107": [
+        336,
+        336
+      ],
+      "threshold_gate/3108": [
+        323,
+        349
+      ],
+      "constant_control/3191": [
+        302,
+        370
+      ],
+      "constant_control/3192": [
+        325,
+        347
+      ]
+    },
+    "model": {
+      "learning_rate": 0.05,
+      "max_iter": 200,
+      "max_leaf_nodes": 31,
+      "l2_regularization": 1.0,
+      "random_state": 42
+    },
+    "crossfit_folds": 5,
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 2808
+  },
+  "model": {
+    "learning_rate": 0.05,
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 1.0,
+    "random_state": 42
+  },
+  "context_sizes": [
+    64,
+    128
+  ],
+  "families": {
+    "smooth_gate": [
+      3101,
+      3102,
+      3103,
+      3104,
+      3105,
+      3106,
+      3107,
+      3108
+    ],
+    "threshold_gate": [
+      3101,
+      3102,
+      3103,
+      3104,
+      3105,
+      3106,
+      3107,
+      3108
+    ],
+    "constant_control": [
+      3191,
+      3192
+    ]
+  },
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 2808,
+  "python": "3.11.15",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scikit-learn": "1.5.2",
+    "torch": "2.3.1",
+    "tqdm": "4.67.1"
+  },
+  "code_git_commit": "859dd7ff2a028ee6f7370b66a54850e3d1272840",
+  "code_sha256": "33b7b7a9e024b967189d23d1c2c2530f30388724f335cd423894ca5ed20d3848",
+  "protocol_sha256": "de5aa9f33c1894470330c52f1177f533db2cbdfd0608f2a4850d692cbee0b879",
+  "dependency_sha256": {
+    "projects/context_selection/src/cs01_e03.py": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+  }
+}

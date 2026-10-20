@@ -1,0 +1,168 @@
+{
+  "status": "complete_exploratory",
+  "prospective_generator": true,
+  "primary_families": {
+    "smooth_gate": {
+      "mean_delta_k": 0.1862971325662562,
+      "median_delta_k": 0.1802440858790097,
+      "positive_seeds": 8,
+      "mean_d_k64": -0.03940945315843062,
+      "mean_d_k128": 0.1468876794078256,
+      "seed_bootstrap_ci": [
+        0.16073351867063643,
+        0.21051457291716583
+      ],
+      "cell_means": [
+        {
+          "context_size": 64,
+          "method": "adjusted_feature",
+          "normalized_pehe": 1.09058006271463,
+          "regret_at_10": 0.2604474570029057
+        },
+        {
+          "context_size": 64,
+          "method": "fm_feature",
+          "normalized_pehe": 1.1299895158730606,
+          "regret_at_10": 0.2948353045190183
+        },
+        {
+          "context_size": 64,
+          "method": "global_cv",
+          "normalized_pehe": 1.0229336309435824,
+          "regret_at_10": 0.261377366940276
+        },
+        {
+          "context_size": 64,
+          "method": "local_feature",
+          "normalized_pehe": 0.9363103492913185,
+          "regret_at_10": 0.28660091009134286
+        },
+        {
+          "context_size": 64,
+          "method": "train_ate",
+          "normalized_pehe": 1.060327386547806,
+          "regret_at_10": 0.61136551004333
+        },
+        {
+          "context_size": 128,
+          "method": "adjusted_feature",
+          "normalized_pehe": 1.0455580769791415,
+          "regret_at_10": 0.2631958653935446
+        },
+        {
+          "context_size": 128,
+          "method": "fm_feature",
+          "normalized_pehe": 0.898670397571316,
+          "regret_at_10": 0.2456454158617327
+        },
+        {
+          "context_size": 128,
+          "method": "global_cv",
+          "normalized_pehe": 1.0229336309435824,
+          "regret_at_10": 0.261377366940276
+        },
+        {
+          "context_size": 128,
+          "method": "local_feature",
+          "normalized_pehe": 0.9091651565211559,
+          "regret_at_10": 0.24543212773278356
+        },
+        {
+          "context_size": 128,
+          "method": "train_ate",
+          "normalized_pehe": 1.060327386547806,
+          "regret_at_10": 0.61136551004333
+        }
+      ]
+    },
+    "threshold_gate": {
+      "mean_delta_k": 0.15906475004644127,
+      "median_delta_k": 0.1692693286875995,
+      "positive_seeds": 8,
+      "mean_d_k64": -0.10188263602973696,
+      "mean_d_k128": 0.05718211401670428,
+      "seed_bootstrap_ci": [
+        0.13734054575422053,
+        0.1733386583029472
+      ],
+      "cell_means": [
+        {
+          "context_size": 64,
+          "method": "adjusted_feature",
+          "normalized_pehe": 1.0501769237939227,
+          "regret_at_10": 0.22055288461538453
+        },
+        {
+          "context_size": 64,
+          "method": "fm_feature",
+          "normalized_pehe": 1.1520595598236598,
+          "regret_at_10": 0.42355769230769214
+        },
+        {
+          "context_size": 64,
+          "method": "global_cv",
+          "normalized_pehe": 0.9613794297869259,
+          "regret_at_10": 0.20492788461538447
+        },
+        {
+          "context_size": 64,
+          "method": "local_feature",
+          "normalized_pehe": 0.9759597583820414,
+          "regret_at_10": 0.4122596153846152
+        },
+        {
+          "context_size": 64,
+          "method": "train_ate",
+          "normalized_pehe": 1.0628707900841317,
+          "regret_at_10": 0.6721153846153843
+        },
+        {
+          "context_size": 128,
+          "method": "adjusted_feature",
+          "normalized_pehe": 1.0025901955574277,
+          "regret_at_10": 0.21165865384615373
+        },
+        {
+          "context_size": 128,
+          "method": "fm_feature",
+          "normalized_pehe": 0.9454080815407234,
+          "regret_at_10": 0.38749999999999984
+        },
+        {
+          "context_size": 128,
+          "method": "global_cv",
+          "normalized_pehe": 0.9613794297869259,
+          "regret_at_10": 0.20492788461538447
+        },
+        {
+          "context_size": 128,
+          "method": "local_feature",
+          "normalized_pehe": 0.9547976416958862,
+          "regret_at_10": 0.36286057692307677
+        },
+        {
+          "context_size": 128,
+          "method": "train_ate",
+          "normalized_pehe": 1.0628707900841317,
+          "regret_at_10": 0.6721153846153843
+        }
+      ]
+    }
+  },
+  "constant_control_cases": 2,
+  "label_access": "Adjusted uses all train labels; FM sees K labels per query",
+  "diagnostic_gate_met": true,
+  "constant_control_pehe": {
+    "K64/adjusted_feature": 0.3382876924231445,
+    "K64/fm_feature": 0.3103597322399354,
+    "K64/global_cv": 0.3133889347301874,
+    "K64/local_feature": 0.1482754599936362,
+    "K64/train_ate": 0.035395259830207026,
+    "K128/adjusted_feature": 0.31966560713671105,
+    "K128/fm_feature": 0.2028709690198913,
+    "K128/global_cv": 0.3133889347301874,
+    "K128/local_feature": 0.10395352090137727,
+    "K128/train_ate": 0.035395259830207026
+  },
+  "interpretation": "Eight independent base draws paired across two fixed synthetic mechanisms; generator selected after viewed ACIC/IHDP, no external RCT confirmation"
+}
