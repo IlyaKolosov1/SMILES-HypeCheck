@@ -137,18 +137,23 @@ def audit() -> dict:
                        "file_propensities": props,
                        "control_outcome_rate": p0, "treatment_outcome_rate": p1})
 
-    # Illustrative 80% power threshold for a paired value contrast, conditional
-    # on fixed policies and uniform disagreement across strata. This is not a
-    # confidence interval or a substitute for a model-specific variance audit.
+    # Illustrative 80% power threshold for a paired policy contrast, conditional
+    # on fixed policies and uniform disagreement across strata. Population value
+    # is E[pi(X)*tau(X)]; CATE among selected is that value divided by budget q.
+    # This is not a CI or a substitute for a model-specific variance audit.
     scenarios = []
     for budget in (0.1, 0.4):
         for overlap in (0.5, 0.75):
             disagreement = 2 * budget * (1 - overlap)
+            ipw_population = 100 * 2.8016 * math.sqrt(disagreement * ipw_factor / 500_000)
+            centered_population = 100 * 2.8016 * math.sqrt(
+                disagreement * stratum_centered_factor / 500_000)
             scenarios.append({
                 "budget": budget, "overlap": overlap, "eval_participants": 500_000,
-                "ipw_mde_pp": 100 * 2.8016 * math.sqrt(disagreement * ipw_factor / 500_000),
-                "stratum_centered_mde_pp": 100 * 2.8016 * math.sqrt(
-                    disagreement * stratum_centered_factor / 500_000),
+                "population_value_ipw_mde_pp": ipw_population,
+                "population_value_stratum_centered_mde_pp": centered_population,
+                "selected_cate_ipw_mde_pp": ipw_population / budget,
+                "selected_cate_stratum_centered_mde_pp": centered_population / budget,
             })
 
     report = {
