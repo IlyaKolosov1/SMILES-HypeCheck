@@ -1,0 +1,77 @@
+{
+  "status": "complete_exploratory",
+  "mean_delta_k": 0.1056550618009084,
+  "median_delta_k": 0.10272694074289578,
+  "positive_replications": 100,
+  "mean_d_k64": -0.03075088363088144,
+  "mean_d_k128": 0.07490417817002697,
+  "conditional_bootstrap_ci": [
+    0.09830158139130298,
+    0.11077465503324704
+  ],
+  "diagnostic_gate_met": true,
+  "cell_means": [
+    {
+      "context_size": 64,
+      "method": "adjusted_feature",
+      "normalized_pehe": 0.32001467872702544,
+      "regret_at_10": 0.2655773059002332
+    },
+    {
+      "context_size": 64,
+      "method": "fm_feature",
+      "normalized_pehe": 0.35076556235790685,
+      "regret_at_10": 0.34116278746328965
+    },
+    {
+      "context_size": 64,
+      "method": "global_cv",
+      "normalized_pehe": 0.31994841775684607,
+      "regret_at_10": 0.2535302801194088
+    },
+    {
+      "context_size": 64,
+      "method": "local_feature",
+      "normalized_pehe": 0.5123415216997462,
+      "regret_at_10": 0.8492007308792311
+    },
+    {
+      "context_size": 64,
+      "method": "train_ate",
+      "normalized_pehe": 0.7171687326749072,
+      "regret_at_10": 6.627317473146417
+    },
+    {
+      "context_size": 128,
+      "method": "adjusted_feature",
+      "normalized_pehe": 0.31803496608100185,
+      "regret_at_10": 0.25626181954747784
+    },
+    {
+      "context_size": 128,
+      "method": "fm_feature",
+      "normalized_pehe": 0.24313078791097487,
+      "regret_at_10": 0.17591847343031106
+    },
+    {
+      "context_size": 128,
+      "method": "global_cv",
+      "normalized_pehe": 0.31994841775684607,
+      "regret_at_10": 0.2535302801194088
+    },
+    {
+      "context_size": 128,
+      "method": "local_feature",
+      "normalized_pehe": 0.5233073008310192,
+      "regret_at_10": 0.7078913910854314
+    },
+    {
+      "context_size": 128,
+      "method": "train_ate",
+      "normalized_pehe": 0.7171687326749072,
+      "regret_at_10": 6.627317473146417
+    }
+  ],
+  "interpretation": "Viewed IHDP family; 100 replications share children; paired within-rep bootstrap only",
+  "label_access": "Adjusted uses all train labels; FM sees K labels per query"
+}
