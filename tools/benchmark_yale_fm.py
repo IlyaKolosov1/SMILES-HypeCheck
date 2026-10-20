@@ -37,7 +37,7 @@ QUERY_PER_ARM = 64
 CONTEXT_PER_ARM = 256
 CHUNK_ROWS = 100_000
 FEATURES = tuple(audit.FULL_PROFILE)
-CATEGORICAL = ("strata", "party")
+CATEGORICAL = ("strata", "party", "close_margins_2016")
 NUMERIC = tuple(c for c in FEATURES if c not in CATEGORICAL)
 
 
