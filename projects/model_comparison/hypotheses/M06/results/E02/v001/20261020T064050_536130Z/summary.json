@@ -1,0 +1,17 @@
+{
+  "status": "complete_exploratory",
+  "primary_criterion_met": true,
+  "practical_criterion_met": false,
+  "mean_interaction": 0.16623265418846578,
+  "median_interaction": 0.16687850907262725,
+  "positive_interactions": 4,
+  "fm_better_both_pehe": 4,
+  "mean_regret": {
+    "fm_feature": 0.0733876056757622,
+    "fm_random": 0.13317935175342874,
+    "global_t": 0.05755908329839304,
+    "local_feature": 0.20658126643014335,
+    "local_random": 0.6647708807505013
+  },
+  "caveat": "Four independent draws of one synthetic DGP; mechanism screen, not external RCT validation."
+}

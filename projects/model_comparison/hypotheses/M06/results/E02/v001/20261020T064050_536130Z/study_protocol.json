@@ -1,0 +1,43 @@
+{
+  "experiment": "M06/E02/v001",
+  "run_id": "20261020T064050_536130Z",
+  "local_path": "artifacts/local/m06_e02_results/20261020T064050_536130Z",
+  "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+  "seeds": [
+    2601,
+    2602,
+    2603,
+    2604
+  ],
+  "train_rows": 4096,
+  "eval_rows": 512,
+  "context_size": 512,
+  "oracle_manipulation": [
+    {
+      "seed": 2601,
+      "oracle_rmse_feature": 0.31222300212053394,
+      "oracle_rmse_random": 0.4568242419544504
+    },
+    {
+      "seed": 2602,
+      "oracle_rmse_feature": 0.305034081461291,
+      "oracle_rmse_random": 0.4662311649790601
+    },
+    {
+      "seed": 2603,
+      "oracle_rmse_feature": 0.31144941310002316,
+      "oracle_rmse_random": 0.4507192740318806
+    },
+    {
+      "seed": 2604,
+      "oracle_rmse_feature": 0.3020626256862319,
+      "oracle_rmse_random": 0.45384199950316734
+    }
+  ],
+  "code_git_commit": "bec82ac7c5995b143e52cbcb28e37e340f33b4f0",
+  "code_dirty": false,
+  "code_sha256": "7d7e791745e8b637068c8877aff0e4bad1b6d01c53fed880d19b80e03f22caee",
+  "protocol_sha256": "2e30def7728a57860977dede14a1dd6296379756e3d404e9973c29cc2118d9b6",
+  "source_sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+}
