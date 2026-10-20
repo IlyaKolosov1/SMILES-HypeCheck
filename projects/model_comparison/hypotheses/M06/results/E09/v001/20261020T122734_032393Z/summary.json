@@ -1,0 +1,37 @@
+{
+  "status": "complete_exploratory",
+  "primary_explanation_gate_met": true,
+  "families": {
+    "smooth_gate": {
+      "mean_tail_mse_fm_minus_global": 0.007838203050128232,
+      "positive_tail_seeds": 4,
+      "mean_rest_mse_fm_minus_global": -0.03758199148617593,
+      "mean_selected_truth_fm_minus_global": 0.015731951078543305,
+      "mean_regret_fm_minus_global": -0.015731951078543305,
+      "mean_oracle_overlap_fm": 0.3942307692307692,
+      "mean_oracle_overlap_global": 0.37740384615384615,
+      "mean_spearman_fm": 0.568837827034052,
+      "mean_spearman_global": 0.5795626806921699,
+      "seed_bootstrap_tail_ci": [
+        -0.044423181218092425,
+        0.05820082808037824
+      ]
+    },
+    "threshold_gate": {
+      "mean_tail_mse_fm_minus_global": 0.13949628796395513,
+      "positive_tail_seeds": 8,
+      "mean_rest_mse_fm_minus_global": -0.018719793419967858,
+      "mean_selected_truth_fm_minus_global": -0.18257211538461535,
+      "mean_regret_fm_minus_global": 0.18257211538461535,
+      "mean_oracle_overlap_fm": 0.2668269230769231,
+      "mean_oracle_overlap_global": 0.5024038461538461,
+      "mean_spearman_fm": 0.4783524137967978,
+      "mean_spearman_global": 0.6365755877732888,
+      "seed_bootstrap_tail_ci": [
+        0.10112380398665069,
+        0.17916657808602865
+      ]
+    }
+  },
+  "interpretation": "Post-hoc diagnostic on viewed E08; no new inference, no independent confirmation"
+}

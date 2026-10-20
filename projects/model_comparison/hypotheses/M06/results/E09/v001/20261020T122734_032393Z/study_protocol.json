@@ -1,0 +1,39 @@
+{
+  "experiment": "M06/E09/v001",
+  "run_id": "20261020T122734_032393Z",
+  "local_path": "artifacts/local/m06_e09_results/20261020T122734_032393Z",
+  "source": {
+    "source_snapshot": "projects/model_comparison/hypotheses/M06/results/E08/v001/20261020T120435_272674Z",
+    "source_manifest_sha256": "f742daee2a3e16e6641392165d224ec65a64fb8133a5c417ed93976d4e48b758",
+    "source_local_index_sha256": "66b5169737ccf5cf9394dc40059c2ccad834ce5f86b59ae85d70e89eda8ea187",
+    "source_code_git_commit": "859dd7ff2a028ee6f7370b66a54850e3d1272840",
+    "input_file_count": 80
+  },
+  "methods": [
+    "fm64",
+    "fm128",
+    "global",
+    "adjusted128"
+  ],
+  "families": [
+    "smooth_gate",
+    "threshold_gate"
+  ],
+  "seeds": [
+    3101,
+    3102,
+    3103,
+    3104,
+    3105,
+    3106,
+    3107,
+    3108
+  ],
+  "n_eval": 512,
+  "oracle_top_n": 52,
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 2909,
+  "code_git_commit": "c996fa6fb6c322cc608151405133e5491511d703",
+  "code_sha256": "22270406bd9f7ed793c01ff996b775b5d280c9d97d1b88ff46cc5a8f43117abe",
+  "protocol_sha256": "db84aafbda46fc1db067db871cacdbcd9841eeac713cfdf24285f082402a4b3f"
+}
