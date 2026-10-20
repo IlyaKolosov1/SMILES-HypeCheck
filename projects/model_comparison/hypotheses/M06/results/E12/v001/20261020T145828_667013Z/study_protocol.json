@@ -1,0 +1,28 @@
+{
+  "experiment": "M06/E12/v001",
+  "run_id": "20261020T145828_667013Z",
+  "sources": {
+    "E08": {
+      "run_id": "20261020T120435_272674Z",
+      "manifest_sha256": "f742daee2a3e16e6641392165d224ec65a64fb8133a5c417ed93976d4e48b758",
+      "code_git_commit": "859dd7ff2a028ee6f7370b66a54850e3d1272840",
+      "local_files_count": 258
+    },
+    "E11": {
+      "run_id": "20261020T144232_220031Z",
+      "manifest_sha256": "ea0812a94d4da0a2676bb132e5f4b7e5133a4439fc0119f7c44e6a5c8cf3248c",
+      "code_git_commit": "0b0100dd8ffcdeae33b38aa2745664118bb6c738",
+      "local_files_count": 173
+    }
+  },
+  "local_path": "artifacts/local/m06_e12_results/20261020T145828_667013Z",
+  "python": "3.11.15",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "tqdm": "4.67.1"
+  },
+  "code_git_commit": "80e7e169085e1f1c03c79066524680aa3f8ff95c",
+  "code_sha256": "3583a309ecbcd6727c52e9b5f27231d7397222a8da06d3f3e1563adbecd6ff35",
+  "protocol_sha256": "713366319ae902fd73355f80539e702a86ecf9966c138db46ad239deea413d3b"
+}

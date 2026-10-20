@@ -1,0 +1,78 @@
+{
+  "status": "complete_exploratory",
+  "retrospective": true,
+  "oracle_adaptive_k_feasibility_gate_met": true,
+  "groups": [
+    {
+      "source": "E08",
+      "family": "constant_control",
+      "cells": 2,
+      "mean_fraction_large_better": 0.6650390625,
+      "mean_pehe_small": 0.3103597322399354,
+      "mean_pehe_large": 0.2028709690198913,
+      "mean_oracle_to_large_mse": 0.7901183480398063,
+      "mean_oracle_gain_over_random_in_large_units": 0.882054524265718,
+      "oracle_to_large_mse_range": [
+        0.7813677522511735,
+        0.7988689438284391
+      ]
+    },
+    {
+      "source": "E08",
+      "family": "smooth_gate",
+      "cells": 8,
+      "mean_fraction_large_better": 0.614501953125,
+      "mean_pehe_small": 0.41733116885236066,
+      "mean_pehe_large": 0.33191212667658476,
+      "mean_oracle_to_large_mse": 0.7545058560595442,
+      "mean_oracle_gain_over_random_in_large_units": 0.5384340842137038,
+      "oracle_to_large_mse_range": [
+        0.7176468819576918,
+        0.7944186380877059
+      ]
+    },
+    {
+      "source": "E08",
+      "family": "threshold_gate",
+      "cells": 8,
+      "mean_fraction_large_better": 0.603515625,
+      "mean_pehe_small": 0.38820814785470514,
+      "mean_pehe_large": 0.3186009391087522,
+      "mean_oracle_to_large_mse": 0.7617960622086455,
+      "mean_oracle_gain_over_random_in_large_units": 0.4816042925330887,
+      "oracle_to_large_mse_range": [
+        0.7211320687638896,
+        0.7890233549809652
+      ]
+    },
+    {
+      "source": "E11",
+      "family": "alpha_0.02",
+      "cells": 8,
+      "mean_fraction_large_better": 0.798583984375,
+      "mean_pehe_small": 0.22192189504042553,
+      "mean_pehe_large": 0.06776030391102668,
+      "mean_oracle_to_large_mse": 1.1462361803233176,
+      "mean_oracle_gain_over_random_in_large_units": 4.984629365117891,
+      "oracle_to_large_mse_range": [
+        0.9669046388118432,
+        1.3794473745251181
+      ]
+    },
+    {
+      "source": "E11",
+      "family": "alpha_0.15",
+      "cells": 8,
+      "mean_fraction_large_better": 0.76416015625,
+      "mean_pehe_small": 0.23670048189917348,
+      "mean_pehe_large": 0.09415128254267102,
+      "mean_oracle_to_large_mse": 0.9436860996823373,
+      "mean_oracle_gain_over_random_in_large_units": 2.7655418941986722,
+      "oracle_to_large_mse_range": [
+        0.8156571348484999,
+        1.0657196044639214
+      ]
+    }
+  ],
+  "interpretation": "Oracle uses eval CATE and is unattainable; no trained selector or new FM inference"
+}
