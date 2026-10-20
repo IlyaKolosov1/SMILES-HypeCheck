@@ -1,0 +1,22 @@
+{
+  "status": "complete_exploratory",
+  "primary_criterion_met": false,
+  "primary_comparison": {
+    "comparison": "fm_feature - x_hgb",
+    "aipw_delta_40": 0.0016429902926026196,
+    "ipw_delta_40": -0.006100000000000008,
+    "ci_low": -0.014585778228932537,
+    "ci_high": 0.01795361813153495,
+    "selection_overlap": 0.5537083333333334
+  },
+  "local_comparison": {
+    "comparison": "fm_feature - local_feature",
+    "aipw_delta_40": 0.005452147020511361,
+    "ipw_delta_40": 0.007449999999999998,
+    "ci_low": -0.004724495751573844,
+    "ci_high": 0.016510455584241367,
+    "selection_overlap": 0.7755416666666666
+  },
+  "source": "Michigan Social Pressure, Neighbors vs control, one person per household",
+  "limitation": "Single processed RCT slice; cluster bootstrap conditional on trained scores; possible neighbor spillovers"
+}
