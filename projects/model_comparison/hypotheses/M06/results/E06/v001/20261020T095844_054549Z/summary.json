@@ -1,0 +1,158 @@
+{
+  "status": "complete_exploratory",
+  "primary_delta_n_mean": 0.2513912079862328,
+  "primary_delta_n_median": 0.15894728902207617,
+  "primary_positive_scenarios": 8,
+  "mean_d_small_k128": -0.0032467387760926423,
+  "conditional_bootstrap_ci": [
+    0.23032585065677877,
+    0.282943052969622
+  ],
+  "diagnostic_gate_met": false,
+  "secondary_delta_k_mean": -0.1587045755135082,
+  "secondary_interaction_mean": 0.0005976214453151663,
+  "cell_means": [
+    {
+      "train_rows": 672,
+      "context_size": 128,
+      "method": "adjusted_feature",
+      "normalized_pehe": 0.7797821893205584,
+      "regret_at_10": 1.379840915256751
+    },
+    {
+      "train_rows": 672,
+      "context_size": 128,
+      "method": "fm_feature",
+      "normalized_pehe": 0.783028928096651,
+      "regret_at_10": 1.9339141563787923
+    },
+    {
+      "train_rows": 672,
+      "context_size": 128,
+      "method": "global_cv",
+      "normalized_pehe": 0.7821922037155016,
+      "regret_at_10": 1.3939426784380489
+    },
+    {
+      "train_rows": 672,
+      "context_size": 128,
+      "method": "local_feature",
+      "normalized_pehe": 1.0477564911003148,
+      "regret_at_10": 4.11980157678883
+    },
+    {
+      "train_rows": 672,
+      "context_size": 128,
+      "method": "train_ate",
+      "normalized_pehe": 1.1491697506279464,
+      "regret_at_10": 6.449573507852966
+    },
+    {
+      "train_rows": 672,
+      "context_size": 224,
+      "method": "adjusted_feature",
+      "normalized_pehe": 0.7810947005419507,
+      "regret_at_10": 1.3854291289498515
+    },
+    {
+      "train_rows": 672,
+      "context_size": 224,
+      "method": "fm_feature",
+      "normalized_pehe": 0.6259356745271928,
+      "regret_at_10": 1.2252987082999636
+    },
+    {
+      "train_rows": 672,
+      "context_size": 224,
+      "method": "global_cv",
+      "normalized_pehe": 0.7821922037155016,
+      "regret_at_10": 1.3939426784380489
+    },
+    {
+      "train_rows": 672,
+      "context_size": 224,
+      "method": "local_feature",
+      "normalized_pehe": 1.098288242047314,
+      "regret_at_10": 4.492888507897756
+    },
+    {
+      "train_rows": 672,
+      "context_size": 224,
+      "method": "train_ate",
+      "normalized_pehe": 1.1491697506279464,
+      "regret_at_10": 6.449573507852966
+    },
+    {
+      "train_rows": 3841,
+      "context_size": 128,
+      "method": "adjusted_feature",
+      "normalized_pehe": 0.45731534422664005,
+      "regret_at_10": 0.3766257421673368
+    },
+    {
+      "train_rows": 3841,
+      "context_size": 128,
+      "method": "fm_feature",
+      "normalized_pehe": 0.7122521017116231,
+      "regret_at_10": 1.6351940996116894
+    },
+    {
+      "train_rows": 3841,
+      "context_size": 128,
+      "method": "global_cv",
+      "normalized_pehe": 0.45229664703732275,
+      "regret_at_10": 0.3588469004672806
+    },
+    {
+      "train_rows": 3841,
+      "context_size": 128,
+      "method": "local_feature",
+      "normalized_pehe": 0.9283454555707971,
+      "regret_at_10": 3.0313840617897183
+    },
+    {
+      "train_rows": 3841,
+      "context_size": 128,
+      "method": "train_ate",
+      "normalized_pehe": 1.1127667360784381,
+      "regret_at_10": 6.449573507852966
+    },
+    {
+      "train_rows": 3841,
+      "context_size": 224,
+      "method": "adjusted_feature",
+      "normalized_pehe": 0.45532057231567225,
+      "regret_at_10": 0.377961071200818
+    },
+    {
+      "train_rows": 3841,
+      "context_size": 224,
+      "method": "fm_feature",
+      "normalized_pehe": 0.5512539435644895,
+      "regret_at_10": 0.9050004460180862
+    },
+    {
+      "train_rows": 3841,
+      "context_size": 224,
+      "method": "global_cv",
+      "normalized_pehe": 0.45229664703732275,
+      "regret_at_10": 0.3588469004672806
+    },
+    {
+      "train_rows": 3841,
+      "context_size": 224,
+      "method": "local_feature",
+      "normalized_pehe": 0.9372463002903855,
+      "regret_at_10": 2.890215351249791
+    },
+    {
+      "train_rows": 3841,
+      "context_size": 224,
+      "method": "train_ate",
+      "normalized_pehe": 1.1127667360784381,
+      "regret_at_10": 6.449573507852966
+    }
+  ],
+  "interpretation": "Viewed ACIC family with shared covariates; paired eval-row bootstrap only",
+  "label_access": "Adjusted uses all bank labels; FM sees K labels per query"
+}
