@@ -1,0 +1,96 @@
+{
+  "status": "complete_exploratory",
+  "external_published_generator": true,
+  "trials": 10,
+  "primary": {
+    "mean_delta_k": -0.09271578443080644,
+    "median_delta_k": -0.10015192267392355,
+    "positive_trials": 0,
+    "mean_d_k64": 0.05706651276734147,
+    "mean_d_k128": -0.03564927166346497,
+    "trial_bootstrap_ci": [
+      -0.12107947000984817,
+      -0.06375856003609448
+    ],
+    "descriptive_gate_met": false
+  },
+  "policy": {
+    "regret_fm_below_adjusted_trials": 0,
+    "regret_fm_below_global_trials": 0,
+    "descriptive_gate_met": false
+  },
+  "cell_means": [
+    {
+      "context_size": 64,
+      "method": "adjusted_feature",
+      "normalized_pehe": 1.4877535445190784,
+      "regret_at_10": 0.2942408042428302,
+      "pehe": 0.2944525007931308
+    },
+    {
+      "context_size": 64,
+      "method": "fm_feature",
+      "normalized_pehe": 1.4306870317517368,
+      "regret_at_10": 0.3697202553161927,
+      "pehe": 0.2831547240068245
+    },
+    {
+      "context_size": 64,
+      "method": "global_cv",
+      "normalized_pehe": 1.3420140540914498,
+      "regret_at_10": 0.27587545987152123,
+      "pehe": 0.2655702607461236
+    },
+    {
+      "context_size": 64,
+      "method": "local_feature",
+      "normalized_pehe": 1.0843867800665135,
+      "regret_at_10": 0.3291464295680122,
+      "pehe": 0.21446408095471026
+    },
+    {
+      "context_size": 64,
+      "method": "train_ate",
+      "normalized_pehe": 1.006537558914159,
+      "regret_at_10": 0.38833354994690905,
+      "pehe": 0.19929637706175332
+    },
+    {
+      "context_size": 128,
+      "method": "adjusted_feature",
+      "normalized_pehe": 1.4141104488409149,
+      "regret_at_10": 0.2878503644055967,
+      "pehe": 0.27982010454019707
+    },
+    {
+      "context_size": 128,
+      "method": "fm_feature",
+      "normalized_pehe": 1.4497597205043797,
+      "regret_at_10": 0.35981054006119806,
+      "pehe": 0.2871150414285001
+    },
+    {
+      "context_size": 128,
+      "method": "global_cv",
+      "normalized_pehe": 1.3420140540914498,
+      "regret_at_10": 0.27587545987152123,
+      "pehe": 0.2655702607461236
+    },
+    {
+      "context_size": 128,
+      "method": "local_feature",
+      "normalized_pehe": 1.023961877478038,
+      "regret_at_10": 0.3272798986770861,
+      "pehe": 0.20251366353638778
+    },
+    {
+      "context_size": 128,
+      "method": "train_ate",
+      "normalized_pehe": 1.006537558914159,
+      "regret_at_10": 0.38833354994690905,
+      "pehe": 0.19929637706175332
+    }
+  ],
+  "label_access": "Adjusted and global models use all 672 train labels; FM sees K labels per query",
+  "interpretation": "Ten trials from one published synthetic generator; no external field RCT"
+}

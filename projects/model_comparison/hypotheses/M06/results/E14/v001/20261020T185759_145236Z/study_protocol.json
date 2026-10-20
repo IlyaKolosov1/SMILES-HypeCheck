@@ -1,0 +1,366 @@
+{
+  "experiment": "M06/E14/v001",
+  "run_id": "20261020T185759_145236Z",
+  "local_path": "artifacts/local/m06_e14_results/20261020T185759_145236Z",
+  "source": {
+    "source_url": "https://zenodo.org/records/6342553/files/synthetic_uplift_data.csv?download=1",
+    "source_sha256": "a80ff7cdfc3f9e0eb52482303dc95133713de925caf6e635795d6a9e750e3097",
+    "source_md5": "48101d5fa9fac9ea530b81375108afb6",
+    "source_size": 785863095,
+    "all_trial_arm_counts": {
+      "0": [
+        10000,
+        10000
+      ],
+      "1": [
+        10000,
+        10000
+      ],
+      "2": [
+        10000,
+        10000
+      ],
+      "3": [
+        10000,
+        10000
+      ],
+      "4": [
+        10000,
+        10000
+      ],
+      "5": [
+        10000,
+        10000
+      ],
+      "6": [
+        10000,
+        10000
+      ],
+      "7": [
+        10000,
+        10000
+      ],
+      "8": [
+        10000,
+        10000
+      ],
+      "9": [
+        10000,
+        10000
+      ],
+      "10": [
+        10000,
+        10000
+      ],
+      "11": [
+        10000,
+        10000
+      ],
+      "12": [
+        10000,
+        10000
+      ],
+      "13": [
+        10000,
+        10000
+      ],
+      "14": [
+        10000,
+        10000
+      ],
+      "15": [
+        10000,
+        10000
+      ],
+      "16": [
+        10000,
+        10000
+      ],
+      "17": [
+        10000,
+        10000
+      ],
+      "18": [
+        10000,
+        10000
+      ],
+      "19": [
+        10000,
+        10000
+      ],
+      "20": [
+        10000,
+        10000
+      ],
+      "21": [
+        10000,
+        10000
+      ],
+      "22": [
+        10000,
+        10000
+      ],
+      "23": [
+        10000,
+        10000
+      ],
+      "24": [
+        10000,
+        10000
+      ],
+      "25": [
+        10000,
+        10000
+      ],
+      "26": [
+        10000,
+        10000
+      ],
+      "27": [
+        10000,
+        10000
+      ],
+      "28": [
+        10000,
+        10000
+      ],
+      "29": [
+        10000,
+        10000
+      ],
+      "30": [
+        10000,
+        10000
+      ],
+      "31": [
+        10000,
+        10000
+      ],
+      "32": [
+        10000,
+        10000
+      ],
+      "33": [
+        10000,
+        10000
+      ],
+      "34": [
+        10000,
+        10000
+      ],
+      "35": [
+        10000,
+        10000
+      ],
+      "36": [
+        10000,
+        10000
+      ],
+      "37": [
+        10000,
+        10000
+      ],
+      "38": [
+        10000,
+        10000
+      ],
+      "39": [
+        10000,
+        10000
+      ],
+      "40": [
+        10000,
+        10000
+      ],
+      "41": [
+        10000,
+        10000
+      ],
+      "42": [
+        10000,
+        10000
+      ],
+      "43": [
+        10000,
+        10000
+      ],
+      "44": [
+        10000,
+        10000
+      ],
+      "45": [
+        10000,
+        10000
+      ],
+      "46": [
+        10000,
+        10000
+      ],
+      "47": [
+        10000,
+        10000
+      ],
+      "48": [
+        10000,
+        10000
+      ],
+      "49": [
+        10000,
+        10000
+      ]
+    },
+    "selected_train_arm_counts": {
+      "0": [
+        342,
+        330
+      ],
+      "1": [
+        337,
+        335
+      ],
+      "2": [
+        326,
+        346
+      ],
+      "3": [
+        328,
+        344
+      ],
+      "4": [
+        323,
+        349
+      ],
+      "5": [
+        330,
+        342
+      ],
+      "6": [
+        336,
+        336
+      ],
+      "7": [
+        350,
+        322
+      ],
+      "8": [
+        335,
+        337
+      ],
+      "9": [
+        327,
+        345
+      ]
+    },
+    "trial_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "train_rows": 672,
+    "eval_rows": 512,
+    "features": 36,
+    "split_seed_rule": "27014 + trial_id",
+    "feature_columns": [
+      "x1_informative",
+      "x2_informative",
+      "x3_informative",
+      "x4_informative",
+      "x5_informative",
+      "x6_informative",
+      "x7_informative",
+      "x8_informative",
+      "x9_informative",
+      "x10_informative",
+      "x11_irrelevant",
+      "x12_irrelevant",
+      "x13_irrelevant",
+      "x14_irrelevant",
+      "x15_irrelevant",
+      "x16_irrelevant",
+      "x17_irrelevant",
+      "x18_irrelevant",
+      "x19_irrelevant",
+      "x20_irrelevant",
+      "x21_irrelevant",
+      "x22_irrelevant",
+      "x23_irrelevant",
+      "x24_irrelevant",
+      "x25_irrelevant",
+      "x26_irrelevant",
+      "x27_irrelevant",
+      "x28_irrelevant",
+      "x29_irrelevant",
+      "x30_irrelevant",
+      "x31_uplift_increase",
+      "x32_uplift_increase",
+      "x33_uplift_increase",
+      "x34_uplift_increase",
+      "x35_uplift_increase",
+      "x36_uplift_increase"
+    ],
+    "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+    "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+    "checkpoint_path": "/Users/ilya-kolosov/.cache/huggingface/hub/models--vdblm--causalpfn/snapshots/83aad07da1cb077cfda4236878a1b07dc9f72a54/causalpfn_v0.pt",
+    "context_sizes": [
+      64,
+      128
+    ],
+    "model": {
+      "learning_rate": 0.05,
+      "max_iter": 200,
+      "max_leaf_nodes": 31,
+      "l2_regularization": 1.0,
+      "random_state": 42
+    },
+    "crossfit_folds": 5,
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 2814
+  },
+  "model": {
+    "learning_rate": 0.05,
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 1.0,
+    "random_state": 42
+  },
+  "context_sizes": [
+    64,
+    128
+  ],
+  "trial_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 2814,
+  "python": "3.11.15",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scikit-learn": "1.5.2",
+    "torch": "2.3.1",
+    "tqdm": "4.67.1"
+  },
+  "code_git_commit": "ac28f8059431eefc025b213963443e1f2d4e20ec",
+  "code_sha256": "4070d4d78912539c873cb47cf6159b0b8868f52b26028ec529c58454bc211323",
+  "protocol_sha256": "ca18889baee7fc30d0ef7388be5e2d60906d2f2bb457511464b92390ba352563",
+  "dependency_sha256": {
+    "projects/context_selection/src/cs01_e03.py": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+    "tools/download_zhao_uplift.py": "b0708dcf967889e6afe1115a8cabc2e177748e2695a6af1fa816dc67429c9495"
+  }
+}

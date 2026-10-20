@@ -1,4 +1,4 @@
-"""M06/E14/v001: external binary generator test of comparative K response."""
+"""M06/E14: external binary generator test of comparative K response."""
 
 from __future__ import annotations
 
@@ -34,11 +34,12 @@ sys.path.insert(0, str(ROOT / "projects/context_selection/src"))
 import cs01_e03 as source  # noqa: E402
 import download_zhao_uplift as fetch  # noqa: E402
 
-PROTOCOL = ROOT / "projects/model_comparison/hypotheses/M06/experiments/E14/v001.md"
-TARGET = ROOT / "projects/model_comparison/hypotheses/M06/results/E14/v001"
+VERSION = "v001"
+PROTOCOL = ROOT / f"projects/model_comparison/hypotheses/M06/experiments/E14/{VERSION}.md"
+TARGET = ROOT / f"projects/model_comparison/hypotheses/M06/results/E14/{VERSION}"
 OUT = ROOT / "artifacts/local/m06_e14_results"
 DATA = fetch.DEST
-EXPERIMENT = "M06/E14/v001"
+EXPERIMENT = f"M06/E14/{VERSION}"
 N_TRAIN, N_EVAL, FEATURES = 672, 512, 36
 K_SMALL, K_LARGE = 64, 128
 FOLDS = 5
@@ -388,24 +389,29 @@ def evaluate(run: Path,rows: list[dict],pairs: list[dict],progress: Progress) ->
     means=metrics.groupby(["context_size","method"])[
         ["normalized_pehe","regret_at_10","pehe"]].mean().reset_index()
     positive=int((values>0).sum())
-    pehe_gate=float(values.mean())>.05 and positive>=8
+    if VERSION=="v001":
+        pehe_gate=float(values.mean())>.05 and positive>=8
+    else:
+        negative=int((values<0).sum())
+        pehe_gate=float(values.mean())<-.05 and negative>=30
     regret_rows=paired[["regret_fm_minus_adjusted_k128",
                         "regret_fm_minus_global_k128"]]
     regret_positive=int((regret_rows["regret_fm_minus_adjusted_k128"]<0).sum())
     global_positive=int((regret_rows["regret_fm_minus_global_k128"]<0).sum())
-    policy_gate=regret_positive>=7 and global_positive>=7
+    policy_gate=(regret_positive>=7 and global_positive>=7) if VERSION=="v001" else None
     summary=dict(status="complete_exploratory",external_published_generator=True,
         trials=len(TRIALS),primary=dict(mean_delta_k=float(values.mean()),
             median_delta_k=float(np.median(values)),positive_trials=positive,
             mean_d_k64=float(paired.d_k64.mean()),mean_d_k128=float(paired.d_k128.mean()),
             trial_bootstrap_ci=[float(low),float(high)],
-            descriptive_gate_met=bool(pehe_gate)),
+            descriptive_gate_met=bool(pehe_gate),
+            negative_trials=int((values<0).sum())),
         policy=dict(regret_fm_below_adjusted_trials=regret_positive,
             regret_fm_below_global_trials=global_positive,
             descriptive_gate_met=bool(policy_gate)),
         cell_means=means.to_dict(orient="records"),
         label_access="Adjusted and global models use all 672 train labels; FM sees K labels per query",
-        interpretation="Ten trials from one published synthetic generator; no external field RCT")
+        interpretation=f"{len(TRIALS)} trials from one published synthetic generator; no external field RCT")
     save_json(run/"summary.json",summary)
     return summary
 
@@ -434,19 +440,23 @@ def package(run: Path,pre: dict,code: dict,summary: dict) -> Path:
         shutil.copy2(path,code_folder/path.name)
     primary=summary["primary"]
     policy=summary["policy"]
+    policy_gate_text=(
+        f"Policy gate: {'пройден' if policy['descriptive_gate_met'] else 'не пройден'}.\n\n"
+        if VERSION=="v001" else
+        "Для v002 это вторичный описательный результат, без отдельного gate.\n\n")
     (staging/"README.md").write_text(
-        f"# M06 / E14 / v001 — {run.name}\n\n"
+        f"# M06 / E14 / {VERSION} — {run.name}\n\n"
         "**Статус:** complete_exploratory. "
-        "[Протокол](../../../../experiments/E14/v001.md). "
-        "Десять trial опубликованного бинарного synthetic uplift-бенчмарка.\n\n"
+        f"[Протокол](../../../../experiments/E14/{VERSION}.md). "
+        f"{len(TRIALS)} trial опубликованного бинарного synthetic uplift-бенчмарка.\n\n"
         f"Primary ΔK: {primary['mean_delta_k']:+.4f} "
-        f"({primary['positive_trials']}/10; условный bootstrap CI "
+        f"({primary['positive_trials']}/{len(TRIALS)}; условный bootstrap CI "
         f"[{primary['trial_bootstrap_ci'][0]:+.4f}; {primary['trial_bootstrap_ci'][1]:+.4f}]). "
         f"PEHE gate: {'пройден' if primary['descriptive_gate_met'] else 'не пройден'}.\n\n"
         f"FM K128 regret лучше adjusted/global в "
-        f"{policy['regret_fm_below_adjusted_trials']}/10 и "
-        f"{policy['regret_fm_below_global_trials']}/10 trial; policy gate: "
-        f"{'пройден' if policy['descriptive_gate_met'] else 'не пройден'}.\n\n"
+        f"{policy['regret_fm_below_adjusted_trials']}/{len(TRIALS)} и "
+        f"{policy['regret_fm_below_global_trials']}/{len(TRIALS)} trial. "
+        f"{policy_gate_text}"
         "[Метрики](all_metrics.csv), [парные разности](paired_deltas.csv), "
         "[сводка](summary.json), [протокол/SHA](study_protocol.json), "
         "[локальные файлы](local_files.csv). Не является полевым RCT.\n")
@@ -455,7 +465,7 @@ def package(run: Path,pre: dict,code: dict,summary: dict) -> Path:
            and p.name not in ("README.md","manifest.json")]
     save_json(staging/"manifest.json",dict(schema_version=1,
         project="model_comparison",hypothesis="M06",experiment="E14",
-        experiment_version="v001",run_id=run.name,result_revision=1,
+        experiment_version=VERSION,run_id=run.name,result_revision=1,
         status="complete_exploratory",summary="Published binary uplift generator K transfer test",
         original_local_path=run.relative_to(ROOT).as_posix(),
         code_git_commit=code["code_git_commit"],code_sha256=code["code_sha256"],
@@ -483,18 +493,33 @@ def status() -> None:
 
 
 def main() -> int:
+    global VERSION,PROTOCOL,TARGET,OUT,EXPERIMENT,TRIALS,BOOTSTRAP_SEED
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action",nargs="?",choices=("all",),default="all")
+    parser.add_argument("--version",choices=("v001","v002"),default="v001",
+                        help="Protocol version; v002 uses previously untouched trials 10-49")
     parser.add_argument("--check",action="store_true",
                         help="Verify source CSV, fixed splits, nested contexts and checkpoint without scoring")
     parser.add_argument("--status",action="store_true",
                         help="Read local progress without inference")
     args=parser.parse_args()
+    VERSION=args.version
+    EXPERIMENT=f"M06/E14/{VERSION}"
+    PROTOCOL=ROOT/f"projects/model_comparison/hypotheses/M06/experiments/E14/{VERSION}.md"
+    TARGET=ROOT/f"projects/model_comparison/hypotheses/M06/results/E14/{VERSION}"
+    if VERSION=="v002":
+        OUT=ROOT/"artifacts/local/m06_e14_v002_results"
+        TRIALS=tuple(range(10,50))
+        BOOTSTRAP_SEED=2824
+    else:
+        OUT=ROOT/"artifacts/local/m06_e14_results"
+        TRIALS=tuple(range(10))
+        BOOTSTRAP_SEED=2814
     if args.status:
         status()
         return 0
     cases,pre=preflight()
-    print("PREFLIGHT PASS: 10 published trials; N=672, K=64/128, 512 eval rows",flush=True)
+    print(f"PREFLIGHT PASS: {len(TRIALS)} published trials; N=672, K=64/128, 512 eval rows",flush=True)
     if args.check:
         return 0
     code=git_state()
