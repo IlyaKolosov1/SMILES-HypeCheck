@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -24,6 +25,11 @@ OUTPUT = ROOT / "artifacts/local/external/yale_ads/audit.json"
 EXPECTED_ROWS = 1_993_917
 EXPECTED_SHA256 = "e71c73956e432a30e212cfc4126cddf359d8a8c2c6b24a7fbb853da58a4b94ee"
 CHUNK_ROWS = 100_000
+PAP_PROFILE = ("strata", "tss_100", "pts_100", "num_times_voted")
+FULL_PROFILE = PAP_PROFILE + (
+    "ideology_score_100", "partisan_score_100", "party", "close_margins_2016",
+    *(f"voted_in_{year}" for year in range(2000, 2020, 2)),
+)
 
 
 def checksum(path: Path) -> str:
@@ -45,6 +51,8 @@ def audit() -> dict:
     required = {"treat_num", "condition", "strata", "treatment_prob", "ipw", "voted_in_2020", "n"}
     if not required.issubset(columns):
         raise ValueError(f"Missing required columns: {sorted(required - set(columns))}")
+    if not set(FULL_PROFILE).issubset(columns):
+        raise ValueError(f"Missing pre-treatment profile columns: {sorted(set(FULL_PROFILE) - set(columns))}")
 
     missing = Counter()
     arm_rows = Counter()
@@ -55,6 +63,7 @@ def audit() -> dict:
     stratum_propensity = defaultdict(set)
     n_values = Counter()
     invalid = Counter()
+    profile_hashes = {"pap": [], "full": []}
     rows = 0
     bar = tqdm(total=EXPECTED_ROWS, desc="Yale archive audit", unit="row", dynamic_ncols=True,
                mininterval=0.5, disable=not sys.stderr.isatty())
@@ -83,6 +92,9 @@ def audit() -> dict:
             participants[arm] += int(n[mask].sum())
             outcome_events[arm] += int((y[mask] * n[mask]).sum())
         n_values.update(chunk["n"].value_counts(dropna=False).to_dict())
+        for name, feature_columns in (("pap", PAP_PROFILE), ("full", FULL_PROFILE)):
+            profile_hashes[name].append(pd.util.hash_pandas_object(
+                chunk[list(feature_columns)], index=False).to_numpy(dtype=np.uint64))
         grouped = chunk.groupby(["strata", "treat_num"], dropna=False).agg(
             count=("n", "sum"), events=("voted_in_2020", lambda s: int((s * chunk.loc[s.index, "n"]).sum())))
         for (stratum, arm), group in grouped.iterrows():
@@ -103,6 +115,8 @@ def audit() -> dict:
         raise ValueError(f"Invalid assignment or propensity: {dict(invalid)}")
 
     strata = []
+    ipw_factor = 0.0
+    stratum_centered_factor = 0.0
     for stratum in sorted(stratum_propensity):
         control = strata_arms[(stratum, 0)]
         treated = strata_arms[(stratum, 1)]
@@ -112,11 +126,30 @@ def audit() -> dict:
         if len(props) != 1 or not np.isclose(props[0], treated / (control + treated),
                                                rtol=1e-10, atol=1e-10):
             raise ValueError(f"File propensity disagrees with weighted arm counts in {stratum}")
+        e = treated / (control + treated)
+        p0 = strata_events[(stratum, 0)] / control
+        p1 = strata_events[(stratum, 1)] / treated
+        share = (control + treated) / sum(participants.values())
+        ipw_factor += share * (p1 / e + p0 / (1 - e))
+        stratum_centered_factor += share * (p1 * (1 - p1) / e + p0 * (1 - p0) / (1 - e))
         strata.append({"stratum": stratum, "control": control, "treatment": treated,
-                       "empirical_propensity": treated / (control + treated),
+                       "empirical_propensity": e,
                        "file_propensities": props,
-                       "control_outcome_rate": strata_events[(stratum, 0)] / control,
-                       "treatment_outcome_rate": strata_events[(stratum, 1)] / treated})
+                       "control_outcome_rate": p0, "treatment_outcome_rate": p1})
+
+    # Illustrative 80% power threshold for a paired value contrast, conditional
+    # on fixed policies and uniform disagreement across strata. This is not a
+    # confidence interval or a substitute for a model-specific variance audit.
+    scenarios = []
+    for budget in (0.1, 0.4):
+        for overlap in (0.5, 0.75):
+            disagreement = 2 * budget * (1 - overlap)
+            scenarios.append({
+                "budget": budget, "overlap": overlap, "eval_participants": 500_000,
+                "ipw_mde_pp": 100 * 2.8016 * math.sqrt(disagreement * ipw_factor / 500_000),
+                "stratum_centered_mde_pp": 100 * 2.8016 * math.sqrt(
+                    disagreement * stratum_centered_factor / 500_000),
+            })
 
     report = {
         "source": "https://dataverse.yale.edu/dataset.xhtml?persistentId=doi:10.60600/YU/LSCLZJ",
@@ -130,6 +163,13 @@ def audit() -> dict:
         "outcome_rates": {str(k): outcome_events[k] / participants[k] for k in (0, 1)},
         "n_values": {str(k): v for k, v in n_values.items()},
         "strata": strata,
+        "planning_variance_factors": {"ipw": ipw_factor,
+                                      "stratum_centered": stratum_centered_factor},
+        "planning_scenarios": scenarios,
+        "distinct_feature_profiles": {
+            name: int(np.unique(np.concatenate(parts)).size)
+            for name, parts in profile_hashes.items()
+        },
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
