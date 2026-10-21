@@ -1,0 +1,29 @@
+{
+  "primary_contrast": "feature_kNN_CausalPFN - native_batch_CausalPFN",
+  "primary_uplift_10_pp": 0.7651024920519607,
+  "primary_uplift_10_pp_ci": [
+    -0.07550377090123878,
+    1.616831469316663
+  ],
+  "primary_qhat": 0.0058810643856187644,
+  "primary_qhat_ci": [
+    -0.010640606508137262,
+    0.022294212255217324
+  ],
+  "descriptive_threshold_pp": 1.0,
+  "descriptive_threshold_met": false,
+  "batch_audit": {
+    "batches": 4513,
+    "query_rows": 500000,
+    "counterfactual_queries": 1000000,
+    "mean_queries_per_batch": 221.58209616662973,
+    "median_queries_per_batch": 9.0,
+    "min_queries_per_batch": 1,
+    "max_queries_per_batch": 4095,
+    "mean_context_size": 512.0,
+    "median_context_size": 512.0,
+    "max_context_size": 512,
+    "min_context_size": 512
+  },
+  "caveat": "Same Criteo eval outcomes as E15/v002; exploratory post hoc comparison, not independent campaign validation."
+}

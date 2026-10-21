@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E16",
+  "experiment_version": "v001",
+  "run_id": "20261021T125039_327945Z",
+  "result_revision": 2,
+  "status": "complete_exploratory",
+  "summary": "Feature-kNN versus CausalPFN native adaptive batch retrieval on the same exploratory Criteo holdout as E15.",
+  "original_local_path": "artifacts/local/m01_e16_v001_results/20261021T102655_873667Z",
+  "code_git_commit": "7eab9c552d0d4f26f511f933cee64d37f3cad6f4",
+  "code_sha256": "3ba2f60609e8edc676116e45bd8402abaa5173daeb17d80fef1d538fa3aa8952",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E16/v001/20261021T125039_327945Z/code/run_m01_e16_v001.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 852,
+      "sha256": "69e85c0e68c08e21452d4d0238caf99c5a50384015f8d390ec6c126ec43e9e0a"
+    },
+    {
+      "path": "bootstrap_draws.csv",
+      "size": 249301,
+      "sha256": "492d7f41550ba7c252acdbde59365eb3e1d51fb5914d6ff090d3118f5858a720"
+    },
+    {
+      "path": "code/causalpfn_native_batch.py",
+      "size": 4136,
+      "sha256": "b8b7d3b2ab307ecd863bd1061d5da50c6ad41603ccf36f7f02de182016a43d59"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/m01_e02.py",
+      "size": 19124,
+      "sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35560,
+      "sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+    },
+    {
+      "path": "code/run_cs05_e01.py",
+      "size": 26599,
+      "sha256": "aa2c778640613b675f05b274bb3d71da7f9c3d542e0695fb4c251d04dacbffae"
+    },
+    {
+      "path": "code/run_cs06_e01.py",
+      "size": 26364,
+      "sha256": "9355d4021ea05dd253bc4fddabc7cf9bcab8f9eb1ede855ee33efc937359f91b"
+    },
+    {
+      "path": "code/run_m01_e06.py",
+      "size": 23648,
+      "sha256": "a97652c67c3e79b7638df75772902dd1ede8c7d9c781fcaa0c2e6c25a7e8e8e2"
+    },
+    {
+      "path": "code/run_m01_e08.py",
+      "size": 26781,
+      "sha256": "f2fbcbae6047f3abda2d2f10a9acc4a91459eca4fb7b31550d2d172cd1dad77c"
+    },
+    {
+      "path": "code/run_m01_e15.py",
+      "size": 28679,
+      "sha256": "26431c8c77b128163ab54e6e5f1877ae97d0007aca3b364f72acf4d6ff4ec5a9"
+    },
+    {
+      "path": "code/run_m01_e15_v002.py",
+      "size": 32420,
+      "sha256": "96edc24e7549c696a675a547e4224772886de701216b140e99405779cb770261"
+    },
+    {
+      "path": "code/run_m01_e16_v001.py",
+      "size": 42079,
+      "sha256": "3ba2f60609e8edc676116e45bd8402abaa5173daeb17d80fef1d538fa3aa8952"
+    },
+    {
+      "path": "code/v001.md",
+      "size": 12580,
+      "sha256": "dd502f28b48d79f6ef51e42257a5818dc45fd7e249090da5638b27a817825ee1"
+    },
+    {
+      "path": "code/v002.md",
+      "size": 8133,
+      "sha256": "60d18c469521e8781b323ef721f8ea73067db4fee08e43f8f97e3d88257000c7"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 4578,
+      "sha256": "30aa903448c546804004617fe6c5990cbc7fa49cbb5279fec215f726fccdab10"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 1797,
+      "sha256": "1403e689453fe9e87bd3398f0c025afa3cb564dfad8f0485fb84aab09a149356"
+    },
+    {
+      "path": "source_local_files.csv",
+      "size": 2391,
+      "sha256": "d95d5d1f744224408ab09cf84eb573511b85ab74ac485816e51022c9497f3ed9"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 2706,
+      "sha256": "3f6343aa95020338575f6065fa0628f26d0bdff7d5a72c83cafad86aa88cb5a4"
+    },
+    {
+      "path": "summary.json",
+      "size": 909,
+      "sha256": "ed44201d3e852f9e6b6bbc4a03493df27c349b2b0870695f050a4dbd3ab134d7"
+    }
+  ],
+  "supersedes": "20261021T102655_873667Z",
+  "supersedes_reason": "Two relative links in the first unpublished snapshot were broken; numerical outputs and source code unchanged.",
+  "superseded_manifest_sha256": "a135fa0a901ae4f35d2cd699d92d71115fbfece3197ab04700daf783efdaf249"
+}
