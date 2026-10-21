@@ -1,0 +1,24 @@
+{
+  "primary_contrast": "local_feature_mean - s_learner",
+  "primary_uplift_10_pp": -0.6609363199881058,
+  "primary_bootstrap_95": [
+    -1.5760925119902065,
+    0.1633601812859365
+  ],
+  "descriptive_gate": false,
+  "secondary_contrasts_pp": {
+    "local_minus_t": 0.34016816956022655,
+    "local_minus_x": -0.18371792235046502,
+    "fm_minus_s": 0.06781485746096827,
+    "local_minus_fm": -0.728751177449074
+  },
+  "ties": {
+    "boundary_score": 0.04296875,
+    "equal_score_total": 2531,
+    "equal_score_selected": 410,
+    "equal_score_excluded": 2121,
+    "selected_rows": 50000,
+    "unique_local_scores": 134
+  },
+  "caveat": "Prospectively specified stored-score reanalysis, but same Criteo holdout as E15/v002; conditional bootstrap and no independent campaign or known individual propensity."
+}

@@ -1,0 +1,25 @@
+{
+  "experiment": "M01/E09/v002",
+  "run_id": "20261020T224240Z",
+  "status": "complete_exploratory_posthoc",
+  "purpose": "Conditional intervals for already inspected E09/v001 uplift@10% point results",
+  "source_snapshot": "20261019T170444_744777Z",
+  "datasets": [
+    "Hillstrom",
+    "Retailhero-uplift",
+    "LZD",
+    "Criteo-ITE-v2.1"
+  ],
+  "splits": [
+    101,
+    102,
+    103
+  ],
+  "draws_per_split": 300,
+  "bootstrap_seed_rule": "20261029 + split_seed + dataset_index * 10",
+  "git_commit": "26d216bb6dcbeb873389a584f36a21496d6ba555",
+  "code_sha256": "7a543431a8c416f919117c71f5b97b5da9e5677882fd8e1e72cbff2da4d750f1",
+  "protocol_sha256": "e997920e7966f864c468a527e4cbb7caf18311d14f4ebd1609f67ac1d09d824f",
+  "posthoc": true,
+  "independent_confirmation": false
+}

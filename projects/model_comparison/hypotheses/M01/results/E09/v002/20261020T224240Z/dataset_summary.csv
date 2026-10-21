@@ -1,0 +1,17 @@
+dataset,contrast,mean_split_delta_pp,positive_splits,splits
+Criteo-ITE-v2.1,fm_context_gain,5.169124632714429,3,3
+Criteo-ITE-v2.1,fm_minus_local_feature,2.5964666402343988,2,3
+Criteo-ITE-v2.1,interaction,1.4695016484244972,2,3
+Criteo-ITE-v2.1,local_context_gain,3.6996229842899315,1,3
+Hillstrom,fm_context_gain,-1.0178472268214442,1,3
+Hillstrom,fm_minus_local_feature,0.1451952060035353,2,3
+Hillstrom,interaction,-1.4516373331774848,1,3
+Hillstrom,local_context_gain,0.4337901063560407,2,3
+LZD,fm_context_gain,-0.04707206016394686,2,3
+LZD,fm_minus_local_feature,-0.6063440003241466,1,3
+LZD,interaction,-0.5755437874781988,1,3
+LZD,local_context_gain,0.5284717273142521,2,3
+Retailhero-uplift,fm_context_gain,2.947015311505432,3,3
+Retailhero-uplift,fm_minus_local_feature,0.8251973731939053,2,3
+Retailhero-uplift,interaction,-1.130420511047562,1,3
+Retailhero-uplift,local_context_gain,4.077435822552994,3,3

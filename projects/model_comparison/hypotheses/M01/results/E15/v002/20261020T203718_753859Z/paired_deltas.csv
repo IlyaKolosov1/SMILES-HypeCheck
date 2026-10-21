@@ -1,0 +1,5 @@
+comparison,metric,delta,low,high,valid_draws
+local_feature_mean - feature_knn_K512,uplift_10_pp,-0.728751177449074,-1.564283011810331,0.0737249551018934,1000
+feature_knn_K512 - s_learner,uplift_10_pp,0.06781485746096827,,,0
+feature_knn_K512 - t_learner,uplift_10_pp,1.0689193470093006,,,0
+feature_knn_K512 - x_learner,uplift_10_pp,0.545033255098609,,,0

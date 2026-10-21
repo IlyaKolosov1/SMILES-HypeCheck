@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E15",
+  "experiment_version": "v002",
+  "run_id": "20261020T203718_753859Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Matched-context FM versus local top-10% targeting on a large disjoint Criteo holdout.",
+  "original_local_path": "artifacts/local/m01_e15_v002_results/20261020T203718_753859Z",
+  "code_git_commit": "2154eb079753726dffd7be9ae962adf14bd18e0e",
+  "code_sha256": "96edc24e7549c696a675a547e4224772886de701216b140e99405779cb770261",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E15/v002/20261020T203718_753859Z/code/run_m01_e15_v002.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 634,
+      "sha256": "bea596fc973ab2a768377f32d471c696b39270e7bbe71ca54353c6d9af54a7b9"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/m01_e02.py",
+      "size": 19124,
+      "sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35560,
+      "sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+    },
+    {
+      "path": "code/run_cs05_e01.py",
+      "size": 26599,
+      "sha256": "aa2c778640613b675f05b274bb3d71da7f9c3d542e0695fb4c251d04dacbffae"
+    },
+    {
+      "path": "code/run_cs06_e01.py",
+      "size": 26364,
+      "sha256": "9355d4021ea05dd253bc4fddabc7cf9bcab8f9eb1ede855ee33efc937359f91b"
+    },
+    {
+      "path": "code/run_m01_e06.py",
+      "size": 23648,
+      "sha256": "a97652c67c3e79b7638df75772902dd1ede8c7d9c781fcaa0c2e6c25a7e8e8e2"
+    },
+    {
+      "path": "code/run_m01_e08.py",
+      "size": 26781,
+      "sha256": "f2fbcbae6047f3abda2d2f10a9acc4a91459eca4fb7b31550d2d172cd1dad77c"
+    },
+    {
+      "path": "code/run_m01_e15.py",
+      "size": 28679,
+      "sha256": "26431c8c77b128163ab54e6e5f1877ae97d0007aca3b364f72acf4d6ff4ec5a9"
+    },
+    {
+      "path": "code/run_m01_e15_v002.py",
+      "size": 32420,
+      "sha256": "96edc24e7549c696a675a547e4224772886de701216b140e99405779cb770261"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 2391,
+      "sha256": "d95d5d1f744224408ab09cf84eb573511b85ab74ac485816e51022c9497f3ed9"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 353,
+      "sha256": "f4a97fea4262e9daef3c39bf6abe0bde7c813af5dd14cfbfe193758042cc2942"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 3265,
+      "sha256": "a3d2a07bebf0b5677b1812a520da05219a7a955503f3e2ec0926e1c7b54078cd"
+    },
+    {
+      "path": "summary.json",
+      "size": 1340,
+      "sha256": "7e1b53c8d15bf366dead3295e442f674e43e15820fe0ee26b17f5828f093ad6a"
+    }
+  ]
+}

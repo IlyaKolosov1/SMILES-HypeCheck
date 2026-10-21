@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E09",
+  "experiment_version": "v002",
+  "run_id": "20261020T224240Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Post-hoc conditional intervals for saved uplift@10% comparisons; not independent confirmation.",
+  "original_local_path": "artifacts/local/m01_e09_v002_results/20261020T224240Z",
+  "code_git_commit": "26d216bb6dcbeb873389a584f36a21496d6ba555",
+  "code_sha256": "7a543431a8c416f919117c71f5b97b5da9e5677882fd8e1e72cbff2da4d750f1",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E09/v002/20261020T224240Z/reanalyze_m01_e09_v002.py",
+  "files": [
+    {
+      "path": "bootstrap_draws.csv",
+      "size": 807214,
+      "sha256": "f0ddfe7803916c98e4cadd05edbce94ba6d0de0689f0c80f713c2e73e679c8ee"
+    },
+    {
+      "path": "dataset_summary.csv",
+      "size": 903,
+      "sha256": "f307963c139e80408c4a9f1606cd9140d596a6cd0f1a1667f888a90fb8955145"
+    },
+    {
+      "path": "point_metrics.csv",
+      "size": 5879,
+      "sha256": "f0dab65baec786217fcfa7d88559ef65307f69617ed955b29ddcf65e7cb56ce5"
+    },
+    {
+      "path": "reanalyze_m01_e09_v002.py",
+      "size": 18905,
+      "sha256": "7a543431a8c416f919117c71f5b97b5da9e5677882fd8e1e72cbff2da4d750f1"
+    },
+    {
+      "path": "source_files.csv",
+      "size": 5324,
+      "sha256": "a9ebfe6bc0c191a1726175e8c83c426079afa6a969cfacc6c2b78dd80b3d7ed2"
+    },
+    {
+      "path": "status.json",
+      "size": 70,
+      "sha256": "659e968c3b3c04470f33ea7fa41e9d1f0430abf56af5b473d4d57a4cde478375"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 781,
+      "sha256": "2c9d34bbb0c1d47736a5a5132cdc0ee18485b3825c90c1021e235b31ae0db065"
+    },
+    {
+      "path": "study_protocol.md",
+      "size": 4834,
+      "sha256": "e997920e7966f864c468a527e4cbb7caf18311d14f4ebd1609f67ac1d09d824f"
+    },
+    {
+      "path": "uplift_deltas_by_split.csv",
+      "size": 4828,
+      "sha256": "b70affa2d0913f1cba4e8af0ae4bd787762eac5df1b773b85a971f2510b20cda"
+    }
+  ]
+}

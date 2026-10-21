@@ -1,0 +1,6 @@
+comparison,left,right,metric,delta,low,high,valid_draws
+local_minus_s,local_feature_mean,s_learner,uplift_10_pp,-0.6609363199881058,-1.5760925119902065,0.1633601812859365,1000
+local_minus_t,local_feature_mean,t_learner,uplift_10_pp,0.34016816956022655,-0.5924558415993291,1.210563399505593,1000
+local_minus_x,local_feature_mean,x_learner,uplift_10_pp,-0.18371792235046502,-1.082264164643931,0.749832310709378,1000
+fm_minus_s,feature_knn_K512,s_learner,uplift_10_pp,0.06781485746096827,-0.6026378438687147,0.829716720686489,1000
+local_minus_fm,local_feature_mean,feature_knn_K512,uplift_10_pp,-0.728751177449074,-1.5775438839990161,0.07907896468681666,1000

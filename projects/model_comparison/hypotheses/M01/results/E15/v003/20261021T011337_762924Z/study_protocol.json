@@ -1,0 +1,18 @@
+{
+  "experiment": "M01/E15/v003",
+  "run_id": "20261021T011337_762924Z",
+  "source_result": "projects/model_comparison/hypotheses/M01/results/E15/v002/20261020T203718_753859Z",
+  "source_manifest_sha256": "8373288fabeb6cdcfa35ad2ef198ad42caa264a9897c6555e25f73d82e0bcb85",
+  "source_run": "artifacts/local/m01_e15_v002_results/20261020T203718_753859Z",
+  "source_code_git_commit": "2154eb079753726dffd7be9ae962adf14bd18e0e",
+  "source_code_sha256": "96edc24e7549c696a675a547e4224772886de701216b140e99405779cb770261",
+  "eval_rows": 500000,
+  "top_fraction": 0.1,
+  "tie_salt": "0x9e3779b97f4a7c15",
+  "bootstrap_seed": 20261023,
+  "bootstrap_draws": 1000,
+  "primary_contrast": "local_feature_mean - s_learner",
+  "code_git_commit": "26d216bb6dcbeb873389a584f36a21496d6ba555",
+  "code_sha256": "571d36157df2e82d213260bf6ea2c00c511e50babc467871dff2fca635849415",
+  "protocol_sha256": "40a685d06fe404ed410f291d80434ee6c5d414e68a62e85bc2cdb8063c9cf5a2"
+}

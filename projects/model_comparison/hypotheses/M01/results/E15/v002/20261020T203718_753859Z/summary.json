@@ -1,0 +1,53 @@
+{
+  "primary_contrast": "local_feature_mean - feature_knn_K512",
+  "primary_uplift_10_pp": -0.728751177449074,
+  "bootstrap_95": [
+    -1.564283011810331,
+    0.0737249551018934
+  ],
+  "practical_threshold_pp": 1.0,
+  "descriptive_gate": false,
+  "disagreement": {
+    "selected_overlap": 32808,
+    "overlap_fraction": 0.65616,
+    "fm_only": {
+      "rows": 17192,
+      "cells": {
+        "0": {
+          "rows": 2586,
+          "events": 152,
+          "rate": 0.05877803557617943
+        },
+        "1": {
+          "rows": 14606,
+          "events": 1084,
+          "rate": 0.07421607558537588
+        }
+      },
+      "uplift_10_pp": 1.543804000919645
+    },
+    "local_only": {
+      "rows": 17192,
+      "cells": {
+        "0": {
+          "rows": 2440,
+          "events": 696,
+          "rate": 0.28524590163934427
+        },
+        "1": {
+          "rows": 14752,
+          "events": 4384,
+          "rate": 0.29718004338394793
+        }
+      },
+      "uplift_10_pp": 1.1934141744603666
+    }
+  },
+  "caveat": "Fresh disjoint rows in the same previously explored pooled Criteo source; interval conditional on model, train and selected eval; no campaign IDs or original propensities.",
+  "x_treatment_propensity": 0.85169921875,
+  "transformed": {
+    "raw_dim": 10,
+    "transformed_dim": 10,
+    "svd_components": null
+  }
+}

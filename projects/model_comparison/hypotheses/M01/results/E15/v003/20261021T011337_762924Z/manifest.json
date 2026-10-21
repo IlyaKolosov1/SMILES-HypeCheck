@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E15",
+  "experiment_version": "v003",
+  "run_id": "20261021T011337_762924Z",
+  "result_revision": 1,
+  "status": "complete_exploratory",
+  "summary": "Matched-Criteo top-decile local versus S-Learner analysis.",
+  "original_local_path": "artifacts/local/m01_e15_v002_results/20261020T203718_753859Z",
+  "code_git_commit": "26d216bb6dcbeb873389a584f36a21496d6ba555",
+  "code_sha256": "571d36157df2e82d213260bf6ea2c00c511e50babc467871dff2fca635849415",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E15/v003/20261021T011337_762924Z/code/reanalyze_m01_e15_v003.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 176,
+      "sha256": "5b3d6faa576993b6f8e0bce3e423d99cbc1d7bc7a6a0d0df0f084872b0906af3"
+    },
+    {
+      "path": "bootstrap_draws.csv",
+      "size": 103762,
+      "sha256": "196dd8a3693755028f67f9596d99e45acf36fff4dcfda47a11b21fd0d0361c42"
+    },
+    {
+      "path": "code/reanalyze_m01_e15_v003.py",
+      "size": 17830,
+      "sha256": "571d36157df2e82d213260bf6ea2c00c511e50babc467871dff2fca635849415"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 656,
+      "sha256": "20afd7b1a2b2c993cba712c26bc431948985754bf6f132bf869b72b2226755b2"
+    },
+    {
+      "path": "source_local_files.csv",
+      "size": 888,
+      "sha256": "ef62f7c86b433b2d89a98efc4e32b142ce2ae693da0cc3985b731a0b980fddf8"
+    },
+    {
+      "path": "status.json",
+      "size": 96,
+      "sha256": "82f82e6dff6cc0ea3a07e4df96a3ef9d5d5a10917269d341fdf99832177aca4c"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 952,
+      "sha256": "01c42ac3eb1f1ccaa57a800076b9582c960c216bb3ac74059d1b3c5cf06abb48"
+    },
+    {
+      "path": "summary.json",
+      "size": 807,
+      "sha256": "0fe6092ccfda4780912515e9b52cb403be66c73bc4e178f45561582fb87787c1"
+    },
+    {
+      "path": "tie_audit.json",
+      "size": 183,
+      "sha256": "626178e67a4436042e4abe73e634892346b3242fd4584b616d76632f90784d97"
+    }
+  ]
+}
