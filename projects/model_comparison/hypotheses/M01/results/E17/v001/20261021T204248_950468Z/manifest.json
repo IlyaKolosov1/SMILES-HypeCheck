@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E17",
+  "experiment_version": "v001",
+  "run_id": "20261021T204248_950468Z",
+  "status": "complete_exploratory",
+  "result_revision": 1,
+  "summary": "One frozen feature/native comparison on new Criteo source rows.",
+  "original_local_path": "artifacts/local/m01_e17_v001_results/20261021T204248_950468Z",
+  "code_git_commit": "ec6d3077cddd8d2e338b62790199b6c22b25d218",
+  "code_sha256": "789910cc4dc4c5804e4ace3f0d9ce15c2ecb2d2098cb961b20741185b8f034fe",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E17/v001/20261021T204248_950468Z/code/run_m01_e17_v001.py",
+  "files": [
+    {
+      "path": "all_metrics.csv",
+      "size": 668,
+      "sha256": "04511b1dcdc2b7d0a44a3b9830457dd3e12a0a9e32a9b775ff2f3582377d8b71"
+    },
+    {
+      "path": "bootstrap_draws.csv",
+      "size": 214884,
+      "sha256": "1a725834e2597d1e24a404335380caaa24ee4ff67fc560ed62a9b1c0ad085aa0"
+    },
+    {
+      "path": "code/causalpfn_native_batch.py",
+      "size": 4136,
+      "sha256": "b8b7d3b2ab307ecd863bd1061d5da50c6ad41603ccf36f7f02de182016a43d59"
+    },
+    {
+      "path": "code/cs01_e03.py",
+      "size": 24397,
+      "sha256": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372"
+    },
+    {
+      "path": "code/m01_e02.py",
+      "size": 19124,
+      "sha256": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+    },
+    {
+      "path": "code/multi_dataset_context.py",
+      "size": 35560,
+      "sha256": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a"
+    },
+    {
+      "path": "code/run_cs05_e01.py",
+      "size": 26599,
+      "sha256": "aa2c778640613b675f05b274bb3d71da7f9c3d542e0695fb4c251d04dacbffae"
+    },
+    {
+      "path": "code/run_cs06_e01.py",
+      "size": 26364,
+      "sha256": "9355d4021ea05dd253bc4fddabc7cf9bcab8f9eb1ede855ee33efc937359f91b"
+    },
+    {
+      "path": "code/run_m01_e06.py",
+      "size": 23648,
+      "sha256": "a97652c67c3e79b7638df75772902dd1ede8c7d9c781fcaa0c2e6c25a7e8e8e2"
+    },
+    {
+      "path": "code/run_m01_e08.py",
+      "size": 26781,
+      "sha256": "f2fbcbae6047f3abda2d2f10a9acc4a91459eca4fb7b31550d2d172cd1dad77c"
+    },
+    {
+      "path": "code/run_m01_e15.py",
+      "size": 28679,
+      "sha256": "26431c8c77b128163ab54e6e5f1877ae97d0007aca3b364f72acf4d6ff4ec5a9"
+    },
+    {
+      "path": "code/run_m01_e15_v002.py",
+      "size": 32420,
+      "sha256": "96edc24e7549c696a675a547e4224772886de701216b140e99405779cb770261"
+    },
+    {
+      "path": "code/run_m01_e16_v001.py",
+      "size": 42079,
+      "sha256": "3ba2f60609e8edc676116e45bd8402abaa5173daeb17d80fef1d538fa3aa8952"
+    },
+    {
+      "path": "code/run_m01_e17_v001.py",
+      "size": 29820,
+      "sha256": "789910cc4dc4c5804e4ace3f0d9ce15c2ecb2d2098cb961b20741185b8f034fe"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 3068,
+      "sha256": "732cd572df53d60218ff4fb33521f2f3df0901bae17210a97fa3737c91d9f4dc"
+    },
+    {
+      "path": "paired_deltas.csv",
+      "size": 1501,
+      "sha256": "18d4d47c7a890fbfefa511bf9c26982e86760802a7a5ccd2897b3d3ffa7d5c42"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 3536,
+      "sha256": "3758e312e1fa78e8debc851dc3e042da16fb9655db93cf14b4a7774eda937919"
+    },
+    {
+      "path": "summary.json",
+      "size": 884,
+      "sha256": "c187075975b720c166591565e9adff02282ae82cbe5f6d3aa0894a9996ab6e91"
+    }
+  ]
+}

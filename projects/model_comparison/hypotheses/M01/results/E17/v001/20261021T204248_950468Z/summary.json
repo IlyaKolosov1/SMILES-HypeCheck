@@ -1,0 +1,28 @@
+{
+  "primary_uplift_10_pp": -0.11740054290633406,
+  "primary_uplift_10_pp_ci": [
+    -0.6420382385331892,
+    0.4354655188918773
+  ],
+  "primary_positive": false,
+  "practical_threshold_1pp_met": false,
+  "secondary_qhat": -0.0019520082492041207,
+  "secondary_qhat_ci": [
+    -0.012835231178323032,
+    0.008916679148271616
+  ],
+  "batch_audit": {
+    "batches": 5464,
+    "query_rows": 1300000,
+    "counterfactual_queries": 2600000,
+    "mean_queries_per_batch": 475.8418740849195,
+    "median_queries_per_batch": 21.0,
+    "min_queries_per_batch": 1,
+    "max_queries_per_batch": 4095,
+    "mean_context_size": 512.0,
+    "median_context_size": 512.0,
+    "max_context_size": 512,
+    "min_context_size": 512
+  },
+  "caveat": "Fresh eval rows from the same pooled Criteo source; conditional interval, unknown campaign IDs and individual assignment propensity; no transfer claim."
+}
