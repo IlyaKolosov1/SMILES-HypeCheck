@@ -174,14 +174,16 @@ def load_and_split(name: str):
     return x, t, y, ids, train_rows, eval_rows, audit
 
 
-def show_progress(label: str, done: int, total: int, started: float) -> None:
+def show_progress(label: str, done: int, total: int, started: float,
+                  initial: int = 0) -> float:
     elapsed = max(time.perf_counter() - started, 1e-9)
-    eta = elapsed * (total - done) / max(done, 1)
+    eta = elapsed * (total - done) / max(done - initial, 1)
     width = 20
     filled = min(width, int(width * done / total))
     print(f"{label} [{'#' * filled}{'.' * (width - filled)}] "
           f"{done:,}/{total:,} ({100 * done / total:.0f}%) "
           f"elapsed {elapsed/60:.1f}m ETA {eta/60:.1f}m", flush=True)
+    return eta
 
 
 def check() -> None:
@@ -357,6 +359,8 @@ def run_dataset(run: Path, name: str, model: CATEEstimator) -> None:
                                      np.int32, -1)
             arms, models = neighbours(a, tt, k)
             started = time.perf_counter()
+            first_missing = np.flatnonzero(~np.isfinite(fm))
+            initial = int(first_missing[0]) if len(first_missing) else len(ev)
             last_report = 0
             for lo in range(0, len(ev), CHUNK):
                 hi = min(lo + CHUNK, len(ev))
@@ -379,14 +383,29 @@ def run_dataset(run: Path, name: str, model: CATEEstimator) -> None:
                 local[lo:hi] = direct
                 fm[lo:hi] = values
                 idx_saved.flush(); local.flush(); fm.flush()
+                elapsed = time.perf_counter() - started
+                eta = elapsed * (len(ev) - hi) / max(hi - initial, 1)
                 save_json(run / "status.json", dict(status="incomplete", stage=label,
-                    processed=hi, total=len(ev), dataset=name))
+                    processed=hi, total=len(ev), dataset=name,
+                    estimated_remaining_minutes=round(eta / 60, 1),
+                    updated_utc=datetime.now(timezone.utc).isoformat()))
                 if (hi - last_report >= max(len(ev)//20, CHUNK) or hi == len(ev) or
                     time.perf_counter() - started >= 60 and last_report == 0):
-                    show_progress(label, hi, len(ev), started)
+                    show_progress(label, hi, len(ev), started, initial)
                     last_report = hi
             require(np.isfinite(fm).all() and np.isfinite(local).all() and
                     (idx_saved >= 0).all(), f"{label}: incomplete arrays")
+            for lo in range(0, len(ev), CHUNK):
+                hi = min(lo + CHUNK, len(ev))
+                idx = np.asarray(idx_saved[lo:hi], dtype=np.int32)
+                require((idx < n).all() and
+                        np.all(tt[idx[:, :k//2]] == 0) and
+                        np.all(tt[idx[:, k//2:]] == 1),
+                        f"{label}: stored donors invalid at {lo}:{hi}")
+                direct = (yt[idx[:, k//2:]].mean(axis=1) -
+                          yt[idx[:, :k//2]].mean(axis=1))
+                np.testing.assert_allclose(local[lo:hi], direct,
+                                           rtol=0, atol=1e-7)
             all_scores[fm_name] = np.asarray(fm).copy()
             all_scores[local_name] = np.asarray(local).copy()
             print(f"CELL COMPLETE {label}", flush=True)
@@ -564,6 +583,9 @@ def show_status() -> None:
         state = json.loads(path.read_text())
         print(f"{path.parent.name}: {state['status']} / {state.get('stage')} "
               f"{state.get('processed', 0):,}/{state.get('total', 0):,}")
+        if state.get("estimated_remaining_minutes") is not None:
+            print(f"  current cell ETA ~{state['estimated_remaining_minutes']:.1f} min; "
+                  f"updated {state.get('updated_utc')}")
         if state.get("error"):
             print(state["error"].strip().splitlines()[-1])
 
