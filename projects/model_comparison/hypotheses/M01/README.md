@@ -2,6 +2,8 @@
 
 **Вопрос:** как CausalPFN соотносится с классическими uplift baselines при общем outcome, train/eval-разбиении и метрике? В M01/E02 основная метрика — Q̂ (`normalized_qini_auc`); PEHE допустим только там, где известен истинный CATE.
 
+[E19/v001](experiments/E19/v001.md) подготовлен после E18: факторный эксперимент на четырёх реальных источниках с независимым изменением объёма train `N` и бюджета контекста `K`. Primary — `uplift@10%` CausalPFN feature минус фиксированный X-Learner; Q̂ обязательно сообщается. `--check` проверяет split и события, `--benchmark` измеряет цену FM до полного запуска. Результатов E19 пока нет.
+
 Первый эксперимент — [исторический Hillstrom notebook-пилот](experiments/E01/v001.md): CausalPFN, S-Learner и T-Learner, `visit`, один выбранный treatment contrast, два folds и условный bootstrap. [Три CSV](results/E01/v001/notebook-hillstrom-pilot/) и [подробный старый отчёт](notebook-report.md) сохранены. Это **не** общий benchmark пяти датасетов; завершённые E02–E14 описаны ниже.
 
 Новый эксперимент [E02/v001](experiments/E02/v001.md) завершён как разведочное сравнение на четырёх датасетах и трёх сохранённых split CS01/E02: CausalPFN с feature-kNN и random context против фиксированных S/T/X-Learner. [Компактный снимок](results/E02/v001/20261018T160846_900882Z/README.md) содержит таблицы и хеши; научный разбор и проверка вторым участником ожидаются.
