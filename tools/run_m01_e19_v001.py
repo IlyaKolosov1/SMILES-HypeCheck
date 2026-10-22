@@ -57,6 +57,7 @@ BOOTSTRAP_SEED = 20261036
 BOOTSTRAP_DRAWS = 500
 CHUNK = 128
 FORWARD_BATCH = 2
+THREADS_BY_K = {512: 4, 2_048: 8}
 REVISION = source.REVISION
 
 
@@ -245,6 +246,7 @@ def benchmark() -> None:
         tt, yt = t[tr], y[tr]
         forward = source.make_forward(model, torch.device("cpu"), a, tt, yt)
         for k in K_VALUES:
+            torch.set_num_threads(THREADS_BY_K[k])
             arms, models = neighbours(a, tt, k)
             start = time.perf_counter()
             idx = indices_for(q, arms, models)
@@ -342,6 +344,7 @@ def run_dataset(run: Path, name: str, model: CATEEstimator) -> None:
         forward = source.make_forward(model, torch.device("cpu"), a, tt, yt)
         save_json(folder / f"transform_n{n}.json", transform)
         for k in K_VALUES:
+            torch.set_num_threads(THREADS_BY_K[k])
             label = f"{name} N{n} K{k}"
             fm_name = f"fm_feature_N{n}_K{k}"
             local_name = f"local_feature_N{n}_K{k}"
@@ -475,7 +478,7 @@ def run_all(resume: bool) -> Path:
             large=LARGE_SEED, small=SMALL_SEED, eval=EVAL_SEED,
             bootstrap=BOOTSTRAP_SEED), bootstrap_draws=BOOTSTRAP_DRAWS,
             checkpoint_revision=REVISION, checkpoint_sha256=sha(weights),
-            model_params=classic.PARAMS, **code,
+            model_params=classic.PARAMS, threads_by_k=THREADS_BY_K, **code,
             versions={name: metadata.version(name) for name in (
                 "causalpfn", "scikit-uplift", "scikit-learn", "torch", "numpy",
                 "pandas", "pyarrow")}))
