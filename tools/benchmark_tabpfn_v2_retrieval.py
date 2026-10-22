@@ -22,6 +22,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 LOCAL = ROOT / "artifacts/local"
 os.environ.setdefault("HF_HOME", str(LOCAL / "hf_tabpfn_cache"))
+os.environ.setdefault("SKB_DATA_DIRECTORY", str(LOCAL / "skrub_data"))
 MODEL_DIR = LOCAL / "tabpfn_v2_weights"
 MODEL = MODEL_DIR / "tabpfn-v2-classifier.ckpt"
 REPORT = LOCAL / "tabpfn_v2_retrieval_benchmark.json"
