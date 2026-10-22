@@ -1,0 +1,29 @@
+{
+  "experiment": "M01/E18/v001",
+  "status": "complete_exploratory",
+  "source": "M01/E17/v001",
+  "anchor_count": 4096,
+  "anchor_seed": 20261030,
+  "context_limit": 512,
+  "full_eval_count": 1300000,
+  "subset_eval_count": 4096,
+  "native_batches": 965,
+  "inference_seconds": 132.2887955000042,
+  "changed_context_fraction": 0.0,
+  "mean_context_jaccard": 1.0,
+  "score_abs_median": 0.0,
+  "score_abs_p90": 0.0,
+  "score_abs_max": 1.0728836059570312e-06,
+  "score_change_ge_1pp_fraction": 0.0,
+  "local_score_abs_median": 0.0,
+  "local_score_change_ge_1pp_fraction": 0.0,
+  "score_spearman": 1.0,
+  "anchor_top10_overlap": 1.0,
+  "descriptive_gate": false,
+  "transformed": {
+    "raw_dim": 10,
+    "transformed_dim": 10,
+    "svd_components": null
+  },
+  "caveat": "Same E17 source and already studied outcomes; no new policy validation or statistical significance. Cohort changes both context composition and adaptive query grouping."
+}

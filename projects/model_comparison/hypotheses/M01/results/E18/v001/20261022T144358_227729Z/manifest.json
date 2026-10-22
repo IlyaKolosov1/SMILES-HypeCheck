@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "project": "model_comparison",
+  "hypothesis": "M01",
+  "experiment": "E18",
+  "experiment_version": "v001",
+  "run_id": "20261022T144358_227729Z",
+  "status": "complete_exploratory",
+  "result_revision": 2,
+  "summary": "Query-cohort dependence of native retrieval on fixed E17 anchors.",
+  "original_local_path": "artifacts/local/m01_e18_v001_results/20261022T144008_009491Z",
+  "code_git_commit": "256f04f0bbc0e1295b0cd8301a9d1dfa63cdca47",
+  "code_sha256": "2a3db7150e8f93d76c79c1c49e5efd400d265bb71a2e532f15d609ca18f7ea96",
+  "code_snapshot": "projects/model_comparison/hypotheses/M01/results/E18/v001/20261022T144358_227729Z/code/run_m01_e18_v001.py",
+  "files": [
+    {
+      "path": "code/run_m01_e18_v001.py",
+      "size": 18330,
+      "sha256": "2a3db7150e8f93d76c79c1c49e5efd400d265bb71a2e532f15d609ca18f7ea96"
+    },
+    {
+      "path": "local_files.csv",
+      "size": 610,
+      "sha256": "703114613a1d2e020eb8cd661d9de15a03454a8c87d286fdcc8a61193ce91c8b"
+    },
+    {
+      "path": "source_hashes.csv",
+      "size": 1430,
+      "sha256": "d1d08267634211f7ea062a426fba39eebf34bb803556234a4c028dbe9c3a498f"
+    },
+    {
+      "path": "study_protocol.json",
+      "size": 1260,
+      "sha256": "5be2805dd893e3b7665fc8a226c61196d28ecb022962ee2fc7552ec602ec6ac7"
+    },
+    {
+      "path": "summary.json",
+      "size": 942,
+      "sha256": "4e1e70123c7bc8d650d627ba862134862535d32debba2abe0cd376f35766f08e"
+    },
+    {
+      "path": "v001.md",
+      "size": 6207,
+      "sha256": "b624dcc3befcf9f2a8cb69ead1b8ebbd3c7c6322855a9f96015a2b067803a08a"
+    }
+  ],
+  "supersedes": "artifacts/local/m01_e18_unpublished_snapshots/20261022T144008_009491Z",
+  "supersedes_reason": "Rebased one relative link in copied protocol; no scores or metrics changed."
+}

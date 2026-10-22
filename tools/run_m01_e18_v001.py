@@ -259,7 +259,14 @@ def package(stage, code, checked, plan, positions, summary):
     stage_target.mkdir(parents=True)
     (stage_target / "code").mkdir()
     shutil.copy2(Path(__file__), stage_target / "code/run_m01_e18_v001.py")
-    shutil.copy2(PROTOCOL, stage_target / "v001.md")
+    # The protocol copy lives under results/E18/v001/<run-id>, not experiments/E18.
+    # Rebase its one relative source link so repository validation can follow it.
+    protocol_copy = PROTOCOL.read_text()
+    old_link = "(../../results/E17/v001/20261021T204248_950468Z/README.md)"
+    new_link = "(../../../E17/v001/20261021T204248_950468Z/README.md)"
+    require(protocol_copy.count(old_link) == 1,
+            "E18 source protocol link changed; update packaging rebase")
+    (stage_target / "v001.md").write_text(protocol_copy.replace(old_link, new_link))
     shutil.copy2(stage / "summary.json", stage_target / "summary.json")
     pd.DataFrame(checked).to_csv(stage_target / "source_hashes.csv", index=False)
     save_json(stage_target / "study_protocol.json", dict(**code,
