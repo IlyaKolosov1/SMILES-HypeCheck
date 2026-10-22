@@ -13,6 +13,7 @@ import json
 import os
 import subprocess
 import time
+import warnings
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -23,6 +24,8 @@ ROOT = Path(__file__).resolve().parents[1]
 LOCAL = ROOT / "artifacts/local"
 os.environ.setdefault("HF_HOME", str(LOCAL / "hf_tabpfn_cache"))
 os.environ.setdefault("SKB_DATA_DIRECTORY", str(LOCAL / "skrub_data"))
+os.environ.setdefault("MPLCONFIGDIR", str(LOCAL / "mpl_tabpfn_cache"))
+os.environ.setdefault("XDG_CACHE_HOME", str(LOCAL / "xdg_tabpfn_cache"))
 MODEL_DIR = LOCAL / "tabpfn_v2_weights"
 MODEL = MODEL_DIR / "tabpfn-v2-classifier.ckpt"
 REPORT = LOCAL / "tabpfn_v2_retrieval_benchmark.json"
@@ -71,6 +74,9 @@ def fetch() -> None:
 
 
 def benchmark() -> None:
+    # CPU use is intentional and measured below; keep other warnings visible.
+    warnings.filterwarnings("ignore", message="Running on CPU with more than 200 samples may be slow.",
+                            category=UserWarning, module="tabpfn.validation")
     from tabpfn import TabPFNClassifier
     from tabpfn.constants import ModelVersion
     import torch
