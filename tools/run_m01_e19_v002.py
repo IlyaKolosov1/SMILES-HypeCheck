@@ -140,6 +140,7 @@ def code_state() -> dict:
 
 
 def load_and_split(name: str):
+    require(DATA_ROOT.is_dir(), f"Dataset directory does not exist: {DATA_ROOT}")
     args = SimpleNamespace(data_root=DATA_ROOT, criteo_sample_max=CRITEO_SAMPLE,
                            criteo_sample_seed=CRITEO_SEED)
     x, t, y, ids, groups, info = context.load_dataset(name, args)
@@ -224,6 +225,7 @@ def show_progress(label: str, done: int, total: int, started: float,
 
 def check(device_name: str) -> None:
     device, info = device_info(device_name)
+    print(f"CHECK data root: {DATA_ROOT}", flush=True)
     for name in DATASETS:
         _, _, _, _, rows, ev, audit = load_and_split(name)
         cells = audit["eval_cells"]
@@ -582,15 +584,17 @@ def run_all(resume: bool, device_name: str) -> Path:
                 saved["code_sha256"] == code["code_sha256"] and
                 saved["protocol_sha256"] == code["protocol_sha256"] and
                 saved["checkpoint_sha256"] == sha(weights) and
+                saved["data_root"] == str(DATA_ROOT) and
                 saved["hardware"] == hardware,
-                "Resume code/protocol/weights/hardware changed")
+                "Resume code/protocol/weights/data root/hardware changed")
     else:
         require(not any(LOCAL.glob("*/status.json")),
                 "E19 run exists; use --resume/status or review before another run")
         run = LOCAL / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S_%fZ")
         run.mkdir(parents=True, exist_ok=False)
         save_json(run / "protocol.json", dict(experiment="M01/E19/v002",
-            datasets=DATASETS, eval_sizes=EVAL_SIZES, train_sizes=N_VALUES,
+            data_root=str(DATA_ROOT), datasets=DATASETS,
+            eval_sizes=EVAL_SIZES, train_sizes=N_VALUES,
             context_sizes=K_VALUES, seeds=dict(criteo=CRITEO_SEED, split=SPLIT_SEED,
             large=LARGE_SEED, small=SMALL_SEED, eval=EVAL_SEED,
             bootstrap=BOOTSTRAP_SEED), bootstrap_draws=BOOTSTRAP_DRAWS,
@@ -699,15 +703,21 @@ def show_status() -> None:
 
 
 def main() -> None:
+    global DATA_ROOT
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", nargs="?", choices=("all", "package", "fetch-weights"), default="all")
     parser.add_argument("--device", choices=("cuda", "cpu"), default="cuda",
                         help="Inference device; full server run requires CUDA")
+    parser.add_argument("--data-root", type=Path, default=DATA_ROOT,
+                        help="Directory containing the four dataset folders; "
+                             "default: artifacts/local/data_A_cleaned in the repo")
     parser.add_argument("--check", action="store_true", help="Audit fixed data and split without FM")
     parser.add_argument("--benchmark", action="store_true", help="32-query timing per dataset/N/K")
     parser.add_argument("--resume", action="store_true", help="Resume exactly one incomplete run")
     parser.add_argument("--status", action="store_true", help="Show saved run progress")
     args = parser.parse_args()
+    data_root = args.data_root.expanduser()
+    DATA_ROOT = (data_root if data_root.is_absolute() else ROOT / data_root).resolve()
     if args.status:
         show_status()
     elif args.action == "fetch-weights":

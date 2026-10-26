@@ -40,6 +40,19 @@ rsync -av --progress /Users/ilya-kolosov/Developer/Projects/SMILE_HypeCheck/arti
 
 Папки Hillstrom, Retailhero-uplift, LZD и Criteo-ITE-v2.1 должны появиться
 на сервере. Runner сверит SHA файлов и согласованность исходов и split.
+Если данные уже лежат в другом месте, переносить их сюда не требуется:
+передайте каталог, содержащий эти четыре папки, через `--data-root`. Можно
+использовать абсолютный путь или путь относительно корня репозитория.
+Аргумент добавьте к **каждой** команде `--check`, `--benchmark`, `all` и
+`--resume`; например:
+
+```bash
+.venv/bin/python -u tools/run_m01_e19_v002.py --check --device cuda --data-root /mnt/uplift/data_A_cleaned
+```
+
+Без аргумента читается `artifacts/local/data_A_cleaned` в клоне. Сам
+`--data-root` указывает на общий каталог, а не на отдельный датасет и не на
+файл `.parquet`. При возобновлении укажите тот же путь, что при `all`.
 
 ## 3. Короткие проверки и оценка ресурса
 
