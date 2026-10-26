@@ -1,0 +1,11 @@
+# Install the matching CUDA PyTorch wheel first; see docs/roadmap/E19_GPU_SERVER.md.
+causalpfn==0.1.5
+numpy==1.26.4
+pandas==2.3.0
+scikit-learn==1.5.2
+scikit-uplift==0.5.1
+huggingface-hub==0.32.4
+tqdm==4.67.1
+matplotlib==3.10.3
+pyarrow==19.0.1
+scipy==1.17.1
