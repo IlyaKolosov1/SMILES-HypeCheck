@@ -1,0 +1,235 @@
+{
+  "datasets": [
+    {
+      "dataset": "Hillstrom",
+      "outcome": "visit",
+      "raw_rows": 64000,
+      "sampled_rows": 64000,
+      "feature_columns": [
+        "recency",
+        "history_segment",
+        "history",
+        "mens",
+        "womens",
+        "zip_code",
+        "newbie",
+        "channel"
+      ],
+      "source_sha256": {
+        "features.parquet": "d6b4b51b8205a6e407b5d8d3ecb2600fec99567280a7d27aa3f6e1d5053d10c1",
+        "outcomes.parquet": "cdeb911fb727d5840d9f54771961a34849062411fed7af839629ce46aa9175e4",
+        "cleaning_metadata.json": "e3976c04c8aa85d232d875ecb5d9fb2c89bba60e3d75db1aa6fd24d0ef61c81c"
+      },
+      "train_id_sha256": {
+        "8192": "7002d9834448ce20c12e7af209ab2c206767d5dd99cde0a2c960678acd9c9057",
+        "51200": "5b557df01bec82fe8852715622f0c075fc19d5eda547ac3a5852e3e98bace3ff"
+      },
+      "eval_id_sha256": "7082e0e3e163827eb64892581b576f1d6b7dcc736e74d463c06518e48cf0dd94",
+      "train_arm_counts": {
+        "8192": [
+          2727,
+          5465
+        ],
+        "51200": [
+          17045,
+          34155
+        ]
+      },
+      "eval_cells": [
+        3809,
+        452,
+        7113,
+        1426
+      ],
+      "group_safe": false,
+      "criteo_sample_seed": null
+    },
+    {
+      "dataset": "Retailhero-uplift",
+      "outcome": "Y",
+      "raw_rows": 200039,
+      "sampled_rows": 200039,
+      "feature_columns": [
+        "gender_M",
+        "gender_F",
+        "gender_U",
+        "age",
+        "first_issue_time"
+      ],
+      "source_sha256": {
+        "features.parquet": "282afce143e09463ec0f422a43fd9fe9534cd056059b34bd53e494a9f183ef8c",
+        "outcomes.parquet": "a2bed96d3738b5904b4f5b974f85d542805c19aed36f4068b8aac5418e21b1e0",
+        "cleaning_metadata.json": "455c4f61e0809f3ada3232fb1164de1bae62cf79b6a43193e81f80cfe1a0372c"
+      },
+      "train_id_sha256": {
+        "8192": "3e74905664e9877fa03765d55fc4e923572da5ca2995acd9da08108a70658df5",
+        "51200": "66b3f1263a09f1705f5b9070f43e2c09c6eec2b8605c7d2661b2beade63ed680"
+      },
+      "eval_id_sha256": "22ef5f779fd38e681e36b00c23b23c3207571963321443aaddfe586712e2c054",
+      "train_arm_counts": {
+        "8192": [
+          4098,
+          4094
+        ],
+        "51200": [
+          25610,
+          25590
+        ]
+      },
+      "eval_cells": [
+        27781,
+        42246,
+        25434,
+        44539
+      ],
+      "group_safe": false,
+      "criteo_sample_seed": null
+    },
+    {
+      "dataset": "LZD",
+      "outcome": "Y",
+      "raw_rows": 181669,
+      "sampled_rows": 181669,
+      "feature_columns": [
+        "f0",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f8",
+        "f9",
+        "f10",
+        "f11",
+        "f12",
+        "f13",
+        "f14",
+        "f16",
+        "f18",
+        "f19",
+        "f20",
+        "f21",
+        "f22",
+        "f23",
+        "f24",
+        "f26",
+        "f27",
+        "f28",
+        "f29",
+        "f30",
+        "f31",
+        "f34",
+        "f35",
+        "f37",
+        "f38",
+        "f40",
+        "f41",
+        "f42",
+        "f43",
+        "f44",
+        "f45",
+        "f46",
+        "f47",
+        "f48",
+        "f49",
+        "f50",
+        "f51",
+        "f52",
+        "f53",
+        "f54",
+        "f55",
+        "f56",
+        "f57",
+        "f58",
+        "f59",
+        "f60",
+        "f61",
+        "f62",
+        "f63",
+        "f64",
+        "f66",
+        "f68",
+        "f75",
+        "f79",
+        "f80",
+        "f81"
+      ],
+      "source_sha256": {
+        "features.parquet": "b9d241f43a5b457d27e4489e713f221ffc6d3d4845fd33824c989843c8147563",
+        "outcomes.parquet": "81da3ab7701a075108af8c4762318303295639d729595149b5dbaacd9b9fec1c",
+        "cleaning_metadata.json": "3ee28fdc2f2e4dcadff0abc46e16711bafd66f47ee17ff0a0b29896347578e94"
+      },
+      "train_id_sha256": {
+        "8192": "6a00f4ec12c1641e1a43b3a58922bf2f22936149f7b4d502ac34987e72fe6c81",
+        "51200": "1f397f4431ca5c5b00dea1acdd551a8ef3c2f1660444c87483720fcc886b5c85"
+      },
+      "eval_id_sha256": "5173ba5dd666eac301a57b1b6032abcf46c363dc75e3188811272b56eaeeb6de",
+      "train_arm_counts": {
+        "8192": [
+          3916,
+          4276
+        ],
+        "51200": [
+          24475,
+          26725
+        ]
+      },
+      "eval_cells": [
+        55576,
+        1925,
+        60153,
+        2346
+      ],
+      "group_safe": true,
+      "criteo_sample_seed": null
+    },
+    {
+      "dataset": "Criteo-ITE-v2.1",
+      "outcome": "visit",
+      "raw_rows": 13979592,
+      "sampled_rows": 250000,
+      "feature_columns": [
+        "f0",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f8",
+        "f9",
+        "f11"
+      ],
+      "source_sha256": {
+        "features.parquet": "a172c0c811c0f53826c797dc504bd47e7a2c58baa3b4390b6a4dd792d31d9464",
+        "outcomes.parquet": "dd864b66d2307132cecce7f5b39e7841ede3377d3313a875c6cffcdfb6abfa61",
+        "cleaning_metadata.json": "d032b4d820dfed1b5c3bb1aededd894ced1d35b66ebda426a094fa48bfa9d8b0"
+      },
+      "train_id_sha256": {
+        "8192": "0ba457bd4c35a2346ee5bf2e111433e35a7c69d2328d412d3e5fe3dab95d8666",
+        "51200": "ef9317c2156ce6ff5221367264da953c0ab29149da77959059666934fcd90d85"
+      },
+      "eval_id_sha256": "eda5d1495f9e48c2eba2dc3289f3ac5f542427df555bb3fa300d8c6b0f486c61",
+      "train_arm_counts": {
+        "8192": [
+          1239,
+          6953
+        ],
+        "51200": [
+          7742,
+          43458
+        ]
+      },
+      "eval_cells": [
+        14396,
+        566,
+        80872,
+        4166
+      ],
+      "group_safe": true,
+      "criteo_sample_seed": 20261031
+    }
+  ]
+}

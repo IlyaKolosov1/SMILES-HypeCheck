@@ -1,0 +1,70 @@
+{
+  "experiment": "M01/E19/v002",
+  "data_root": "/home/sedunovaan/projects/smiles/data/data_A_cleaned",
+  "datasets": [
+    "Hillstrom",
+    "Retailhero-uplift",
+    "LZD",
+    "Criteo-ITE-v2.1"
+  ],
+  "eval_sizes": {
+    "Hillstrom": 12800,
+    "Retailhero-uplift": 140000,
+    "LZD": 120000,
+    "Criteo-ITE-v2.1": 100000
+  },
+  "train_sizes": [
+    8192,
+    51200
+  ],
+  "context_sizes": [
+    512,
+    2048
+  ],
+  "seeds": {
+    "criteo": 20261031,
+    "split": 20261032,
+    "large": 20261033,
+    "small": 20261034,
+    "eval": 20261035,
+    "bootstrap": 20261036
+  },
+  "bootstrap_draws": 500,
+  "checkpoint_revision": "83aad07da1cb077cfda4236878a1b07dc9f72a54",
+  "checkpoint_sha256": "4f0f53717f1c62426fe98faa0459d33bc8f9862a87e8484ca3869ca899e7841d",
+  "model_params": {
+    "learning_rate": 0.05,
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 1.0,
+    "random_state": 42
+  },
+  "threads_by_k": {
+    "512": 4,
+    "2048": 8
+  },
+  "forward_batch": 2,
+  "hardware": {
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_memory_bytes": 11346575360,
+    "torch_cuda_runtime": "12.1"
+  },
+  "code_git_commit": "1584d618a1c118a53659d8319d74cb109c0e47f4",
+  "code_sha256": "616efa50898c8c949cbadceb93668cdf862e8677d612e9e7ee2c2c2f7d0ca16e",
+  "protocol_sha256": "de2cf994720acfa78117dc7604f6af8a1dc16e17a4702d267d56eb545cab9419",
+  "dependency_sha256": {
+    "projects/context_selection/src/cs01_e03.py": "3511c15ee94b84a9caa3673a7c5bebdb0dc311e0ce5c7e7be63980b9dfb83372",
+    "projects/context_selection/src/multi_dataset_context.py": "c451963a98e504a21bedce8760557195036c4c9c45aa8835511919922b2a946a",
+    "projects/model_comparison/src/m01_e02.py": "1081432eed8b5cc20f2350f564fdf17fce537c3a884c0fcb06dff14e08c8bc44"
+  },
+  "versions": {
+    "causalpfn": "0.1.5",
+    "scikit-uplift": "0.5.1",
+    "scikit-learn": "1.5.2",
+    "torch": "2.3.1+cu121",
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "pyarrow": "19.0.1"
+  }
+}
