@@ -1,0 +1,55 @@
+{
+  "project": "context_selection",
+  "hypothesis": "CS08",
+  "experiment": "E01",
+  "experiment_version": "v001",
+  "run_id": "20261029T203405_436715Z",
+  "status": "complete_exploratory",
+  "code_git_commit": "6c6de05eee6bc2a99df30bfc6389c930be3ebac4",
+  "code_snapshot": "projects/context_selection/hypotheses/CS08/results/E01/v001/20261029T203405_436715Z/code/run_cs08_e01.py",
+  "code_sha256": "327e01a1219611308d7d45555aa6b2cbcc1c43378fc3e2f9b6a7e70d9279b255",
+  "protocol_sha256": "31ce90ee5e547fe95ba78b3c1cd655454f961ac04a04f46ac68c2172018071d8",
+  "local_run": "/Users/ilya-kolosov/Developer/Projects/SMILE_HypeCheck/artifacts/local/cs08_e01_results/20261029T203405_436715Z",
+  "files": [
+    {
+      "path": "code/run_cs08_e01.py",
+      "sha256": "327e01a1219611308d7d45555aa6b2cbcc1c43378fc3e2f9b6a7e70d9279b255",
+      "size": 22012
+    },
+    {
+      "path": "dataset_summary.csv",
+      "sha256": "7a8c7f50e1e8007ab72bd8cf445a807bd7ec1cbebd048a4191a81a07dc715f12",
+      "size": 2422
+    },
+    {
+      "path": "gate.json",
+      "sha256": "84ade2736b50a04c0f83da38324d4d0f7c4c725f5161e0b42e719e4abd00694b",
+      "size": 255
+    },
+    {
+      "path": "input_files.csv",
+      "sha256": "a67e806c83b6c05f2293bfe16e200075777efac90933801b0255527246fb24f9",
+      "size": 27599
+    },
+    {
+      "path": "local_files.csv",
+      "sha256": "c1a95b7bdcf6d894dd5f7410ca37b68745fba5f484d4b61964b184ce8e63d826",
+      "size": 5525
+    },
+    {
+      "path": "oof_model_quality.csv",
+      "sha256": "c2961da4636b04539f9d3fdc832025e60c5c0c3065a1a5087efc506fc58bd1bb",
+      "size": 1126
+    },
+    {
+      "path": "protocol.txt",
+      "sha256": "31ce90ee5e547fe95ba78b3c1cd655454f961ac04a04f46ac68c2172018071d8",
+      "size": 6423
+    },
+    {
+      "path": "split_diagnostics.csv",
+      "sha256": "6a2bdb255b7a1c6410a39bf52bb7dd045c3886680a776155d3352007f5b53490",
+      "size": 11234
+    }
+  ]
+}

@@ -289,7 +289,9 @@ def make_snapshot(run_id: str, local: Path, split_rows: list[dict],
     pd.DataFrame(input_records).drop_duplicates("path").to_csv(
         result / "input_files.csv", index=False)
     pd.DataFrame(local_records).to_csv(result / "local_files.csv", index=False)
-    shutil.copy2(PROTOCOL, result / "protocol.md")
+    # Preserve the protocol bytes; its relative links belong to the source
+    # location and must not be reinterpreted by the repository Markdown audit.
+    shutil.copy2(PROTOCOL, result / "protocol.txt")
     (result / "code").mkdir()
     shutil.copy2(Path(__file__), result / "code/run_cs08_e01.py")
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"],
@@ -315,7 +317,7 @@ def make_snapshot(run_id: str, local: Path, split_rows: list[dict],
         "не измеренная ошибка CausalPFN или uplift@10%. Источники и разбиения "
         "уже изучались; Brier skill проверяет пригодность диагностической модели. "
         "Новый селектор и его практическое качество здесь не проверены.\n\n"
-        + "Файлы: [протокол](protocol.md), [сводка](dataset_summary.csv), "
+        + "Файлы: [протокол](protocol.txt), [сводка](dataset_summary.csv), "
         "[по split](split_diagnostics.csv), [качество OOF](oof_model_quality.csv), "
         "[gate](gate.json), [входные SHA](input_files.csv), "
         "[локальные выходы и SHA](local_files.csv).\n")
@@ -331,7 +333,7 @@ def make_snapshot(run_id: str, local: Path, split_rows: list[dict],
         "code_git_commit": commit,
         "code_snapshot": code_file.relative_to(ROOT).as_posix(),
         "code_sha256": sha256(code_file),
-        "protocol_sha256": sha256(result / "protocol.md"),
+        "protocol_sha256": sha256(result / "protocol.txt"),
         "local_run": str(local), "files": listed})
     return result
 

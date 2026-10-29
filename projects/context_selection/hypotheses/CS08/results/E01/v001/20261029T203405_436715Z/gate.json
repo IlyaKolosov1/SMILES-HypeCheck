@@ -1,0 +1,9 @@
+{
+  "description": "positive Brier skill on all splits and feature gap >=0.5 pp",
+  "qualifying_datasets": [
+    "Criteo-ITE-v2.1"
+  ],
+  "passed": false,
+  "required_datasets": 2,
+  "interpretation": "development gate only; not an FM or uplift result"
+}
