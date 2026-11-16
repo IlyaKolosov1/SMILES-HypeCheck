@@ -13,6 +13,7 @@ import importlib.util
 import json
 import os
 from pathlib import Path
+import platform
 import subprocess
 import sys
 import time
@@ -194,7 +195,8 @@ def prepare(a):
         "preprocess": "original gpu_smoke.preprocess_train_only, fitted on each context",
         "causalpfn_defaults": {"max_context_length": 4096, "max_query_length": 4096,
                                "num_neighbours": 1024, "calibrate": False},
-        "batch_size": BATCH, "device": a.device, "data_sha256": DATA_SHA256,
+        "batch_size": BATCH, "device": a.device, "cpu_threads": a.cpu_threads,
+        "data_sha256": DATA_SHA256,
         "source_dopfn": sources,
         "source_code_sha256": {f: digest(HERE / f) for f in
             (Path(__file__).name, "fm_benchmark.py", "gpu_smoke.py")},
@@ -264,20 +266,44 @@ def validate_completed(output, label, protocol_sha):
     return True
 
 
-def worker(output, checkpoint, label):
-    # Only this explicit worker path imports model/runtime libraries.
+def configure_runtime(config):
+    import torch
+    if config["device"].startswith("cuda"):
+        require(torch.cuda.is_available(), "Requested CUDA is unavailable; no silent CPU fallback")
+    else:
+        require(config["device"] == "cpu", "Only explicitly selected CPU or CUDA is supported")
+    torch.set_num_threads(config["cpu_threads"])
+    torch.set_num_interop_threads(1)
+
+
+def runtime_metadata(config):
+    import torch
+    return {"device": config["device"], "torch": torch.__version__,
+            "causalpfn": package_version("causalpfn"),
+            "cpu_threads": torch.get_num_threads(), "platform": platform.platform(),
+            "processor": platform.processor(),
+            "gpu": torch.cuda.get_device_name() if config["device"].startswith("cuda") else None}
+
+
+def synchronize(config):
+    if config["device"].startswith("cuda"):
+        import torch
+        torch.cuda.synchronize()
+
+
+def build_model(output, checkpoint, label, config):
     import torch
     from causalpfn import CATEEstimator
     import fm_benchmark as fm
     from gpu_smoke import preprocess_train_only
-    from tqdm.auto import tqdm
-    config = json.loads((output / "protocol.json").read_text())
     require(digest(checkpoint) == config["checkpoint_sha256"], "Checkpoint changed")
     require(package_code_hash("causalpfn") == config["causalpfn_code_sha256"], "CausalPFN source changed")
-    require(torch.cuda.is_available() and config["device"].startswith("cuda"), "CUDA required; no CPU fallback")
+    prepared = json.loads((output / "prepared.sha256.json").read_text())
+    require(digest(output / "prepared.npz") == prepared["sha256"], "Prepared input was modified")
     seed = int(label.split("_", 1)[0])
     fm.set_seed(seed)
-    started = time.monotonic()
+    # The shared helper selects two threads; restore this recorded run setting.
+    torch.set_num_threads(config["cpu_threads"])
     with np.load(output / "prepared.npz", allow_pickle=False) as z:
         ctx = np.searchsorted(z["all_indices"], z["context_" + label])
         ev = np.searchsorted(z["all_indices"], z["eval_indices"])
@@ -286,18 +312,79 @@ def worker(output, checkpoint, label):
     model = CATEEstimator(device=torch.device(config["device"]), verbose=False, model_path=str(checkpoint),
                           **config["causalpfn_defaults"])
     model.fit(cx, ct.astype(np.float32), cy.astype(np.float32))
+    return model, xev
+
+
+def check_prediction_invariance(batched, repeated, split):
+    require(np.isfinite(batched).all() and batched.shape == repeated.shape == split.shape,
+            "Smoke prediction shape/finiteness mismatch")
+    # Do not relax these tolerances to make a different batching implementation pass.
+    np.testing.assert_allclose(batched, repeated, rtol=2e-4, atol=2e-5,
+                               err_msg="CausalPFN is not repeatable at the fixed batch size")
+    np.testing.assert_allclose(batched, split, rtol=2e-4, atol=2e-5,
+                               err_msg="CausalPFN query batching changed predictions")
+
+
+def benchmark_worker(output, checkpoint):
+    """Time a fixed prefix without computing or inspecting any outcome metric."""
+    from tqdm.auto import tqdm
+    config = json.loads((output / "protocol.json").read_text())
+    configure_runtime(config)
+    rows = []
+    for strategy in STRATEGIES:
+        label = f"42_{strategy}"
+        started = time.monotonic()
+        model, xev = build_model(output, checkpoint, label, config)
+        synchronize(config)
+        fit_seconds = time.monotonic() - started
+        predict = lambda x: np.asarray(model.estimate_cate(x), dtype=np.float32).ravel()
+        batched = predict(xev[:BATCH])
+        repeated = predict(xev[:BATCH])
+        split = np.concatenate([predict(xev[:BATCH//2]), predict(xev[BATCH//2:BATCH])])
+        check_prediction_invariance(batched, repeated, split)
+        seconds = []
+        for lo in tqdm(range(0, 4*BATCH, BATCH), desc=f"Timing {label}", unit="batch"):
+            synchronize(config)
+            tick = time.monotonic()
+            pred = predict(xev[lo:lo+BATCH])
+            synchronize(config)
+            require(pred.shape == (BATCH,) and np.isfinite(pred).all(), "Invalid timing prediction")
+            seconds.append(time.monotonic()-tick)
+        rows.append({"label": label, "fit_seconds": fit_seconds, "batch_seconds": seconds,
+                     "repeat_max_abs": float(np.max(np.abs(batched-repeated))),
+                     "split_max_abs": float(np.max(np.abs(batched-split)))})
+        del model
+    max_batch = max(max(row["batch_seconds"]) for row in rows)
+    estimate = 6 * (max(row["fit_seconds"] for row in rows)
+                    + int(np.ceil(EVAL_SIZE/BATCH))*max_batch) + 600
+    result = {"status": "passed", "protocol_sha256": digest(output / "protocol.json"),
+              **runtime_metadata(config), "timings": rows,
+              "estimated_six_arms_plus_analysis_seconds": estimate,
+              "estimate_rule": "six times slower measured fit plus391 times slowest measured batch; plus600s analysis reserve",
+              "outcome_metrics_computed": False,
+              "warning": "Short-prefix timing is a projection, not a guarantee; full run retains a wall-time cap."}
+    atomic_json(output / "benchmark.json", result)
+    print(json.dumps(result, indent=2), flush=True)
+
+
+def worker(output, checkpoint, label):
+    # Only explicit worker paths import model/runtime libraries.
+    from tqdm.auto import tqdm
+    config = json.loads((output / "protocol.json").read_text())
+    configure_runtime(config)
+    started = time.monotonic()
+    model, xev = build_model(output, checkpoint, label, config)
     preds = []
     for lo in tqdm(range(0, len(xev), BATCH), desc=f"CausalPFN {label}", unit="batch"):
         preds.append(np.asarray(model.estimate_cate(xev[lo:lo+BATCH]), dtype=np.float32).ravel())
-    torch.cuda.synchronize()
+    synchronize(config)
     scores = np.concatenate(preds).astype(np.float64)
     require(scores.shape == (EVAL_SIZE,) and np.isfinite(scores).all(), "Invalid CausalPFN scores")
     path = output / f"causal_{label}.npz"
     atomic_npz(path, scores=scores)
     atomic_json(output / f"causal_{label}.json", {
         "protocol_sha256": digest(output / "protocol.json"), "prediction_sha256": digest(path),
-        "elapsed_seconds": time.monotonic()-started, "torch": torch.__version__,
-        "causalpfn": package_version("causalpfn"), "gpu": torch.cuda.get_device_name(),
+        "elapsed_seconds": time.monotonic()-started, **runtime_metadata(config),
         "checkpoint_sha256": config["checkpoint_sha256"], "label": label,
     })
 
@@ -383,14 +470,16 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--data-root", type=Path)
     p.add_argument("--dopfn-output", type=Path, help="Directory with the six source JSON/NPZ pairs")
-    p.add_argument("--checkpoint", type=Path, help="Pinned local CausalPFN v0 checkpoint (required for --run)")
+    p.add_argument("--checkpoint", type=Path, help="Pinned local CausalPFN v0 checkpoint (required for inference)")
     p.add_argument("--output", type=Path, required=True)
-    p.add_argument("--device", choices=["cuda:0"], default="cuda:0")
-    p.add_argument("--max-hours", choices=[2, 3], type=int, default=2, help="Hard per-invocation wall-time budget")
+    p.add_argument("--device", choices=["cuda:0", "cpu"], default="cuda:0")
+    p.add_argument("--cpu-threads", type=int, choices=[1, 2, 4, 8], default=2)
+    p.add_argument("--max-hours", choices=[1, 2, 3, 4, 6], type=int, default=2, help="Hard per-invocation wall-time budget")
     p.add_argument("--bootstrap-draws", type=int, default=1000)
     mode = p.add_mutually_exclusive_group(required=True)
     mode.add_argument("--check", action="store_true", help="Validate sources and selected rows on CPU, without model imports")
-    mode.add_argument("--run", action="store_true", help="Freeze protocol, run/resume six GPU arms, then analyze")
+    mode.add_argument("--benchmark", action="store_true", help="Freeze plan; check repeatability/batching and time fixed prefixes; no outcome metrics")
+    mode.add_argument("--run", action="store_true", help="Freeze protocol, run/resume six explicit CPU or CUDA arms, then analyze")
     mode.add_argument("--analyze", action="store_true", help="Only analyze twelve saved score vectors, no models")
     a = p.parse_args()
     started = time.monotonic()
@@ -399,9 +488,9 @@ def main():
     if a.analyze:
         return 0 if analyze(output, deadline) else 2
     if not a.data_root or not a.dopfn_output:
-        p.error("--data-root and --dopfn-output are required for --check/--run")
-    if a.run and not a.checkpoint:
-        p.error("--run requires a local --checkpoint so weights can be hashed before inference")
+        p.error("--data-root and --dopfn-output are required for --check/--benchmark/--run")
+    if (a.run or a.benchmark) and not a.checkpoint:
+        p.error("Inference requires a local --checkpoint so weights can be hashed before inference")
     if a.bootstrap_draws < 200:
         p.error("--bootstrap-draws must be >=200; use the default1000 for the paper")
     if a.checkpoint:
@@ -416,6 +505,11 @@ def main():
             "This adapter requires CausalPFN 0.1.5. Use a compatible environment before --run.")
     protocol_sha = freeze_plan(output, config, payload)
     del payload
+    if a.benchmark:
+        subprocess.run([sys.executable, "-u", str(Path(__file__).resolve()), "_benchmark_worker",
+                        str(output), str(a.checkpoint)], check=True,
+                       timeout=min(1800, max(1, deadline-time.monotonic())))
+        return 0
     labels = [f"{seed}_{s}" for seed in SEEDS for s in STRATEGIES]
     completed = [x for x in labels if validate_completed(output, x, protocol_sha)]
     for i, label in enumerate(labels):
@@ -448,5 +542,7 @@ def main():
 if __name__ == "__main__":
     if len(sys.argv) == 5 and sys.argv[1] == "_worker":
         worker(Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4])
+    elif len(sys.argv) == 4 and sys.argv[1] == "_benchmark_worker":
+        benchmark_worker(Path(sys.argv[2]), Path(sys.argv[3]))
     else:
         raise SystemExit(main())

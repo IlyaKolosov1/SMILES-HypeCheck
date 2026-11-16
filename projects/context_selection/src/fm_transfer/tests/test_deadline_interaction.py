@@ -66,6 +66,14 @@ class PairedProvenanceTest(unittest.TestCase):
 
 
 class StatisticalContrastTest(unittest.TestCase):
+    def test_smoke_rejects_batch_dependent_scores(self):
+        scores = np.array([.1, -.2], dtype=np.float32)
+        run.check_prediction_invariance(scores, scores.copy(), scores.copy())
+        with self.assertRaisesRegex(AssertionError, "batching"):
+            run.check_prediction_invariance(scores, scores.copy(), scores + .09)
+        with self.assertRaisesRegex(AssertionError, "repeatable"):
+            run.check_prediction_invariance(scores, scores + .09, scores.copy())
+
     def test_interaction_sign_and_seed_pairing(self):
         # Do improvement +3/+5/+7, Causal improvement -1/+1/+3 -> interaction+4.
         metrics = np.zeros((2, 3, 2, 2))
